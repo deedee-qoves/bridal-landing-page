@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Her recommendations</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"PP Neue Montreal";src:url("./assets/1f362b820cb3024cee63b02124ee6e08.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("./assets/385bcd664ecf1de60fd6dd7e2b3beead.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Zagma";src:url("./assets/8113282f96d9ce8b34fe8c8e91150126.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{color:inherit}
+.qv{--ink:#233137;--ink-900:#2D3B41;--mid-500:#798F97;--mid-300:#AEC2C9;--mid-200:#CDDBE1;--tint:#F2F5F5;--gray-700:#515255;--gray-600:#6B767A;--white-50:#F2F2F2;--white-100:#E8E8E8;--font-body:"PP Neue Montreal",-apple-system,"Helvetica Neue",Arial,sans-serif;--font-label:"Zagma",ui-monospace,monospace;background:var(--tint);color:var(--ink);font-family:var(--font-body);font-size:14px;line-height:1.43;-webkit-font-smoothing:antialiased}
+.qv *{box-sizing:border-box}
+.qv h2,.qv h3{font-weight:400;margin:0;letter-spacing:-.015em;text-wrap:balance}
+.qv p{margin:0;text-wrap:pretty}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:32px}
+.eyebrow-pill{display:inline-flex;align-items:center;font-family:var(--font-label);font-size:12px;letter-spacing:-.01em;text-transform:uppercase;color:var(--mid-500);background:#fff;border:1px solid rgba(174,194,201,.3);border-radius:999px;padding:6px 10px 4px;width:max-content}
+.h-section{font-size:30px;line-height:1.17}
+.hl{color:var(--mid-500)}
+.section-sub{max-width:588px;margin-top:14px;font-size:14px;color:var(--gray-700)}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:12px 24px;border-radius:999px;font-weight:500;font-size:16px;white-space:nowrap;width:max-content;background:var(--ink);color:#fff}
+.btn:hover{background:var(--ink-900);color:#fff}
+.btn svg{width:14px;height:14px}
+.pill{display:inline-flex;align-items:center;font-family:var(--font-label);font-size:11px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.pill-tint{background:var(--mid-200);color:var(--ink-900)}
+.ba-band{background:var(--tint);padding:88px 0}
+.ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
+.ba-band .h-section{margin-top:16px;max-width:460px}
+.rec-list{list-style:none;margin:28px 0 0;padding:0;max-width:480px;display:flex;flex-direction:column;gap:6px}
+.rec{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 16px;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:background .25s,border-color .25s}
+.rec:hover{background:rgba(255,255,255,.6)}
+.rec:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.rec.on{background:#fff;border-color:var(--white-100);box-shadow:0 6px 20px rgba(117,128,132,.1)}
+.rec .pill{justify-content:center;transition:background .25s,color .25s}
+.rec.on .pill{background:var(--ink);color:#fff}
+.rec p{font-size:15px;color:var(--gray-700)}
+.rec-hint{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600);margin-top:16px}
+.bx{position:relative;width:100%;aspect-ratio:760/960;border-radius:14px;overflow:hidden;background:#C4D8DF;user-select:none;touch-action:pan-y;box-shadow:0 16px 40px rgba(117,128,132,.16)}
+.bx-zoom{position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.8,.2,1),transform-origin .7s cubic-bezier(.2,.8,.2,1)}
+.bx-zoom img,.bx-before img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bx-before{position:absolute;inset:0}
+.bx-label{position:absolute;top:24px;font-size:15px;color:#fff;text-transform:uppercase;letter-spacing:.01em;z-index:3;pointer-events:none;text-shadow:0 1px 8px rgba(35,49,55,.35)}
+.bx-line{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:3;pointer-events:none}
+.bx-knob{position:absolute;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:2px solid #fff;background:rgba(35,49,55,.15);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;gap:2px;z-index:4;pointer-events:none}
+.bx-knob svg{width:10px;height:10px;fill:#fff}
+.bx-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:5}
+@media (prefers-reduced-motion:reduce){.bx-zoom{transition:none}}
+@media (max-width:860px){.ba-band{padding:56px 0}.ba-band-grid{grid-template-columns:minmax(0,1fr);gap:32px;padding:0 16px}}
+</style>
+</helmet>
+<div class="qv">
+<div class="ba-band">
+<div class="ba-band-grid">
+<div>
+<span class="eyebrow-pill">Her recommendations</span>
+<h2 class="h-section">What changed <span class="hl">for her big day.</span></h2>
+<ul class="rec-list">
+<li><button type="button" class="rec {{recHair}}" aria-pressed="{{ariaHair}}" onClick="{{pickHair}}"><span class="pill pill-tint">Hair</span><p>A soft, low updo with a centre part and loose face-framing pieces.</p></button></li>
+<li><button type="button" class="rec {{recBrows}}" aria-pressed="{{ariaBrows}}" onClick="{{pickBrows}}"><span class="pill pill-tint">Brows</span><p>Shaped and filled through the tail to frame the eyes.</p></button></li>
+<li><button type="button" class="rec {{recSkin}}" aria-pressed="{{ariaSkin}}" onClick="{{pickSkin}}"><span class="pill pill-tint">Skin</span><p>An even, dewy finish that calms redness around the nose and cheeks.</p></button></li>
+<li><button type="button" class="rec {{recEyes}}" aria-pressed="{{ariaEyes}}" onClick="{{pickEyes}}"><span class="pill pill-tint">Eyes</span><p>Defined lashes and a soft line along the upper lash line.</p></button></li>
+<li><button type="button" class="rec {{recLips}}" aria-pressed="{{ariaLips}}" onClick="{{pickLips}}"><span class="pill pill-tint">Lips</span><p>A rosy tint a shade deeper than her natural colour.</p></button></li>
+</ul>
+<p class="rec-hint" style="margin-top: 30px">Tap a recommendation to zoom in. Drag to compare.</p>
+</div>
+<div><div class="bx">
+<div class="bx-zoom" style="transform-origin: {{zOrigin}}; transform: scale({{zScale}});">
+<img src="./assets/9f9994cb4be2c3c61be788732133e69d.jpg" alt="Projection: the same woman on her wedding day, with a soft low updo, glowing skin and a satin top" draggable="false">
+<div class="bx-before" style="clip-path: {{zClip}};"><img src="./assets/f7143173a9278e93c0f2a3642d46bb72.jpg" alt="Before: woman with loose hair and no makeup" draggable="false"></div>
+</div>
+<span class="bx-label" style="left: 28px;">Before</span>
+<span class="bx-label" style="right: 28px;">Projection</span>
+<div class="bx-line" style="left: {{bxPct}};"></div>
+<div class="bx-knob" style="left: {{bxPct}};"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M7 1L2 5l5 4z"></path></svg><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1l5 4-5 4z"></path></svg></div>
+<input class="bx-range" type="range" min="0" max="100" step="0.5" value="{{bxPos}}" onInput="{{onBx}}" onChange="{{onBx}}" aria-label="Drag to compare before and projection">
+</div></div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"":{"width":1440,"height":760}}'>
+class Component extends DCLogic {
+renderVals() {
+const Z = { hair: [50, 8, 2.0], brows: [50, 39, 3.0], skin: [30, 56, 2.6], eyes: [50, 44, 3.2], lips: [50, 61, 3.2] };
+const rec = (this.state && this.state.rec) || null;
+const bxPos = (this.state && this.state.bxPos != null) ? this.state.bxPos : 50;
+const z = rec ? Z[rec] : [50, 50, 1];
+const wx = Math.max(0, Math.min(100, z[0] + (bxPos - z[0]) / z[2]));
+const pick = (k) => () => this.setState({ rec: rec === k ? null : k });
+return {
+zOrigin: z[0] + '% ' + z[1] + '%', zScale: z[2], zClip: 'inset(0 ' + (100 - wx) + '% 0 0)',
+bxPos: bxPos, bxPct: bxPos + '%', onBx: (e) => this.setState({ bxPos: Number(e.target.value) }),
+recHair: rec === 'hair' ? 'on' : '', ariaHair: rec === 'hair' ? 'true' : 'false', pickHair: pick('hair'),
+recBrows: rec === 'brows' ? 'on' : '', ariaBrows: rec === 'brows' ? 'true' : 'false', pickBrows: pick('brows'),
+recSkin: rec === 'skin' ? 'on' : '', ariaSkin: rec === 'skin' ? 'true' : 'false', pickSkin: pick('skin'),
+recEyes: rec === 'eyes' ? 'on' : '', ariaEyes: rec === 'eyes' ? 'true' : 'false', pickEyes: pick('eyes'),
+recLips: rec === 'lips' ? 'on' : '', ariaLips: rec === 'lips' ? 'true' : 'false', pickLips: pick('lips')
+};
+}
+}
+</script>
+</body>
+</html>
