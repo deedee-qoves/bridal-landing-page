@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wedding Day Protocol | QOVES</title>
-<meta name="description" content="A personalized beauty plan built around your features, so you look and feel your best on your wedding day.">
-<link rel="preload" href="assets/fonts/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
+<title>Wedding Day Protocol</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
 <style>
-@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
-@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
-@font-face{font-family:"Zagma";src:url("assets/fonts/Zagma-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("./assets/1f362b820cb3024cee63b02124ee6e08.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("./assets/385bcd664ecf1de60fd6dd7e2b3beead.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Zagma";src:url("./assets/8113282f96d9ce8b34fe8c8e91150126.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
 body{margin:0}
 a{color:inherit;text-decoration:none}a:hover{color:inherit}
 .qv{--ink:#233137;--ink-900:#2D3B41;--mid-500:#798F97;--mid-400:#9AAEB5;--mid-300:#AEC2C9;--mid-200:#CDDBE1;--tint:#F2F5F5;--gray-700:#515255;--gray-600:#6B767A;--white:#FFFFFF;--white-50:#F2F2F2;--white-100:#E8E8E8;--font-body:"PP Neue Montreal",-apple-system,"Helvetica Neue",Arial,sans-serif;--font-label:"Zagma",ui-monospace,monospace;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;line-height:1.43;-webkit-font-smoothing:antialiased;}
@@ -57,15 +61,9 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .row{display:flex;gap:16px;flex-wrap:wrap}
 @keyframes qvUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes qvIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
-.hero-inner > *{animation:qvUp 1.4s cubic-bezier(.2,.8,.2,1) both}
-.hero-inner > *:nth-child(1){animation-delay:.2s}
-.hero-inner > *:nth-child(2){animation-delay:.5s}
-.hero-inner > *:nth-child(3){animation-delay:.8s}
-.hero-inner > *:nth-child(4){animation-delay:1.1s}
-.hero-ba{animation:qvIn 1.6s cubic-bezier(.2,.8,.2,1) .7s both}
 .qv.reveal-on [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
 .qv.reveal-on [data-reveal].in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.hero-inner > *,.hero-ba{animation:none}.qv.reveal-on [data-reveal]{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.qv.reveal-on [data-reveal]{opacity:1;transform:none;transition:none}}
 .hero-ba{position:absolute;z-index:2;bottom:64px;right:calc(max(0px, (100% - 1360px) / 2) + 120px);width:min(420px,33vw)}
 @media (max-width:860px){.hero{flex-direction:column;justify-content:flex-end;align-items:stretch}.hero-ba{position:relative;right:auto;bottom:auto;width:auto;margin:96px 16px 0;order:-1}}
 .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1360px;margin:0 auto;padding-inline:32px}
@@ -97,7 +95,8 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .quote-strip .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
 .quote-strip .who b{color:var(--ink);font-weight:500}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:32px;background:var(--white-50);border:1px solid var(--white-50);border-radius:12px;overflow:hidden}
-.feature-card{background:#fff;display:flex;flex-direction:column}
+.feature-card{background:#fff;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--white-100)}
+.grid3.features{gap:16px;background:transparent;border:none;border-radius:0;overflow:visible}
 .feature-card .photo-slot{border:none;border-radius:0;aspect-ratio:1/1;min-height:0;flex:none;overflow:hidden}
 .feature-card .photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .feature-card .photo-slot .pill{z-index:1}
@@ -156,7 +155,8 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .cd-title{font-weight:500;font-size:14px}
 .cd-text{color:var(--gray-700);font-size:13px;margin-top:2px}
 .date-input{font-size:18px;border:1px solid var(--white-100);border-radius:8px;padding:12px 14px;margin-top:10px;width:100%;font-family:var(--font-body);color:var(--ink)}
-.big-days{font-size:40px;margin-top:20px}
+.big-days{font-size:64px;line-height:1;font-weight:500;letter-spacing:-.02em;color:var(--ink);margin-top:24px}
+.big-days span{font-size:16px;font-weight:400;letter-spacing:0;margin-left:4px}
 .big-days span,.price-amount span{font-size:14px;color:var(--gray-600)}
 .check-list{list-style:none;margin:18px 0 0;padding:0}
 .check-list li{display:flex;gap:10px;padding-block:14px;border-top:1px solid var(--white-50);font-size:14px}
@@ -166,6 +166,46 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .pay-chip{border:1px solid var(--white-100);border-radius:6px;padding:6px 12px;font-size:12px;font-weight:500}
 .trust-row{display:flex;gap:16px;margin-top:16px;font-family:var(--font-label);font-size:10px;color:var(--gray-600);flex-wrap:wrap}
 .band-tint{background:var(--tint)}
+.pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px;align-items:stretch}
+.areas{background:#fff;border:1px solid var(--white-100);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(117,128,132,.08)}
+.area-list{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
+.area-list .area:nth-child(odd){border-right:1px solid var(--white-50)}
+.area-list .area:nth-child(-n+2){border-top:none}
+.areas-head{display:flex;justify-content:space-between;align-items:baseline;padding:22px 24px;border-bottom:1px solid var(--white-50)}
+.areas-head h3{font-size:18px}
+.areas-head span{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600)}
+.area{display:flex;align-items:center;gap:16px;padding:12px 24px;border-top:1px solid var(--white-50)}
+.area.first{border-top:none}
+.area img{width:52px;height:52px;border-radius:10px;object-fit:cover;display:block;flex-shrink:0}
+.area .ph{width:52px;height:52px;border-radius:10px;background:#E3EAEE;flex-shrink:0}
+.area .nm{font-size:17px;flex:1}
+
+.profile{background:#fff;border:1px solid var(--white-100);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(117,128,132,.08)}
+.pf-head{display:flex;align-items:center;gap:16px;padding:24px;background:#F5F8F8;border-bottom:1px solid var(--white-50)}
+.pf-head img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 1px 4px rgba(35,49,55,.15)}
+.pf-head h3{font-size:20px}
+.pf-head p{font-size:14px;color:var(--gray-600);margin-top:2px}
+.pf-tag{margin-left:auto;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-700);border:1px solid #D5DADC;border-radius:999px;padding:6px 12px 5px}
+.pf-row{padding:18px 24px;border-top:1px solid var(--white-50)}
+.pf-row:first-of-type{border-top:none}
+.pf-label{display:flex;align-items:baseline;gap:10px;font-size:16px}
+.pf-label i{font-style:normal;font-family:var(--font-label);font-size:11px;color:var(--gray-600)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:6px 13px;font-size:14px;border:1px solid #D5DADC;color:var(--gray-600);transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--mid-500);color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.chip.on{background:#E6EDEE;border-color:#E6EDEE;color:var(--ink)}
+.pf-label em{font-style:normal;margin-left:auto;font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
+.age-range{position:absolute;left:0;right:0;top:50%;height:28px;margin:-14px 0 0;width:100%;opacity:0;cursor:pointer}
+.chip.add{background:transparent;border:1px dashed #C3CDD0;color:var(--gray-600)}
+.age-track{position:relative;height:4px;background:#E3EAEE;border-radius:2px;margin-top:16px}
+.age-fill{position:absolute;left:0;top:0;bottom:0;width:28%;background:var(--ink);border-radius:2px}
+.age-dot{position:absolute;left:28%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#fff;border:2px solid var(--ink)}
+.pf-foot{margin-top:auto;display:flex;align-items:center;gap:12px;padding:16px 24px;background:var(--ink);color:#fff;font-size:15px}
+.pf-foot b{margin-left:auto;font-weight:400;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--mid-300)}
+.pf-foot span{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:12px}
+@media (max-width:860px){.pv-grid{grid-template-columns:minmax(0,1fr)}.area-list{grid-auto-rows:auto}.wrap{padding-inline:16px}.area{padding:10px 16px}.areas-head,.pf-head,.pf-row,.pf-foot{padding-inline:16px}}
+.ba-slot{display:none}
 .band-ink{background:var(--ink);color:#fff}
 .faq-text{color:var(--mid-300);margin-top:10px;font-size:14px}
 .faq-item{border-top:1px solid var(--white-50);padding-block:18px}
@@ -174,7 +214,7 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .faq-item summary::-webkit-details-marker{display:none}
 .sign{width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--white-100);border-radius:50%;font-size:13px}
 .faq-item[open] .sign{transform:rotate(45deg)}
-.faq-a{margin-top:12px;color:var(--gray-700);font-size:14px;max-width:640px;line-height:1.5}
+.faq-a{margin-top:20px;color:var(--gray-700);font-size:14px;max-width:640px;line-height:1.5}
 .chat-card{background:var(--tint);border-radius:12px;padding:20px;margin-top:24px}
 .chat-label{font-family:var(--font-label);font-size:10px;color:var(--gray-600)}
 .bubble{border-radius:8px;padding:12px 14px;font-size:13px;margin-top:12px;max-width:85%}
@@ -200,24 +240,9 @@ nav.main{display:none}
 .split .text-side,.final-grid .text-side{padding:28px}
 .benefit-row{grid-template-columns:minmax(0,1fr)}
 }
-
-
-
-.ba{position:relative;width:100%;height:100%;border-radius:14px;overflow:hidden;background:#B4C1C8;font-family:"PP Neue Montreal",-apple-system,"Helvetica Neue",Arial,sans-serif;user-select:none;touch-action:none}
-.ba-layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.ba-layer img{width:100%;height:100%;object-fit:cover;display:block}
-.ba-ph{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13px;color:#fff;letter-spacing:.02em}
-.ba-ph svg{width:32px;height:32px}
-.ba-label{position:absolute;top:24px;font-size:17px;color:#fff;text-transform:uppercase;letter-spacing:.01em;z-index:3;pointer-events:none;text-shadow:0 1px 8px rgba(35,49,55,.35)}
-.ba-label sup{font-size:12px;margin-left:4px}
-.ba-line{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:3;pointer-events:none}
-.ba-knob{position:absolute;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:2px solid #fff;background:rgba(35,49,55,.15);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;gap:2px;z-index:4;pointer-events:none}
-.ba-knob svg{width:10px;height:10px;fill:#fff}
-.ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:5}
-html{scroll-behavior:smooth}
 </style>
-</head>
-<body><div class="qv">
+</helmet>
+<div class="qv" ref="{{rootRef}}">
 
 <div class="announce">
 <span>Get your protocol in as fast as 48 hours.</span>
@@ -245,10 +270,10 @@ html{scroll-behavior:smooth}
 <main>
 
 <section class="hero">
-<div class="hero-media"><img src="assets/img/hero-gradient.webp" alt=""></div>
-<div class="hero-scrim"></div>
-<div class="hero-inner">
-<span class="eyebrow-pill">For your big day</span>
+<div class="hero-media"><img src="./assets/9e9d608760e2625f0fae57189b377125.png" alt=""></div>
+<div class="hero-scrim" style="height: 1000px"></div>
+<div class="hero-inner" style="height: 400px">
+
 <h1 class="h-hero">Look the absolute best on your big day.</h1>
 <p class="lead">A plan built around your features, so you'll want to look back on the photos for years to come.</p>
 <div class="row" style="margin-top: 8px;">
@@ -257,35 +282,23 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <div class="hero-ba">
-<div style="width: 100%; aspect-ratio: 760 / 960; box-sizing: border-box;">
-<div class="ba">
-<div class="ba-layer" style="background: #C4D8DF;">
-<img src="assets/img/projection.jpg" alt="Projection: the same woman on her wedding day, with a soft low updo, glowing skin and a satin top" draggable="false">
-</div>
-<div class="ba-layer ba-before" style="background: #C4D8DF; clip-path: inset(0 50% 0 0);">
-<img src="assets/img/before.jpg" alt="Before: woman with loose hair and no makeup" draggable="false">
-</div>
-<span class="ba-label" style="left: 32px; font-size: 15px">Before</span>
-<span class="ba-label" style="right: 32px; font-size: 15px">Projection<sup>(3)</sup></span>
-<div class="ba-line" data-ba-move style="left: 50%;"></div>
-<div class="ba-knob" data-ba-move style="left: 50%;"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M7 1L2 5l5 4z"></path></svg><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1l5 4-5 4z"></path></svg></div>
-<input class="ba-range" type="range" min="0" max="100" step="0.5" value="50" aria-label="Drag to compare before and projection">
-</div>
-</div>
+<dc-import name="BeforeAfter" hint-size="100%,556px"></dc-import>
 </div>
 </section>
+
 
 <section style="padding-block: 40px;">
 <div class="trust">
 <div><p class="t-title">Recommended by experts</p><p class="t-sub">Supported by world renowned experts</p></div>
 <div><p class="t-title">80,000+ members</p><p class="t-sub">Trusted worldwide</p></div>
 <div>
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<div class="stars" role="img" aria-label="5 stars"><sc-for list="{{stars}}" as="s" hint-placeholder-count="5"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></sc-for></div>
 <p class="t-sub" style="margin-top: 8px;">From verified members</p>
 </div>
 <div><p class="t-title">Clear, actionable plan</p><p class="t-sub">Tailored to your features</p></div>
 </div>
 </section>
+<div class="ba-slot"><dc-import name="Recommendations" hint-size="100%,760px"></dc-import></div>
 
 <section>
 <div class="wrap">
@@ -298,7 +311,7 @@ html{scroll-behavior:smooth}
 </div>
 <div class="img-side" data-reveal="" style="transition-delay: 0.15s;">
 <div class="photo-slot" style="border: none; overflow: hidden;">
-<img src="assets/img/makeup-trial.jpg" alt="A bride-to-be in a mirror with vanity lights as a stylist works on her hair during a makeup trial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%;">
+<img src="./assets/ddd42899a7c83a344eca51a03ee6b117.jpg" alt="A bride-to-be in a mirror with vanity lights as a stylist works on her hair during a makeup trial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%;">
 
 </div>
 </div>
@@ -330,7 +343,7 @@ html{scroll-behavior:smooth}
 <span class="pill pill-tint">With QOVES</span>
 </div>
 <ul class="steps">
-<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text">Celebrate your whole face</p></div></li>
+<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text">Share your photos and goals</p></div></li>
 <li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text">QOVES analysis</p></div></li>
 <li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text">Visualise your best self</p></div></li>
 <li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text">Personalized protocol</p></div></li>
@@ -350,18 +363,32 @@ html{scroll-behavior:smooth}
 <span class="eyebrow-pill">Your plan</span>
 <h2 class="h-section" style="font-size: 30px; margin-top: 16px; max-width: 680px;">Make the most of <span class="hl">your unique features.</span></h2>
 <p class="section-sub">We look at more than 200 aspects of your face, so your makeup, hair and skin prep are planned around you. Your personalized protocol guides your beauty routine, so you know the exact steps to follow in the months before the wedding.</p>
-<div class="grid3">
-<div class="feature-card">
-<div class="photo-slot"><span class="pill pill-dark">Tweakments</span></div>
-<div class="fc-body"><h3>Non-surgical enhancements</h3><p>Treatments to help you look like your best, natural self.</p></div>
+<div class="pv-grid">
+<div class="areas">
+<div class="areas-head"><h3>What we assess</h3><span>12 facial areas</span></div>
+<div class="area-list">
+<div class="area"><img src="./assets/6cefba90525a0b1d6afee364a573ed8f.jpg" alt=""><p class="nm">General Analysis</p></div>
+<div class="area"><img src="./assets/5dcae38157d6727e3bc4c85ae8b8ea86.jpg" alt=""><p class="nm">Eyebrows</p></div>
+<div class="area"><img src="./assets/cd4ba75f6166ff731ac4cda89bb0f7bb.jpg" alt=""><p class="nm">Eyes</p></div>
+<div class="area"><img src="./assets/e38fb267874bcd93fcfb8a55a41de30c.jpg" alt=""><p class="nm">Nose</p></div>
+<div class="area"><img src="./assets/78ba60e766b6fd4953cf24aea7b45c3a.jpg" alt=""><p class="nm">Lips</p></div>
+<div class="area"><img src="./assets/ef634b819784a1ea1f0da271d43ac080.jpg" alt=""><p class="nm">Cheeks</p></div>
+<div class="area"><img src="./assets/db12274ba3678a56a36e31c9a04ab6b9.jpg" alt=""><p class="nm">Jaw</p></div>
+<div class="area"><img src="./assets/22befb7899bf380648dba79f66e7ae34.jpg" alt=""><p class="nm">Chin</p></div>
+<div class="area"><img src="./assets/66a051982336f49e3ba667fa695aeab6.jpg" alt=""><p class="nm">Smile</p></div>
+<div class="area"><img src="./assets/609b81ec528ca762e57bb3bde4c384be.jpg" alt=""><p class="nm">Neck</p></div>
+<div class="area"><img src="./assets/9de125ee092e5a9b092216f445d62c5a.jpg" alt=""><p class="nm">Ear</p></div>
+<div class="area"><img src="./assets/f5b5820b225e0f0e0d64f31a44d9931d.jpg" alt=""><p class="nm">Skin</p></div>
 </div>
-<div class="feature-card">
-<div class="photo-slot"><span class="pill pill-dark">Skin</span></div>
-<div class="fc-body"><h3>Skin</h3><p>What to prioritize in your routine in the months before the wedding.</p></div>
 </div>
-<div class="feature-card">
-<div class="photo-slot"><span class="pill pill-dark">Hair</span></div>
-<div class="fc-body"><h3>Hair</h3><p>Guidance on ways to use hair to accentuate your unique features.</p></div>
+<div class="profile">
+<div class="pf-head"><div><h3>Your profile</h3><p>Used to personalize your plan</p></div><span class="pf-tag">Try it</span></div>
+<div class="pf-row"><p class="pf-label"><i>01</i>Ethnic background<em>Pick one</em></p><div class="chips"><button type="button" class="chip {{pf_eth0}}" aria-pressed="{{pa_eth0}}" onClick="{{pt_eth0}}">East Asian</button><button type="button" class="chip {{pf_eth1}}" aria-pressed="{{pa_eth1}}" onClick="{{pt_eth1}}">South Asian</button><button type="button" class="chip {{pf_eth2}}" aria-pressed="{{pa_eth2}}" onClick="{{pt_eth2}}">Black</button><button type="button" class="chip {{pf_eth3}}" aria-pressed="{{pa_eth3}}" onClick="{{pt_eth3}}">Mixed European</button><button type="button" class="chip {{pf_eth4}}" aria-pressed="{{pa_eth4}}" onClick="{{pt_eth4}}">Latina</button><button type="button" class="chip {{pf_eth5}}" aria-pressed="{{pa_eth5}}" onClick="{{pt_eth5}}">Middle Eastern</button></div></div>
+<div class="pf-row"><p class="pf-label"><i>02</i>Personal preferences<em>Pick any</em></p><div class="chips"><button type="button" class="chip {{pf_pref0}}" aria-pressed="{{pa_pref0}}" onClick="{{pt_pref0}}">Natural look</button><button type="button" class="chip {{pf_pref1}}" aria-pressed="{{pa_pref1}}" onClick="{{pt_pref1}}">Soft glam</button><button type="button" class="chip {{pf_pref2}}" aria-pressed="{{pa_pref2}}" onClick="{{pt_pref2}}">Glass skin</button><button type="button" class="chip {{pf_pref3}}" aria-pressed="{{pa_pref3}}" onClick="{{pt_pref3}}">Bold lip</button><button type="button" class="chip {{pf_pref4}}" aria-pressed="{{pa_pref4}}" onClick="{{pt_pref4}}">Defined brows</button></div></div>
+<div class="pf-row"><p class="pf-label"><i>03</i>Lifestyle<em>Pick any</em></p><div class="chips"><button type="button" class="chip {{pf_life0}}" aria-pressed="{{pa_life0}}" onClick="{{pt_life0}}">6-7h sleep</button><button type="button" class="chip {{pf_life1}}" aria-pressed="{{pa_life1}}" onClick="{{pt_life1}}">8h+ sleep</button><button type="button" class="chip {{pf_life2}}" aria-pressed="{{pa_life2}}" onClick="{{pt_life2}}">High stress</button><button type="button" class="chip {{pf_life3}}" aria-pressed="{{pa_life3}}" onClick="{{pt_life3}}">Humid climate</button><button type="button" class="chip {{pf_life4}}" aria-pressed="{{pa_life4}}" onClick="{{pt_life4}}">Dry climate</button><button type="button" class="chip {{pf_life5}}" aria-pressed="{{pa_life5}}" onClick="{{pt_life5}}">Lots of travel</button></div></div>
+<div class="pf-row"><p class="pf-label" style="justify-content: space-between;"><span style="display: flex; align-items: baseline; gap: 10px;"><i>04</i>Age</span><span>{{pfAge}}</span></p><div class="age-track"><div class="age-fill" style="width: {{pfAgePct}};"></div><div class="age-dot" style="left: {{pfAgePct}};"></div><input class="age-range" type="range" min="18" max="65" step="1" value="{{pfAge}}" onInput="{{onAge}}" onChange="{{onAge}}" aria-label="Age"></div></div>
+<div class="pf-row"><p class="pf-label"><i>05</i>Region<em>Pick one</em></p><div class="chips"><button type="button" class="chip {{pf_reg0}}" aria-pressed="{{pa_reg0}}" onClick="{{pt_reg0}}">United States</button><button type="button" class="chip {{pf_reg1}}" aria-pressed="{{pa_reg1}}" onClick="{{pt_reg1}}">United Kingdom</button><button type="button" class="chip {{pf_reg2}}" aria-pressed="{{pa_reg2}}" onClick="{{pt_reg2}}">Europe</button><button type="button" class="chip {{pf_reg3}}" aria-pressed="{{pa_reg3}}" onClick="{{pt_reg3}}">Asia</button><button type="button" class="chip {{pf_reg4}}" aria-pressed="{{pa_reg4}}" onClick="{{pt_reg4}}">Australia</button></div></div>
+<div class="pf-foot"><span aria-hidden="true">✓</span>Applied across 200+ assessments<b>{{pfFoot}}</b></div>
 </div>
 </div>
 <a class="btn btn-primary" href="#start" style="margin-top: 28px;">Get my personalized plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
@@ -458,9 +485,9 @@ html{scroll-behavior:smooth}
 </div>
 <div>
 <label class="eyebrow-pill" for="wedding-date">When's your big day?</label>
-<input class="date-input" type="text" value="04/22/2027" id="wedding-date">
-<p class="big-days">26 <span>weeks to go</span></p>
-<p style="color: #515255; margin-top: 8px; font-size: 13px;">That's plenty of time to follow your plan from start to finish.</p>
+<input class="date-input" type="date" id="wedding-date" value="{{cdDate}}" min="{{cdToday}}" onChange="{{onDate}}">
+<p class="big-days">{{cdNum}} <span>{{cdUnit}}</span></p>
+<p style="color: #515255; margin-top: 8px; font-size: 13px;">{{cdMsg}}</p>
 <a class="btn btn-primary" href="#start" style="margin-top: 20px; width: 100%;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
 </div>
@@ -473,17 +500,17 @@ html{scroll-behavior:smooth}
 <p class="section-sub">What other brides said about using QOVES to prepare for their day.</p>
 <div class="grid3">
 <div class="testi-card">
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<div class="stars" role="img" aria-label="5 stars"><sc-for list="{{stars}}" as="s" hint-placeholder-count="5"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></sc-for></div>
 <p class="q">[Review text, to be supplied]</p>
 <div class="who"><span>[Name, to be supplied]</span><a href="#top">Trustpilot ↗</a></div>
 </div>
 <div class="testi-card">
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<div class="stars" role="img" aria-label="5 stars"><sc-for list="{{stars}}" as="s" hint-placeholder-count="5"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></sc-for></div>
 <p class="q">[Review text, to be supplied]</p>
 <div class="who"><span>[Name, to be supplied]</span><a href="#top">Trustpilot ↗</a></div>
 </div>
 <div class="testi-card">
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<div class="stars" role="img" aria-label="5 stars"><sc-for list="{{stars}}" as="s" hint-placeholder-count="5"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></sc-for></div>
 <p class="q">[Review text, to be supplied]</p>
 <div class="who"><span>[Name, to be supplied]</span><a href="#top">Trustpilot ↗</a></div>
 </div>
@@ -498,21 +525,21 @@ html{scroll-behavior:smooth}
 <div class="adv-head">
 <p class="section-sub" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 10px">Built with input from the people shaping modern aesthetics.</p>
 <div class="adv-nav">
-<button class="adv-btn" type="button" aria-label="Previous advisors" data-adv="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-<button class="adv-btn" type="button" aria-label="Next advisors" data-adv="1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+<button class="adv-btn" type="button" aria-label="Previous advisors" onClick="{{prev}}"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+<button class="adv-btn" type="button" aria-label="Next advisors" onClick="{{next}}"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
 </div>
 </div>
-<div class="adv-track" id="adv-track">
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/devgan.jpg" alt="Dr. Lara Devgan"></div><div class="adv-body"><h4>Dr. Lara Devgan</h4><p>Top board-certified female plastic surgeon in New York, founder of Dr. Devgan Scientific Beauty, Vogue &amp; Elle Beauty Board, former RealSelf CMO, Yale Sterling Fellow, NIH Scholar</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/shamoun.jpg" alt="Dr. John Shamoun"></div><div class="adv-body"><h4>Dr. John Shamoun</h4><p>The only U.S. plastic surgeon with six active board certifications</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/khan.jpg" alt="Dr. Neelam Khan"></div><div class="adv-body"><h4>Dr. Neelam Khan</h4><p>Founder of Neely Dermatology &amp; Aesthetics, Clinical Assistant Professor at Georgetown University</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/gould.jpg" alt="Dr. Daniel Gould"></div><div class="adv-body"><h4>Dr. Daniel Gould</h4><p>Editorial Board member of the Aesthetic Surgery Journal, Sherrell Aston Award recipient</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/harb.jpg" alt="Dr. Ayad Harb"></div><div class="adv-body"><h4>Dr. Ayad Harb</h4><p>Founder of SRGN and Aesthetic Intelligence, educator to 4,000+ aesthetic professionals</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/linkov.jpg" alt="Dr. Gary Linkov, M.D."></div><div class="adv-body"><h4>Dr. Gary Linkov, M.D.</h4><p>ISHRS Communications &amp; Public Education Committee Member, founder of Feel Confident, former Adjunct Assistant Professor at NYU</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/keyes.jpg" alt="Dr. Michael Keyes"></div><div class="adv-body"><h4>Dr. Michael Keyes</h4><p>Founder of Celebrity Plastics, Vice-Chair of the ASPS Social Media Subcommittee</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/ching.jpg" alt="Dr. Shim Ching"></div><div class="adv-body"><h4>Dr. Shim Ching</h4><p>Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/zelken.jpg" alt="Dr. Jonathan Zelken"></div><div class="adv-body"><h4>Dr. Jonathan Zelken</h4><p>Johns Hopkins-trained plastic surgeon, CEO and Medical Director of Zelken MD</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/zolman.jpg" alt="Dr. Oliver Zolman"></div><div class="adv-body"><h4>Dr. Oliver Zolman</h4><p>Founder of Longevity Level 1, 2, 3 Protocol, King's College London Medical Doctor</p></div></div>
+<div class="adv-track" ref="{{track}}">
+<div class="advisor"><div class="adv-photo"><img src="./assets/5f1b570dca1a452ad32604dadb261157.jpg" alt="Dr. Lara Devgan"></div><div class="adv-body"><h4>Dr. Lara Devgan</h4><p>Top board-certified female plastic surgeon in New York, founder of Dr. Devgan Scientific Beauty, Vogue &amp; Elle Beauty Board, former RealSelf CMO, Yale Sterling Fellow, NIH Scholar</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/c7bf9f441f015e4481cd2e4fe6967202.jpg" alt="Dr. John Shamoun"></div><div class="adv-body"><h4>Dr. John Shamoun</h4><p>The only U.S. plastic surgeon with six active board certifications</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/4e97f535de7fd1c1db2d099b1c9e023f.jpg" alt="Dr. Neelam Khan"></div><div class="adv-body"><h4>Dr. Neelam Khan</h4><p>Founder of Neely Dermatology &amp; Aesthetics, Clinical Assistant Professor at Georgetown University</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/d7f99b1bf6acf598bc2d8a297c93eacd.jpg" alt="Dr. Daniel Gould"></div><div class="adv-body"><h4>Dr. Daniel Gould</h4><p>Editorial Board member of the Aesthetic Surgery Journal, Sherrell Aston Award recipient</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/1befd0ff8a04031eaef3c397505c4d7c.jpg" alt="Dr. Ayad Harb"></div><div class="adv-body"><h4>Dr. Ayad Harb</h4><p>Founder of SRGN and Aesthetic Intelligence, educator to 4,000+ aesthetic professionals</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/294e6d5ecaa5d8b336ba9e1dc37a7c1a.jpg" alt="Dr. Gary Linkov, M.D."></div><div class="adv-body"><h4>Dr. Gary Linkov, M.D.</h4><p>ISHRS Communications &amp; Public Education Committee Member, founder of Feel Confident, former Adjunct Assistant Professor at NYU</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/7f6da6b3c0d472e5a481ced181ef5d9d.jpg" alt="Dr. Michael Keyes"></div><div class="adv-body"><h4>Dr. Michael Keyes</h4><p>Founder of Celebrity Plastics, Vice-Chair of the ASPS Social Media Subcommittee</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/934fd353eaa1c6e86b20ea0c9709d8f3.jpg" alt="Dr. Shim Ching"></div><div class="adv-body"><h4>Dr. Shim Ching</h4><p>Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/dd01955aa78ce6ce0d4186b03e0ac0cd.jpg" alt="Dr. Jonathan Zelken"></div><div class="adv-body"><h4>Dr. Jonathan Zelken</h4><p>Johns Hopkins-trained plastic surgeon, CEO and Medical Director of Zelken MD</p></div></div>
+<div class="advisor"><div class="adv-photo"><img src="./assets/1acc6bee82d2cf92cc422988eae21012.jpg" alt="Dr. Oliver Zolman"></div><div class="adv-body"><h4>Dr. Oliver Zolman</h4><p>Founder of Longevity Level 1, 2, 3 Protocol, King's College London Medical Doctor</p></div></div>
 </div>
 </div>
 </section>
@@ -586,24 +613,24 @@ html{scroll-behavior:smooth}
 <p class="faq-a">Yes, that is exactly what the protocol is built for. Every recommendation in it is non surgical. The individual changes are small by design, and the plan sequences them so they compound. What you get out of it depends on what you put in, and results vary.</p>
 </details>
 <details class="faq-item">
-<summary><span>Will I mess my face up before my big day?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">[Answer, to be supplied]</p>
+<summary><span>Will I still look like me?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Your protocol is built around your natural features, so the focus is on bringing out what is already there. Every recommendation is non-surgical and the changes are small by design, so on the day you will look like yourself at your best. Anything involving clinical services, procedures or medication should be discussed with a licensed provider.</p>
 </details>
 <details class="faq-item">
 <summary><span>How long will it take for me to receive my results?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">[Answer, to be supplied]</p>
+<p class="faq-a">It can take up to 28 days from the moment you upload your photos for our team to prepare your analysis and protocol, so leave enough time before the wedding.</p>
 </details>
 <details class="faq-item">
 <summary><span>How does it work?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">[Answer, to be supplied]</p>
+<p class="faq-a">Tell us about yourself: demographics, lifestyle, and goals. Upload your photos: eight specific angles of your face and head. Within 28 days, you’ll receive your full protocol and visuals of your best-looking self.</p>
 </details>
 <details class="faq-item">
 <summary><span>Is this realistic?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">[Answer, to be supplied]</p>
+<p class="faq-a">Yes. Any changes we show are realistic and achievable without surgery. Results vary.</p>
 </details>
 <details class="faq-item">
 <summary><span>Is this a one time report or a continuous service?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">[Answer, to be supplied]</p>
+<p class="faq-a">This is an ongoing service that you can cancel at any time. After your initial plan, you’ll receive updated protocols, analyses, and visualizations every year. You’ll also have unlimited access to message our care team whenever you need.</p>
 </details>
 </div>
 </div>
@@ -635,23 +662,62 @@ html{scroll-behavior:smooth}
 </footer>
 
 </div>
-<script>
-(function(){
-  var ba=document.querySelector('.ba');
-  if(ba){var r=ba.querySelector('.ba-range'),b=ba.querySelector('.ba-before'),m=ba.querySelectorAll('[data-ba-move]');
-    function set(v){b.style.clipPath='inset(0 '+(100-v)+'% 0 0)';m.forEach(function(el){el.style.left=v+'%';});}
-    r.addEventListener('input',function(){set(Number(r.value));});}
-  var root=document.querySelector('.qv');
-  if(root&&'IntersectionObserver' in window){var single='main > section:not(.hero) .eyebrow-pill:not(.stat-card .eyebrow-pill), main > section:not(.hero) .h-section, main > section:not(.hero) .section-sub, .quote-strip, .as-card, .copy, .chat-card, .final-grid';
-    var still=function(el){var sec=el.closest('section');return !!(sec&&sec.querySelector('.testi-card'));};
-    root.querySelectorAll(single).forEach(function(el){if(!still(el)&&!el.closest('[data-reveal]'))el.setAttribute('data-reveal','');});
-    ['.trust','.compare','.grid3','.grid2','.check-list'].forEach(function(sel){root.querySelectorAll(sel).forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){if(still(c)||c.closest('[data-reveal]'))return;c.setAttribute('data-reveal','');c.style.transitionDelay=(Math.min(i,5)*0.12)+'s';});});});
-    root.classList.add('reveal-on');
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-    root.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});}
-  var t=document.getElementById('adv-track');
-  document.querySelectorAll('[data-adv]').forEach(function(btn){btn.addEventListener('click',function(){t.scrollBy({left:Number(btn.dataset.adv)*512,behavior:'smooth'});});});
-})();
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":9000}}'>
+class Component extends DCLogic {
+componentDidMount() {
+const root = this.rootEl;
+if (!root || !('IntersectionObserver' in window)) return;
+const single = 'main > section:not(.hero) .eyebrow-pill:not(.stat-card .eyebrow-pill), main > section:not(.hero) .h-section, main > section:not(.hero) .section-sub, .quote-strip, .as-card, .copy, .chat-card, .final-grid';
+const still = (el) => { const sec = el.closest('section'); return !!(sec && sec.querySelector('.testi-card')); };
+root.querySelectorAll(single).forEach((el) => { if (!still(el) && !el.closest('[data-reveal]')) el.setAttribute('data-reveal', ''); });
+const groups = ['.trust', '.compare', '.grid3', '.grid2', '.check-list'];
+groups.forEach((sel) => root.querySelectorAll(sel).forEach((g) => {
+Array.from(g.children).forEach((c, i) => { if (still(c) || c.closest('[data-reveal]')) return; c.setAttribute('data-reveal', ''); c.style.transitionDelay = (Math.min(i, 5) * 0.12) + 's'; });
+}));
+root.classList.add('reveal-on');
+this.io = new IntersectionObserver((entries) => {
+entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); this.io.unobserve(e.target); } });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+root.querySelectorAll('[data-reveal]').forEach((el) => this.io.observe(el));
+}
+componentWillUnmount() {
+if (this.io) this.io.disconnect();
+}
+renderVals() {
+const step = (dir) => { if (this.trackEl) this.trackEl.scrollBy({ left: dir * 264 * 2, behavior: 'smooth' }); };
+const iso = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const today = new Date(); today.setHours(0, 0, 0, 0);
+const def = new Date(today); def.setDate(def.getDate() + 182);
+const cdDate = (this.state && this.state.cdDate) || iso(def);
+const p = cdDate.split('-').map(Number);
+const days = Math.round((new Date(p[0], p[1] - 1, p[2]) - today) / 86400000);
+let cdNum, cdUnit, cdMsg;
+if (days <= 0) { cdNum = 0; cdUnit = 'days to go'; cdMsg = 'Pick a date in the future to see your countdown.'; }
+else if (days < 14) { cdNum = days; cdUnit = days === 1 ? 'day to go' : 'days to go'; cdMsg = 'Your plan will focus on what makes the biggest difference in the time you have.'; }
+else { cdNum = Math.floor(days / 7); cdUnit = 'weeks to go'; cdMsg = cdNum >= 12 ? "That's plenty of time to follow your plan from start to finish." : 'Enough time for the key steps. Start soon to make the most of it.'; }
+const PF = { eth: ["East Asian", "South Asian", "Black", "Mixed European", "Latina", "Middle Eastern"], pref: ["Natural look", "Soft glam", "Glass skin", "Bold lip", "Defined brows"], life: ["6-7h sleep", "8h+ sleep", "High stress", "Humid climate", "Dry climate", "Lots of travel"], reg: ["United States", "United Kingdom", "Europe", "Asia", "Australia"] };
+const PFM = { eth: false, pref: true, life: true, reg: false };
+const pfDef = { eth: ["Mixed European"], pref: ["Glass skin", "Soft glam"], life: ["6-7h sleep", "High stress", "Humid climate"], reg: ["United States"] };
+const pf = (this.state && this.state.pf) || pfDef;
+const pfAge = (this.state && this.state.pfAge) || 31;
+const pfToggle = (k, o) => () => { const cur = pf[k]; let nx; if (PFM[k]) nx = cur.includes(o) ? cur.filter((x) => x !== o) : cur.concat([o]); else nx = [o]; this.setState({ pf: Object.assign({}, pf, { [k]: nx }) }); };
+const pfVals = {};
+Object.keys(PF).forEach((k) => PF[k].forEach((o, i) => { const on = pf[k].includes(o); pfVals["pf_" + k + i] = on ? "on" : ""; pfVals["pa_" + k + i] = on ? "true" : "false"; pfVals["pt_" + k + i] = pfToggle(k, o); }));
+const pfN = pf.pref.length + pf.life.length;
+return Object.assign(pfVals, {
+pfAge: pfAge, pfAgePct: ((pfAge - 18) / 47 * 100).toFixed(1) + "%", onAge: (e) => this.setState({ pfAge: Number(e.target.value) }),
+pfFoot: pfN + " selected",
+cdDate: cdDate, cdToday: iso(today), cdNum: cdNum, cdUnit: cdUnit, cdMsg: cdMsg,
+onDate: (e) => this.setState({ cdDate: e.target.value }),
+stars: [1, 2, 3, 4, 5],
+rootRef: (el) => { this.rootEl = el; },
+track: (el) => { this.trackEl = el; },
+prev: () => step(-1),
+next: () => step(1)
+});
+}
+}
 </script>
 </body>
 </html>
