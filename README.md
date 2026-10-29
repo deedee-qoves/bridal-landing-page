@@ -16,6 +16,12 @@ Live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.
 - `assets/fonts`: PP Neue Montreal and Zagma
 - `assets/img`: couple hero photo, before/projection photos, makeup trial photo, facial area thumbnails, advisor headshots
 
+## Phone and desktop versions
+
+- `index.html` is the desktop page. `phone/index.html` is the phone page.
+- Screens under 768px wide are sent to `phone/` automatically, and wider screens are sent back to the desktop page, so each version only shows on its own device type.
+- Share the main link only. Both pages use the same `assets` folder.
+
 ## Still to fill in before launch
 
 - Replace the 3 "Sample review" cards with real customer reviews
