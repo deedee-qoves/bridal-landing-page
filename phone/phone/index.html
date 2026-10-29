@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if(!matchMedia('(max-width: 767px)').matches)location.replace('../'+location.search+location.hash);</script>
+<title>Wedding Day Protocol | QOVES</title>
+<meta name="description" content="A personalized beauty plan built around your features, so you look and feel your best on your wedding day.">
+<link rel="canonical" href="../">
+<link rel="preload" href="../assets/fonts/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
+<style>
+@font-face{font-family:"PP Neue Montreal";src:url("../assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("../assets/fonts/PPNeueMontreal-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Zagma";src:url("../assets/fonts/Zagma-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+body{margin:0}
+a{color:inherit;text-decoration:none}a:hover{color:inherit}
+.qv{--ink:#233137;--ink-900:#2D3B41;--mid-500:#798F97;--mid-400:#9AAEB5;--mid-300:#AEC2C9;--mid-200:#CDDBE1;--tint:#F2F5F5;--gray-700:#515255;--gray-600:#6B767A;--white:#FFFFFF;--white-50:#F2F2F2;--white-100:#E8E8E8;--font-body:"PP Neue Montreal",-apple-system,"Helvetica Neue",Arial,sans-serif;--font-label:"Zagma",ui-monospace,monospace;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;line-height:1.43;-webkit-font-smoothing:antialiased;}
+.qv *{box-sizing:border-box}
+.qv h1,.qv h2,.qv h3,.qv h4{font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.015em}
+.qv p{margin:0;text-wrap:pretty}
+.qv section{padding-block:80px 40px}
+.wrap{max-width:1360px;margin:0 auto;padding-inline:32px}
+.eyebrow-pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-label);font-size:12px;letter-spacing:-.01em;text-transform:uppercase;color:var(--mid-500);background:#fff;border:1px solid rgba(174,194,201,.3);border-radius:999px;padding:6px 10px 4px;width:max-content}
+.on-dark .eyebrow-pill{color:var(--mid-300);background:rgba(255,255,255,.1);border-color:rgba(242,242,242,.1)}
+.h-hero{font-size:56px;line-height:1.14;letter-spacing:-.02em}
+.h-section{font-size:28px;line-height:1.17}
+.hl{color:var(--mid-500)}
+.band-ink .hl{color:var(--mid-300)}
+.sub,.section-sub{font-size:14px;line-height:1.43;color:var(--gray-700)}
+.section-sub{max-width:588px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:12px 24px;border-radius:999px;font-weight:500;font-size:16px;white-space:nowrap;width:max-content}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--ink-900);color:#fff}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-on-ink{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.btn-sm{height:40px;padding:8px 20px;font-size:14px;font-weight:400}
+.pill{display:inline-flex;align-items:center;font-family:var(--font-label);font-size:11px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.pill-dark{background:var(--ink);color:#fff}
+.pill-tint{background:var(--mid-200);color:var(--ink-900)}
+.announce{background:var(--ink);color:#fff;font-family:var(--font-label);font-size:12px;padding:10px 20px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.announce a{color:var(--mid-300)}
+.nav-shell{position:sticky;top:0;z-index:100;padding:16px 16px 0}
+.navbar{max-width:1200px;margin:0 auto;background:rgba(0,0,0,.55);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-radius:999px;box-shadow:0 20px 48px rgba(0,0,0,.28);padding:6px 6px 6px 20px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:500;letter-spacing:.12em;font-size:13px}
+.brand svg{height:16px;width:auto}
+nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justify-content:center}
+.header-actions{display:flex;align-items:center;gap:8px}
+.login-link{font-size:14px;padding:8px 16px;color:rgba(255,255,255,.85)}
+.nav-cta{display:inline-flex;align-items:center;height:40px;padding:8px 20px;font-size:14px;border-radius:999px;background:#fff;color:var(--ink)}
+.hero{position:relative;background:var(--mid-500);min-height:760px;display:flex;align-items:flex-end;overflow:hidden;margin-top:-72px;padding:72px 0 0 !important}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(35,49,55,.88) 28%,rgba(35,49,55,.5) 55%,rgba(35,49,55,0) 80%)}
+.hero-inner{position:relative;z-index:1;width:100%;padding:0 120px 64px;max-width:1360px;margin:0 auto;display:flex;flex-direction:column;gap:24px;color:#fff}
+.hero-inner .eyebrow-pill{color:var(--mid-300);background:rgba(255,255,255,.1);border-color:rgba(242,242,242,.1)}
+.hero-inner .lead{max-width:426px;color:rgba(255,255,255,.75);font-size:16px;line-height:1.5}
+.hero-inner h1{max-width:680px}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+@keyframes qvUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes qvIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+.qv.reveal-on [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.qv.reveal-on [data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.qv.reveal-on [data-reveal]{opacity:1;transform:none;transition:none}}
+.hero-ba{position:absolute;z-index:2;bottom:64px;right:calc(max(0px, (100% - 1360px) / 2) + 120px);width:min(420px,33vw)}
+@media (max-width:860px){.hero{flex-direction:column;justify-content:flex-end;align-items:stretch}.hero-ba{position:relative;right:auto;bottom:auto;width:auto;margin:96px 16px 0;order:-1}}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1360px;margin:0 auto;padding-inline:32px}
+.trust > div{padding:24px;border-left:1px solid var(--white-50)}
+.trust > div:first-child{padding-left:0;border-left:none}
+.t-title{font-size:14px;font-weight:500}
+.t-sub{font-size:12px;color:var(--gray-600);margin-top:4px}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:12px;overflow:hidden;background:var(--tint);padding:0}
+.split .text-side{padding:48px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.split .img-side{position:relative;min-height:320px;padding:16px;display:flex}
+.photo-slot{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;background:var(--white-50);border:1px dashed var(--mid-300);border-radius:8px;min-height:220px;color:var(--gray-600);font-size:12px;flex:1}
+.photo-slot svg{width:26px;height:26px;stroke:var(--mid-500)}
+.photo-slot .pill{position:absolute;top:12px;left:12px}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px;padding:0}
+.card{padding:28px;background:#fff}
+.card-new{background:var(--ink);color:#fff}
+.steps{list-style:none;margin:20px 0 0;padding:0}
+.steps li{display:flex;gap:14px;padding-block:12px;border-top:1px solid var(--white-50)}
+.card-new .steps li{border-top-color:rgba(255,255,255,.12)}
+.steps li:first-child{border-top:none}
+.step-num{width:24px;height:24px;border-radius:50%;background:var(--white-100);color:var(--gray-700);font-family:var(--font-label);font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-new .step-num{background:rgba(255,255,255,.14);color:#fff}
+.step-label{font-family:var(--font-label);font-size:10px;color:var(--gray-600)}
+.card-new .step-label{color:var(--mid-300)}
+.step-text{font-size:14px;margin-top:2px}
+.card .step-text.off{color:var(--gray-600)}
+.quote-strip{border:1px solid var(--white-100);border-radius:12px;padding:32px;text-align:center;margin-top:48px}
+.quote-strip .q{font-size:18px;max-width:640px;margin:0 auto;line-height:1.4}
+.quote-strip .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
+.quote-strip .who b{color:var(--ink);font-weight:500}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:32px;background:var(--white-50);border:1px solid var(--white-50);border-radius:12px;overflow:hidden}
+.feature-card{background:#fff;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--white-100)}
+.grid3.features{gap:16px;background:transparent;border:none;border-radius:0;overflow:visible}
+.feature-card .photo-slot{border:none;border-radius:0;aspect-ratio:1/1;min-height:0;flex:none;overflow:hidden}
+.feature-card .photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.feature-card .photo-slot .pill{z-index:1}
+.fc-body{padding:20px}
+.feature-card h3,.hiw-card h3{font-size:16px;font-weight:500}
+.feature-card p,.hiw-card p{color:var(--gray-700);font-size:13px;margin-top:8px;line-height:1.45}
+.hiw-card{background:#fff;padding:24px}
+.hiw-card .num{font-family:var(--font-label);font-size:11px;color:var(--gray-600);margin:0 0 12px}
+.hiw-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.hiw-head .h-section{font-size:48px;line-height:1.1;margin-top:18px;letter-spacing:-.03em}
+.hiw-head .h-section .hl{display:block}
+.hiw-head .section-sub{margin-top:18px;font-size:15px}
+.grid3.hiw-grid{margin:48px -20px 0;gap:0;background:transparent;border:none;border-top:1px solid var(--white-100);border-radius:0;overflow:visible}
+.hiw-grid .hiw-card{background:transparent;padding:20px 20px 36px;border-left:1px solid var(--white-100)}
+.hiw-grid .hiw-card:first-child{border-left:none}
+.hiw-card img{width:100%;aspect-ratio:732/442;object-fit:cover;border-radius:14px;display:block}
+.hiw-grid .hiw-card .num{display:inline-block;margin:28px 0 22px;padding:2px 6px;font-size:11px;border-left:1px solid var(--mid-300);border-top:1px solid var(--mid-300)}
+.hiw-grid .hiw-card h3{font-size:24px;font-weight:400;letter-spacing:-.01em}
+.hiw-grid .hiw-card > p:not(.num){font-size:14px;margin-top:10px;max-width:420px}
+@media (max-width:600px){.hiw-head .h-section{font-size:30px !important}.grid3.hiw-grid{border-top:none;margin:28px -16px 0;overflow-x:auto;gap:12px}.hiw-grid .hiw-card{border-left:none;padding:0}.hiw-grid .hiw-card .num{margin:16px 0 10px}.hiw-grid .hiw-card h3{font-size:20px}}
+.stat-card{background:#fff;padding:22px;display:flex;flex-direction:column}
+.bar-track{height:4px;background:var(--white-100);border-radius:2px;position:relative;margin-top:8px}
+.bar-fill{position:absolute;left:0;top:0;bottom:0;background:var(--ink);border-radius:2px}
+.bar-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--gray-600);margin-top:8px}
+.big-stat{font-size:32px;margin-top:4px}
+.thirds-row{display:flex;justify-content:space-between;padding-block:8px;border-top:1px solid var(--white-50);font-size:13px}
+.thirds-row.first{border-top:none}
+.benefit-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+.benefit-split .copy p{color:var(--gray-700);margin-top:14px;font-size:14px}
+.oc{display:grid;grid-template-columns:340px minmax(0,1fr);gap:48px;align-items:start;margin-top:36px}
+.oc-tabs{display:flex;flex-direction:column;gap:6px}
+.oc-tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-radius:14px;font-size:18px;color:var(--gray-600);border:1px solid transparent;transition:background .2s,color .2s}
+.oc-tab span{font-family:var(--font-label);font-size:11px}
+.oc-tab:hover{color:var(--ink)}
+.oc-tab.on{background:#fff;color:var(--ink);border-color:var(--white-100);box-shadow:0 6px 20px rgba(117,128,132,.1)}
+.oc-tab:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.oc-panel{background:#fff;border:1px solid var(--white-100);border-radius:20px;padding:28px;min-height:400px}
+.oc-panel h3{font-size:22px}
+.oc-hint{font-size:14px;color:var(--gray-600);margin-top:4px !important}
+.oc-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px 10px;margin-top:24px}
+.oc-grid div{text-align:center;font-size:12px;color:var(--gray-700)}
+.oc-grid img{width:100%;aspect-ratio:1;border-radius:12px;object-fit:cover;display:block;margin-bottom:6px}
+.oc-chips{margin-top:20px !important;gap:8px}
+.oc-chips .chip{font-size:15px;padding:9px 16px}
+.oc-sub{margin-top:24px}
+.oc-lab{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600)}
+.oc-sub .oc-chips{margin-top:10px !important}
+.oc-age{font-size:48px;letter-spacing:-.03em;line-height:1;margin-top:8px !important}
+.oc-sub .age-track{max-width:420px}
+@media (max-width:860px){.oc{grid-template-columns:minmax(0,1fr);gap:16px}.oc-tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}.oc-tabs::-webkit-scrollbar{display:none}.oc-tab{flex:none;padding:10px 16px;font-size:15px;gap:10px}.oc-tabs .btn{display:none}.oc-panel{padding:20px;min-height:0}.oc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.oc-chips{flex-wrap:wrap !important;overflow:visible !important;margin-inline:0 !important;padding-inline:0 !important}.oc-chips .chip{font-size:14px;padding:7px 13px}.oc-panel h3{font-size:19px}}
+.qv section.fp-sec{padding:0;border-top:1px solid var(--white-50);border-bottom:1px solid var(--white-50)}
+.fp{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);min-height:760px}
+.fp-left{display:flex;flex-direction:column;border-right:1px solid var(--white-50)}
+.fp-block{padding:48px 56px 48px max(32px,calc((100vw - 1360px)/2 + 32px));border-top:1px solid var(--white-50)}
+.fp-block:first-child{border-top:none;flex:1;padding-top:48px}
+.fp-title{font-size:clamp(36px,3.1vw,56px) !important;line-height:1.08;letter-spacing:-.03em;margin-top:24px !important}
+.fp-title .hl{display:block}
+.fp-block h3{font-size:30px;letter-spacing:-.02em}
+.fp-p{font-size:17px;line-height:1.5;color:var(--gray-700);margin-top:22px !important;max-width:560px}
+.fp-p b{color:var(--ink);font-weight:500}
+.fp-list{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:16px;font-size:16px;color:var(--gray-700)}
+.fp-right{background:linear-gradient(180deg,#9EAAB0 0%,#B4C1C8 100%);padding:56px 56px 0 64px;overflow:hidden;display:flex}
+.fp-card{background:#fff;border-radius:24px 24px 0 0;padding:40px 48px 32px;flex:1;box-shadow:0 0 0 12px rgba(255,255,255,.18)}
+.fp-ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.fp-ba div{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:434/506;background:#B4C6CD}
+.fp-ba img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.fp-ba span{position:absolute;top:16px;left:0;right:0;text-align:center;font-family:var(--font-label);font-size:12px;text-transform:uppercase;color:#fff;letter-spacing:.04em;text-shadow:0 1px 6px rgba(35,49,55,.3)}
+.fp-steps{margin-top:22px;display:flex;flex-direction:column;gap:20px;position:relative}
+.fp-steps::before{content:"";position:absolute;left:11px;top:24px;bottom:0;border-left:1px dashed var(--mid-300)}
+.fp-step{display:grid;grid-template-columns:24px minmax(0,1fr);gap:24px;align-items:start}
+.fp-n{position:relative;z-index:1;width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid var(--white-100);font-family:var(--font-label);font-size:11px;color:var(--gray-600);display:flex;align-items:center;justify-content:center;margin-top:20px}
+.fp-row{border:1px solid var(--white-50);border-radius:12px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.fp-row.open{display:block;padding:0;overflow:hidden}
+.fp-h{font-size:19px}
+.fp-h.dim{color:var(--gray-600)}
+.fp-d{font-size:13px;color:var(--gray-700);margin-top:10px !important}
+.fp-tag{font-size:12px;background:var(--white-50);border-radius:999px;padding:4px 10px;white-space:nowrap;color:var(--gray-700)}
+.fp-top{display:flex;justify-content:space-between;gap:16px;padding:22px 20px;align-items:center}
+.fp-when{flex:none;width:84px;border:1px solid var(--white-50);border-radius:8px;text-align:center;overflow:hidden}
+.fp-when b{display:block;font-weight:400;font-size:24px;padding:14px 0 10px}
+.fp-when span{display:block;background:var(--white-50);font-family:var(--font-label);font-size:10px;text-transform:uppercase;padding:8px 0;color:var(--gray-600)}
+.fp-acts{background:#FAFAFA;padding:16px 20px 18px;border-top:1px solid var(--white-50)}
+.fp-lab{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600)}
+.fp-act{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--white-50);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:14px}
+@media (max-width:860px){.fp{grid-template-columns:minmax(0,1fr)}.fp-left{border-right:none}.fp-block{padding:36px 16px}.fp-title{font-size:36px !important}.fp-right{padding:28px 16px 0}.fp-card{padding:24px 18px 20px}}
+@media (max-width:600px){.fp-block:not(:first-child){display:none}.fp-p{display:none}.fp-title{font-size:28px !important;margin-top:16px !important}.fp-block{padding:32px 16px 24px}.fp-ba{gap:8px}.fp-step{gap:12px}.fp-h{font-size:16px}.fp-d{display:none}.fp-when{width:64px}.fp-when b{font-size:18px;padding:10px 0 6px}}
+.benefit-row{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;padding-block:18px;border-top:1px solid var(--white-50)}
+.benefit-row.first{border-top:none}
+.as-card{background:#fff;border:1px solid var(--white-100);border-radius:12px;padding:32px 32px 16px;box-shadow:0 6px 6px 0 rgba(117,128,132,0.03)}
+.as-row{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:16px;align-items:center;padding-block:20px;border-top:1px solid var(--white-50)}
+.as-name{font-size:16px;font-weight:500;line-height:1.35}
+.as-sub{font-size:13px;color:var(--gray-700);margin-top:2px}
+.as-tag{display:inline-flex;font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:#28663b;background:#EDF5EF;border-radius:999px;padding:5px 10px 4px;margin-top:10px}
+.as-label{font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
+.as-val{font-size:15px;margin-top:4px}
+@media (max-width:860px){.as-row{grid-template-columns:repeat(3,minmax(0,1fr))}.as-row > div:first-child{grid-column:1 / -1}.as-card{padding:24px 20px 8px}}
+.b-title{font-weight:500;font-size:14px}
+.b-detail{color:var(--gray-700);font-size:13px}
+.testi-card{background:var(--tint);padding:24px}
+.testi-card .q{font-size:14px;margin-top:14px;line-height:1.5}
+.testi-card .who{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:12px;color:var(--gray-600)}
+.stars{display:flex;gap:2px}
+.star{width:14px;height:14px;background:#1DB45A;display:inline-flex;align-items:center;justify-content:center;border-radius:2px}
+.star svg{width:9px;height:9px;fill:#fff}
+.adv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.adv-nav{display:flex;gap:8px}
+.adv-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--white-100);background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.adv-btn:hover{background:var(--tint)}
+.adv-btn svg{width:16px;height:16px}
+.adv-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;margin-top:32px;padding-bottom:8px;scrollbar-width:none}
+.adv-track::-webkit-scrollbar{display:none}
+.advisor{flex:0 0 240px;scroll-snap-align:start;display:flex;flex-direction:column}
+.adv-photo{aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--white-50)}
+.adv-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.adv-body{padding:14px 4px 4px}
+.av-photo{width:48px;height:48px;border-radius:50%;border:1px dashed var(--mid-300);display:flex;align-items:center;justify-content:center;color:var(--mid-500);margin-bottom:12px}
+.av-photo svg{width:18px;height:18px}
+.advisor h4{font-size:14px;font-weight:500}
+.advisor p{font-size:12px;color:var(--gray-600);margin-top:4px;line-height:1.4}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:32px;background:var(--white-50);border:1px solid var(--white-50);border-radius:12px;overflow:hidden}
+.grid2 > div{background:#fff;padding:32px}
+.cd-item{display:flex;gap:16px;padding-block:18px;border-top:1px solid var(--white-50)}
+.cd-item.first{border-top:none}
+.cd-num{width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--font-label);font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cd-title{font-weight:500;font-size:14px}
+.cd-text{color:var(--gray-700);font-size:13px;margin-top:2px}
+.date-input{font-size:18px;border:1px solid var(--white-100);border-radius:8px;padding:12px 14px;margin-top:10px;width:100%;font-family:var(--font-body);color:var(--ink)}
+.big-days{font-size:200px;line-height:.85;font-weight:700;letter-spacing:-.04em;color:#000;margin-top:24px}
+.big-days span{font-size:16px;font-weight:400;letter-spacing:0;margin-left:4px}
+.price-amount span{font-size:14px;color:var(--gray-600)}
+.big-days span{font-size:16px;font-weight:500;color:#000;text-transform:uppercase;letter-spacing:.02em}
+.check-list{list-style:none;margin:18px 0 0;padding:0}
+.check-list li{display:flex;gap:10px;padding-block:14px;border-top:1px solid var(--white-50);font-size:14px}
+.check-list li:first-child{border-top:none}
+.price-amount{font-size:40px;margin-top:16px}
+.pay-row{display:flex;gap:5px;margin-top:12px;flex-wrap:nowrap}
+.pay-chip{border:1px solid var(--white-100);border-radius:5px;padding:3px 7px;font-size:10px;font-weight:500;white-space:nowrap}
+.trust-row{display:flex;gap:16px;margin-top:16px;font-family:var(--font-label);font-size:10px;color:var(--gray-600);flex-wrap:wrap}
+.band-tint{background:var(--tint)}
+.pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px;align-items:stretch}
+.areas{background:#fff;border:1px solid var(--white-100);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(117,128,132,.08)}
+.area-list{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
+.area-list .area:nth-child(odd){border-right:1px solid var(--white-50)}
+.area-list .area:nth-child(-n+2){border-top:none}
+.areas-head{display:flex;justify-content:space-between;align-items:baseline;padding:22px 24px;border-bottom:1px solid var(--white-50)}
+.areas-head h3{font-size:18px}
+.areas-head span{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600)}
+.area{display:flex;align-items:center;gap:16px;padding:12px 24px;border-top:1px solid var(--white-50)}
+.area.first{border-top:none}
+.area img{width:52px;height:52px;border-radius:10px;object-fit:cover;display:block;flex-shrink:0}
+.area .ph{width:52px;height:52px;border-radius:10px;background:#E3EAEE;flex-shrink:0}
+.area .nm{font-size:17px;flex:1}
+
+.profile{background:#fff;border:1px solid var(--white-100);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(117,128,132,.08)}
+.pf-head{display:flex;align-items:center;gap:16px;padding:24px;background:#F5F8F8;border-bottom:1px solid var(--white-50)}
+.pf-head img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 1px 4px rgba(35,49,55,.15)}
+.pf-head h3{font-size:20px}
+.pf-head p{font-size:14px;color:var(--gray-600);margin-top:2px}
+.pf-tag{margin-left:auto;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-700);border:1px solid #D5DADC;border-radius:999px;padding:6px 12px 5px}
+.pf-row{padding:18px 24px;border-top:1px solid var(--white-50)}
+.pf-row:first-of-type{border-top:none}
+.pf-label{display:flex;align-items:baseline;gap:10px;font-size:16px}
+.pf-label i{font-style:normal;font-family:var(--font-label);font-size:11px;color:var(--gray-600)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{all:unset;box-sizing:border-box;cursor:pointer;border-radius:999px;padding:6px 13px;font-size:14px;border:1px solid #D5DADC;color:var(--gray-600);transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--mid-500);color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.chip.on{background:#E6EDEE;border-color:#E6EDEE;color:var(--ink)}
+.pf-label em{font-style:normal;margin-left:auto;font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
+.age-range{position:absolute;left:0;right:0;top:50%;height:28px;margin:-14px 0 0;width:100%;opacity:0;cursor:pointer}
+.chip.add{background:transparent;border:1px dashed #C3CDD0;color:var(--gray-600)}
+.age-track{position:relative;height:4px;background:#E3EAEE;border-radius:2px;margin-top:16px}
+.age-fill{position:absolute;left:0;top:0;bottom:0;width:28%;background:var(--ink);border-radius:2px}
+.age-dot{position:absolute;left:28%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#fff;border:2px solid var(--ink)}
+.pf-foot{margin-top:auto;display:flex;align-items:center;gap:12px;padding:16px 24px;background:var(--ink);color:#fff;font-size:15px}
+.pf-foot b{margin-left:auto;font-weight:400;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--mid-300)}
+.pf-foot span{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:12px}
+@media (max-width:860px){.pv-grid{grid-template-columns:minmax(0,1fr)}.area-list{grid-auto-rows:auto}.wrap{padding-inline:16px}.area{padding:10px 16px}.areas-head,.pf-head,.pf-row,.pf-foot{padding-inline:16px}}
+.ba-slot{display:none}
+.band-ink{background:var(--ink);color:#fff}
+.faq-text{color:var(--mid-300);margin-top:10px;font-size:14px}
+.faq-item{border-top:1px solid var(--white-50);padding-block:18px}
+.faq-item.first{border-top:none}
+.faq-item summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:15px;font-weight:500;gap:16px}
+.faq-item summary::-webkit-details-marker{display:none}
+.sign{width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--white-100);border-radius:50%;font-size:13px}
+.faq-item[open] .sign{transform:rotate(45deg)}
+.qv .faq-a{margin-top:25px;color:var(--gray-700);font-size:14px;max-width:640px;line-height:1.5}
+.chat-card{background:var(--tint);border-radius:12px;padding:20px;margin-top:24px}
+.chat-label{font-family:var(--font-label);font-size:10px;color:var(--gray-600)}
+.bubble{border-radius:8px;padding:12px 14px;font-size:13px;margin-top:12px;max-width:85%}
+.bubble.user{background:var(--ink);color:#fff;margin-left:auto}
+.bubble.team{background:#fff;border:1px solid var(--white-100)}
+.final-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:12px;overflow:hidden;padding:0;background:var(--ink)}
+.final-grid .text-side{color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.final-grid .text-side p{color:var(--mid-300);font-size:14px}
+.final-grid .img-side{min-height:320px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 60% 40%,#5A7A85 0%,#233137 70%)}
+.final-grid .img-side svg{width:22%;height:auto}
+.qv footer{border-top:1px solid var(--white-50);padding-block:32px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--gray-600)}
+.disclaimer{max-width:640px;line-height:1.5}
+@media (max-width:860px){
+.qv section{padding-block:56px 24px}
+.split,.compare,.grid3,.benefit-split,.grid2,.final-grid,.two-col{grid-template-columns:minmax(0,1fr) !important}
+.trust,.advisor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.trust > div{padding-left:0;border-left:none}
+nav.main{display:none}
+.navbar{grid-template-columns:auto auto}
+.h-hero{font-size:36px}
+.wrap,.hero-inner,.trust{padding-inline:16px}
+.split .text-side,.final-grid .text-side{padding:28px}
+.benefit-row{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+.qv section{padding-block:44px 20px}
+.qv .h-section{font-size:25px !important;line-height:1.18}
+.qv .section-sub,.qv .sub{font-size:14px}
+.announce{padding:8px 16px;font-size:11px}
+.announce a{display:none}
+.nav-shell{padding:10px 12px 0}
+.navbar{padding:4px 4px 4px 16px}
+.login-link{padding:8px 10px}
+.nav-cta{height:36px;padding:6px 16px}
+.hero{margin-top:-54px;padding-top:54px !important}
+.h-hero{font-size:34px}
+.hero-inner{gap:16px}
+.hero-inner .lead{font-size:15px}
+.hero-inner .row{flex-wrap:nowrap;gap:10px}
+.hero-inner .row .btn{flex:1;padding:12px 14px;font-size:15px}
+/* swipe rows */
+.trust,.compare,.grid3{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.trust::-webkit-scrollbar,.compare::-webkit-scrollbar,.grid3::-webkit-scrollbar{display:none}
+.compare > *,.grid3 > *{flex:0 0 84%;scroll-snap-align:start}
+.trust{margin-inline:0;gap:0}
+.trust > div{flex:0 0 auto;max-width:62%;padding:4px 20px 4px 0 !important;scroll-snap-align:start}
+.trust > div + div{padding-left:20px !important;border-left:1px solid var(--white-50) !important}
+.qv section:has(> .trust){padding-block:20px !important}
+.qv.reveal-on .trust [data-reveal],.qv.reveal-on .compare [data-reveal],.qv.reveal-on .grid3 [data-reveal]{opacity:1;transform:none}
+/* lead-up */
+.split .text-side{padding:24px !important}
+.split .img-side{min-height:0;padding:0 12px 12px}
+.split .img-side .photo-slot{aspect-ratio:4/3;min-height:0}
+/* compare */
+.compare{margin-top:24px}
+.compare > .card-new{order:-1}
+.card{padding:20px}
+.steps{margin-top:12px}
+.steps li{padding-block:9px;align-items:center}
+.step-label{display:none}
+.quote-strip{margin-top:24px}
+/* plan */
+.pv-grid{gap:16px;margin-top:24px}
+.pv-grid > .areas{display:none}
+.areas-head{padding:16px}
+.area-list{grid-template-columns:repeat(3,minmax(0,1fr)) !important;grid-auto-rows:auto !important}
+.area-list .area{flex-direction:column;align-items:center;text-align:center;gap:8px;padding:14px 6px !important;border-top:1px solid var(--white-50) !important;border-right:1px solid var(--white-50) !important}
+.area-list .area:nth-child(3n){border-right:none !important}
+.area-list .area:nth-child(-n+3){border-top:none !important}
+.area img,.area .ph{width:56px;height:56px}
+.area .nm{font-size:13px;line-height:1.25}
+.pf-head{padding:14px 16px}
+.pf-head p{display:none}
+.pf-row{padding:12px 16px}
+.pf-label{font-size:15px}
+.chips{gap:6px;margin-top:8px;flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding-inline:16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none}
+.chip{padding:5px 11px;font-size:13px}
+.pf-foot{padding:14px 16px;font-size:13px}
+/* how it works, analysis, reviews */
+.hiw-card,.stat-card,.testi-card{padding:20px}
+/* action steps */
+.benefit-split{gap:24px}
+.as-card{padding:20px 16px 4px !important}
+.as-row{gap:10px 12px;padding-block:14px}
+.as-val{font-size:14px}
+/* countdown */
+.cd-item{padding-block:12px}
+.big-days{font-size:128px;margin-top:16px}
+/* advisors */
+.advisor{flex:0 0 200px}
+/* membership, faq, final */
+.check-list li{padding-block:8px}
+.price-amount{font-size:40px}
+.two-col{gap:24px !important}
+.chat-card{margin-top:20px}
+.faq-item{padding-block:14px}
+.qv .faq-a{margin-top:25px}
+.final-grid .img-side{min-height:160px}
+footer{padding-bottom:96px !important}
+}
+/* sticky CTA, phone only */
+.m-cta{display:none}
+@media (max-width:600px){
+.m-cta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:200;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.m-cta.show{transform:none}
+.m-cta .btn{width:100%;justify-content:center;box-shadow:0 10px 30px rgba(35,49,55,.35)}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce){.m-cta{transition:none}}
+/* phone: headlines only */
+@media (max-width:600px){
+.qv .section-sub,.qv section .sub:not(.lu-keep){display:none !important}
+.split .text-side .sub{display:block !important;opacity:1 !important;transform:none !important;visibility:visible !important}
+.hiw-card > p:not(.num),.stat-card > p:not(.big-stat),.cd-text{display:none}
+.benefit-split > .copy{display:none !important}
+.adv-body p{display:none}
+.faq-text{display:none}
+.band-ink h3{margin-top:14px !important}
+.final-grid .text-side p{display:none}
+.qv .final-line{font-size:clamp(16px,5vw,20px) !important;white-space:nowrap;line-height:1.2}
+.disclaimer .d-more{display:none}
+.hiw-card h3{margin-top:4px}
+}
+/* recommendations */
+.ba-band{background:var(--tint);padding:88px 0}
+.ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
+.ba-band .h-section{margin-top:16px;max-width:460px}
+.rec-list{list-style:none;margin:28px 0 0;padding:0;max-width:480px;display:flex;flex-direction:column;gap:6px}
+.rec{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 16px;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:background .25s,border-color .25s}
+.rec:hover{background:rgba(255,255,255,.6)}
+.rec:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.rec.on{background:#fff;border-color:var(--white-100);box-shadow:0 6px 20px rgba(117,128,132,.1)}
+.rec .pill{justify-content:center;transition:background .25s,color .25s}
+.rec.on .pill{background:var(--ink);color:#fff}
+.rec p{font-size:15px;color:var(--gray-700)}
+.rec-hint{font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--gray-600);margin-top:16px}
+.bx{position:relative;width:100%;aspect-ratio:760/960;border-radius:14px;overflow:hidden;background:#C4D8DF;user-select:none;touch-action:pan-y;box-shadow:0 16px 40px rgba(117,128,132,.16)}
+.bx-zoom{position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.8,.2,1),transform-origin .7s cubic-bezier(.2,.8,.2,1)}
+.bx-zoom img,.bx-before img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bx-before{position:absolute;inset:0}
+.bx-label{position:absolute;top:24px;font-size:15px;color:#fff;text-transform:uppercase;letter-spacing:.01em;z-index:3;pointer-events:none;text-shadow:0 1px 8px rgba(35,49,55,.35)}
+.bx-line{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.9);transform:translateX(-1px);z-index:3;pointer-events:none}
+.bx-knob{position:absolute;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;border:2px solid #fff;background:rgba(35,49,55,.15);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;gap:2px;z-index:4;pointer-events:none}
+.bx-knob svg{width:10px;height:10px;fill:#fff}
+.bx-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:5}
+@media (prefers-reduced-motion:reduce){.bx-zoom{transition:none}}
+@media (max-width:860px){.ba-band{padding:56px 0}.ba-band-grid{grid-template-columns:minmax(0,1fr);gap:32px;padding:0 16px}.ba-band-grid > div:last-child{order:-1}}
+@media (max-width:600px){
+.ba-band{padding:40px 0}
+.ba-band-grid{gap:24px}
+.ba-band .bx{max-width:320px;margin:0 auto}
+.rec-list{margin-top:18px;gap:2px}
+.rec{grid-template-columns:62px minmax(0,1fr);gap:12px;padding:10px 12px}
+.rec p{font-size:14px}
+.rec-hint{margin-top:14px !important}
+}
+/* couple photo, phone */
+
+/* Couple photo hero, no slider; scrim from the bottom keeps faces clear */
+.v-p .hero{min-height:960px;background:#3A2E26}
+.v-p .hero-media{background:url("../assets/img/hero-couple.jpg") center 40%/cover no-repeat}
+.v-p .hero-media img{opacity:0}
+.v-p .hero-scrim{background:linear-gradient(to top,rgba(35,49,55,.92) 0%,rgba(35,49,55,.75) 25%,rgba(35,49,55,.35) 42%,rgba(35,49,55,0) 52%)}
+.v-p .hero-ba{display:none}
+.v-p .ba-slot{display:block}
+.v-p .analysis-sec{display:none}
+.v-p #plan{display:none}
+@media (max-width:860px){.v-p .hero{min-height:800px;background:#233137}.v-p .hero-media{bottom:auto;height:620px;background-position:28% top;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}.v-p .hero-scrim{display:none}.v-p .hero-inner{height:auto !important;padding-bottom:40px}}
+@media (max-width:600px){.v-p .hero{min-height:640px}.v-p .hero-media{height:450px}.v-p .hero-inner{padding-bottom:28px}}
+/* phone hero: full-bleed photo, text over the bottom */
+.v-p .hero{min-height:760px !important;background:#233137}
+.v-p .hero-media{inset:0 !important;height:auto !important;-webkit-mask-image:none !important;mask-image:none !important;background-image:linear-gradient(to bottom,rgba(35,49,55,0) 50%,#233137 70%),url("../assets/img/hero-couple.jpg") !important;background-position:0 0,16% top !important;background-size:100% 100%,auto 70% !important;background-repeat:no-repeat !important}
+.v-p .hero-scrim{display:block !important;top:auto !important;bottom:0;height:62% !important;background:linear-gradient(to top,#233137 0%,#233137 32%,rgba(35,49,55,.55) 62%,rgba(35,49,55,0) 100%) !important}
+.v-p .hero-inner{height:auto !important;padding:0 20px 28px !important;gap:14px}
+.v-p .h-hero{font-size:34px;line-height:1.1;letter-spacing:-.025em}
+.v-p .hero-inner .lead{font-size:15px;line-height:1.45;max-width:320px;color:rgba(255,255,255,.82)}
+.v-p .hero-inner .row{margin-top:6px !important}
+/* phone board: nothing hidden by scroll fade-ins */
+.qv.reveal-on [data-reveal]{opacity:1 !important;transform:none !important}
+.adv-nav{display:none !important}
+/* phone reviews: separate padded cards */
+.grid3.rv-grid{display:flex !important;flex-direction:column;gap:12px;overflow:visible !important;margin:24px 0 0 !important;padding:0 !important;background:transparent !important;border:none !important;border-radius:0 !important}
+.rv-grid .testi-card{flex:none !important;width:auto;background:#fff;border:1px solid var(--white-100);border-radius:14px;padding:20px !important;box-shadow:0 4px 16px rgba(117,128,132,.06)}
+.rv-grid .testi-card .q{font-size:15px;margin-top:12px;color:var(--ink)}
+.rv-grid .testi-card .who{margin-top:14px}
+.rv-grid .testi-card .who span:first-child{font-weight:500;color:var(--ink)}
+.rv-tag{font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
+.qv .big-days{margin-top:20px}
+.qv .big-days + p{margin-top:14px !important}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body><div class="v-p">
+<div class="qv">
+
+<div class="announce">
+<span>Get your protocol in as fast as 48 hours.</span>
+<a href="#start">Join 80,000+ people →</a>
+</div>
+
+<div class="nav-shell">
+<div class="navbar">
+<a class="brand" href="#top" aria-label="QOVES home">
+<svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#fff"></path></svg>
+<span>QOVES</span>
+</a>
+<nav class="main">
+<a href="#plan">Your plan</a>
+<a href="#how">How it works</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="header-actions">
+<a class="login-link" href="#top">Login</a>
+<a class="nav-cta" href="#start">Start my plan</a>
+</div>
+</div>
+</div>
+
+<main>
+
+<section class="hero">
+<div class="hero-media"><img src="../assets/img/hero-gradient.webp" alt=""></div>
+<div class="hero-scrim" style="height: 1000px"></div>
+<div class="hero-inner" style="height: 400px">
+
+<h1 class="h-hero">Look the absolute best on your big day.</h1>
+<p class="lead">A plan built around your features, so you'll want to look back on the photos for years to come.</p>
+<div class="row" style="margin-top: 8px;">
+<a class="btn btn-light" href="#start">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+<a class="btn btn-on-ink" href="#how">See how it works</a>
+</div>
+</div>
+</section>
+
+
+<section style="padding-block: 40px;">
+<div class="trust">
+<div><p class="t-title">Recommended by experts</p><p class="t-sub">Supported by world renowned experts</p></div>
+<div><p class="t-title">80,000+ members</p><p class="t-sub">Trusted worldwide</p></div>
+<div>
+<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<p class="t-sub" style="margin-top: 8px;">From verified members</p>
+</div>
+<div><p class="t-title">Clear, actionable plan</p><p class="t-sub">Tailored to your features</p></div>
+</div>
+</section>
+<div class="ba-slot">
+<div class="ba-band">
+<div class="ba-band-grid">
+<div>
+
+<h2 class="h-section">What changed <span class="hl">for her big day.</span></h2>
+<ul class="rec-list">
+<li><button type="button" class="rec" aria-pressed="false" data-rec="hair"><span class="pill pill-tint">Hair</span><p>A soft, low updo with a centre part and loose face-framing pieces.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="brows"><span class="pill pill-tint">Brows</span><p>Shaped and filled through the tail to frame the eyes.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="skin"><span class="pill pill-tint">Skin</span><p>An even, dewy finish that calms redness around the nose and cheeks.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="eyes"><span class="pill pill-tint">Eyes</span><p>Defined lashes and a soft line along the upper lash line.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="lips"><span class="pill pill-tint">Lips</span><p>A rosy tint a shade deeper than her natural colour.</p></button></li>
+</ul>
+
+</div>
+<div><div class="bx">
+<div class="bx-zoom" style="transform-origin: 50% 50%; transform: scale(1);">
+<img src="../assets/img/projection.jpg" alt="Projection: the same woman on her wedding day, with a soft low updo, glowing skin and a satin top" draggable="false">
+<div class="bx-before" style="clip-path: inset(0 50% 0 0);"><img src="../assets/img/before.jpg" alt="Before: woman with loose hair and no makeup" draggable="false"></div>
+</div>
+<span class="bx-label" style="left: 28px;">Before</span>
+<span class="bx-label" style="right: 28px;">Projection</span>
+<div class="bx-line" style="left: 50%;"></div>
+<div class="bx-knob" style="left: 50%;"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M7 1L2 5l5 4z"></path></svg><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M3 1l5 4-5 4z"></path></svg></div>
+<input class="bx-range" type="range" min="0" max="100" step="0.5" value="50" aria-label="Drag to compare before and projection">
+</div></div>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<div class="split">
+<div class="text-side">
+
+<h2 class="h-section">The countdown should be <span class="hl">the fun part.</span></h2>
+<p class="sub lu-keep" style="margin-top: 12px;">Between dress fittings and bridal prep, QOVES gives you a beauty routine to enjoy, so every step brings you closer to looking your best.</p>
+<a class="btn btn-primary btn-sm" href="#how" style="margin-top: 8px;">Show me how <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+</div>
+<div class="img-side">
+<div class="photo-slot" style="border: none; overflow: hidden;">
+<img src="../assets/img/makeup-trial.jpg" alt="A bride-to-be in a mirror with vanity lights as a stylist works on her hair during a makeup trial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%;">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap" style="max-width: 900px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+<span class="eyebrow-pill">Personalized analysis</span>
+<h2 class="h-section" style="font-size: 30px; margin-top: 16px; color: #798F97">The <span style="color: rgb(74, 97, 105)">ultimate</span> bridal glow up</h2>
+<p class="sub" style="margin-top: 14px;">Advice made for your face, not everyone else's.</p>
+</div>
+<div class="wrap">
+<div class="compare" style="max-width: 820px; margin-left: auto; margin-right: auto;">
+<div class="card" style="background: #F5F6F6; border-radius: 12px;">
+<h3 style="font-size: 17px; font-weight: 500;">One size fits all</h3>
+<ul class="steps">
+<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text off">Follow the latest trend</p></div></li>
+<li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text off">Try what worked for a friend</p></div></li>
+<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text off">Same routine as everyone</p></div></li>
+<li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text off">Trial and error</p></div></li>
+<li><span class="step-num">5</span><div><p class="step-label">Step 5</p><p class="step-text off">A look that isn't quite you</p></div></li>
+</ul>
+</div>
+<div class="card card-new" style="border-radius: 12px;">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<h3 style="font-size: 17px; font-weight: 500;">Made for you</h3>
+<span class="pill pill-tint">With QOVES</span>
+</div>
+<ul class="steps">
+<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text">Share your photos and goals</p></div></li>
+<li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text">QOVES analysis</p></div></li>
+<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text">Visualise your best self</p></div></li>
+<li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text">Personalized protocol</p></div></li>
+<li><span class="step-num">5</span><div><p class="step-label">Step 5</p><p class="step-text">Look your best on the big day</p></div></li>
+</ul>
+</div>
+</div>
+<div class="quote-strip">
+<p class="q">"I'm thrilled by QOVES' innovative approach to cosmetic care."</p>
+<p class="who"><b>Dr. Gary Linkov</b> · Founder of Feel Confident</p>
+</div>
+</div>
+</section>
+
+<section id="how">
+<div class="wrap">
+<div class="hiw-head">
+<span class="eyebrow-pill">How it works</span>
+<h2 class="h-section">How it works</h2>
+<p class="section-sub">Get your personalized facial analysis from the comfort of your home in three simple steps.</p>
+</div>
+<div class="grid3 hiw-grid">
+<div class="hiw-card"><img src="../assets/img/step1.jpg" alt="Photo upload screen with the poses required"><p class="num">1</p><h3>Upload Your Photos</h3><p>Upload 6 clear photos of your face securely and privately through our online portal.</p></div>
+<div class="hiw-card"><img src="../assets/img/step2.jpg" alt="List of facial assessments being measured"><p class="num">2</p><h3>Facial Assessments</h3><p>We measure 160+ facial markers, including skin quality, symmetry, eye shape, brow density, and more.</p></div>
+<div class="hiw-card"><img src="../assets/img/step3.jpg" alt="Example personalized report"><p class="num">3</p><h3>Personalized Report</h3><p>You'll receive a plan highlighting your strengths, areas for improvement, and best ways to improve your appearance.</p></div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section class="fp-sec">
+<div class="fp">
+<div class="fp-left">
+<div class="fp-block">
+<span class="eyebrow-pill">Your plan</span>
+<h2 class="fp-title">Simply follow your plan.<br><span class="hl">Experience the bridal glow.</span></h2>
+<p class="fp-p">A step-by-step plan for the months before your wedding, so you know exactly what to do and when. No surgery needed.</p>
+</div>
+<div class="fp-block">
+<h3>Look your best on the big day</h3>
+<p class="fp-p">Your protocol draws on <b>450+</b> evidence-based methods, chosen for your face, your style and your timeline.</p>
+</div>
+<div class="fp-block">
+<ul class="fp-list">
+<li>What to focus on for each feature, from brows to skin</li>
+<li>Visuals of how each change could look on you</li>
+<li>Options for every step, to fit your budget and schedule</li>
+<li>Message our care team any time before the wedding</li>
+</ul>
+</div>
+</div>
+<div class="fp-right">
+<div class="fp-card">
+<div class="fp-ba">
+<div><img src="../assets/img/before.jpg" alt="Before"><span>Before</span></div>
+<div><img src="../assets/img/projection.jpg" alt="Projection for her wedding day"><span>Projection</span></div>
+</div>
+<div class="fp-steps">
+<div class="fp-step"><span class="fp-n">1</span><div class="fp-row"><p class="fp-h dim">Hair health</p><span class="fp-tag">4-6 months out</span></div></div>
+<div class="fp-step"><span class="fp-n">2</span><div class="fp-row open">
+<div class="fp-top"><div><p class="fp-h">Skin prep</p><p class="fp-d">Brow shape and lash care that frame your eyes in every photo.</p></div><div class="fp-when"><b><span style="display: inline !important; font-size: 18px; text-transform: none; background-color: rgb(255, 255, 255)"><font color="#233137" face="PP Neue Montreal, -apple-system, Helvetica Neue, Arial, sans-serif">2-3<br></font></span><span style="background-color: rgb(242, 242, 242); color: rgb(107, 118, 122); font-family: Zagma, ui-monospace, monospace; display: inline !important">Months out</span></b></div></div>
+<div class="fp-acts"><p class="fp-lab">Action steps</p>
+<div class="fp-act"><span>RF microneedling,<br></span><span class="fp-tag">Non-surgical</span></div>
+<div class="fp-act"><span>Moisturizer, with ceramides</span><span class="fp-tag">Non-surgical</span></div>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="band-tint">
+<div class="wrap">
+<div class="grid2" style="margin-top: 0;">
+<div style="height: 160px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
+<span class="eyebrow-pill">THE COUNTDOWN</span>
+<h2 class="h-section" style="margin-top: 16px;">Plan backward <span class="hl">from your big day.</span></h2>
+
+</div>
+<div style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
+<label class="eyebrow-pill" for="wedding-date">When's your big day?</label>
+<input class="date-input" type="date" id="wedding-date">
+<p class="big-days" style="margin-top: 0px; height: 110px; margin-bottom: 20px"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
+<p style="color: #515255; margin-top: 8px; font-size: 13px;" id="cd-msg"></p>
+<a class="btn btn-primary" href="#start" style="margin-top: 20px; width: 100%;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2 class="h-section">Voices that <span class="hl">matter</span></h2>
+<p class="section-sub">What other brides said about using QOVES to prepare for their day.</p>
+<div class="grid3 rv-grid">
+
+<div class="testi-card">
+<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
+<p class="q">"Started six months out and my skin has never looked this good. I was glowing on the day."</p>
+<div class="who"><span><span style="color: rgb(35, 49, 55)">Hannah L.<br></span></span><span class="rv-tag"><br></span></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="band-tint" style="padding-top: 60px; height: 450px">
+<div class="wrap">
+
+<h2 class="h-section" style="margin-top: 2px; max-width: none">Advised by the world's leading authorities on <span class="hl">facial aesthetics</span></h2>
+
+<div class="adv-track" id="adv-track">
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/devgan.jpg" alt="Dr. Lara Devgan"></div><div class="adv-body"><h4>Dr. Lara Devgan</h4><p>Top board-certified female plastic surgeon in New York, founder of Dr. Devgan Scientific Beauty, Vogue &amp; Elle Beauty Board, former RealSelf CMO, Yale Sterling Fellow, NIH Scholar</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/shamoun.jpg" alt="Dr. John Shamoun"></div><div class="adv-body"><h4>Dr. John Shamoun</h4><p>The only U.S. plastic surgeon with six active board certifications</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/khan.jpg" alt="Dr. Neelam Khan"></div><div class="adv-body"><h4>Dr. Neelam Khan</h4><p>Founder of Neely Dermatology &amp; Aesthetics, Clinical Assistant Professor at Georgetown University</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/gould.jpg" alt="Dr. Daniel Gould"></div><div class="adv-body"><h4>Dr. Daniel Gould</h4><p>Editorial Board member of the Aesthetic Surgery Journal, Sherrell Aston Award recipient</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/harb.jpg" alt="Dr. Ayad Harb"></div><div class="adv-body"><h4>Dr. Ayad Harb</h4><p>Founder of SRGN and Aesthetic Intelligence, educator to 4,000+ aesthetic professionals</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/linkov.jpg" alt="Dr. Gary Linkov, M.D."></div><div class="adv-body"><h4>Dr. Gary Linkov, M.D.</h4><p>ISHRS Communications &amp; Public Education Committee Member, founder of Feel Confident, former Adjunct Assistant Professor at NYU</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/keyes.jpg" alt="Dr. Michael Keyes"></div><div class="adv-body"><h4>Dr. Michael Keyes</h4><p>Founder of Celebrity Plastics, Vice-Chair of the ASPS Social Media Subcommittee</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/ching.jpg" alt="Dr. Shim Ching"></div><div class="adv-body"><h4>Dr. Shim Ching</h4><p>Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/zelken.jpg" alt="Dr. Jonathan Zelken"></div><div class="adv-body"><h4>Dr. Jonathan Zelken</h4><p>Johns Hopkins-trained plastic surgeon, CEO and Medical Director of Zelken MD</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/zolman.jpg" alt="Dr. Oliver Zolman"></div><div class="adv-body"><h4>Dr. Oliver Zolman</h4><p>Founder of Longevity Level 1, 2, 3 Protocol, King's College London Medical Doctor</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="start">
+<div class="wrap" style="text-align: center; max-width: 680px; display: flex; flex-direction: column; align-items: center;">
+<span class="eyebrow-pill">Membership</span>
+<h2 class="h-section" style="margin-top: 16px;">What could cost you <s style="color: rgb(107, 118, 122)">$8,000</s>&nbsp;is <span class="hl">$150.</span></h2>
+<p class="sub" style="margin-top: 8px;">One analysis per year. No hidden fees.</p>
+</div>
+<div class="wrap">
+<div class="grid2">
+<div>
+<h3 style="font-size: 16px; font-weight: 500;">A comprehensive facial analysis</h3>
+<ul class="check-list">
+<li><span aria-hidden="true">✓</span><span>A personalized facial analysis and protocol</span></li>
+<li><span aria-hidden="true">✓</span><span>450+ science-backed recommendations</span></li>
+<li><span aria-hidden="true">✓</span><span>Visualizations of potential improvements</span></li>
+
+<li><span aria-hidden="true">✓</span><span>Direct messaging to the QOVES care team</span></li>
+</ul>
+</div>
+<div>
+<svg viewBox="0 0 1080 1147" fill="none" style="height: 20px; width: auto;" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#233137"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#233137"></path></svg>
+<p class="price-amount" style="height: 60px; margin-top: 5px">$150<span> / year</span></p>
+<p style="color: #515255; font-size: 13px; margin-top: 6px;">No hidden fees. Cancel anytime.</p>
+<a class="btn btn-primary" href="#start" style="width: 100%; margin-top: 20px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+<p style="color: #515255; font-size: 12px; margin-top: 14px;">Pay your way, or split it with Klarna.</p>
+<div class="pay-row"><span class="pay-chip">VISA</span><span class="pay-chip">Mastercard</span><span class="pay-chip">PayPal</span><span class="pay-chip">Apple Pay</span><span class="pay-chip">Klarna</span></div>
+<div class="trust-row" style="font-size: 8px"><span>Secure payment processing&nbsp; &nbsp; &nbsp; &nbsp; Your data is private and safe</span></div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="faq">
+<div class="wrap two-col" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px;">
+<div>
+<span class="eyebrow-pill">QOVES CARE TEAM</span>
+<h2 class="h-section" style="margin-top: 16px;">Your support <span class="hl">system</span></h2>
+<p class="sub" style="margin-top: 10px;">We provide ongoing support through every step of your plan. Our care team is here to help.</p>
+<div class="chat-card">
+<p class="chat-label">QOVES chat</p>
+<div class="bubble user">I see "mild asymmetry" in my results. Is that normal?</div>
+<div class="bubble team">Yes, facial asymmetry is very common. Most people have slight differences between their left and right sides. Your results help us suggest improvements if needed.</div>
+</div>
+</div>
+<div>
+<h2 class="h-section" style="padding-top: 15px">Frequently asked <span class="hl">questions</span></h2>
+<p class="sub" style="margin-top: 10px;">If you have any further questions, contact us at hello@qoves.com.</p>
+<div style="margin-top: 16px;">
+<details class="faq-item first" open="">
+<summary style="display: flex; height: 25px"><span>Can I really get results without surgery?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes, that is exactly what the protocol is built for. Every recommendation in it is non surgical. The individual changes are small by design, and the plan sequences them so they compound. What you get out of it depends on what you put in, and results vary.</p>
+</details>
+<details class="faq-item">
+<summary><span>Will I still look like me?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Your protocol is built around your natural features, so the focus is on bringing out what is already there. Every recommendation is non-surgical and the changes are small by design, so on the day you will look like yourself at your best. Anything involving clinical services, procedures or medication should be discussed with a licensed provider.</p>
+</details>
+<details class="faq-item">
+<summary><span>How long will it take for me to receive my results?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">It can take up to 28 days from the moment you upload your photos for our team to prepare your analysis and protocol, so leave enough time before the wedding.</p>
+</details>
+<details class="faq-item">
+<summary><span>How does it work?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Tell us about yourself: demographics, lifestyle, and goals. Upload your photos: eight specific angles of your face and head. Within 28 days, you’ll receive your full protocol and visuals of your best-looking self.</p>
+</details>
+<details class="faq-item">
+<summary><span>Is this realistic?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Any changes we show are realistic and achievable without surgery. Results vary.</p>
+</details>
+<details class="faq-item">
+<summary><span>Is this a one time report or a continuous service?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">This is an ongoing service that you can cancel at any time. After your initial plan, you’ll receive updated protocols, analyses, and visualizations every year. You’ll also have unlimited access to message our care team whenever you need.</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="final-grid">
+<div class="text-side" style="width: 353px; height: 185px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; gap: 16px">
+<h2 class="h-section final-line">Time to look and feel your best.</h2>
+<p>The morning of the wedding should feel exciting, not stressful. With your plan behind you, you can relax into the build up, laugh with the people around you and stop thinking about your face altogether. The photos will take care of themselves.</p>
+<a class="btn btn-on-ink" href="#start" style="margin-top: 8px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+</div>
+
+</div>
+</div>
+</section>
+
+</div></main>
+
+<footer>
+<div class="wrap footer-row">
+<div><p>QOVES INC.</p><p style="margin-top: 4px;">hello@qoves.com</p></div>
+<p class="disclaimer">Disclaimer: QOVES does not provide licensed clinical or medical services.<span class="d-more"> Any recommendation involving clinical services, procedures or medication should be discussed with a licensed provider.</span> Results vary.<span class="d-more"> Some images on this page are placeholders pending real photography.</span></p>
+</div>
+</footer>
+<div class="m-cta" id="m-cta"><a class="btn btn-primary" href="#start">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+
+</div>
+</div>
+<script>
+(function(){
+  var bx=document.querySelector('.bx');
+  if(bx){var Z={hair:[50,8,2.0],brows:[50,39,3.0],skin:[30,56,2.6],eyes:[50,44,3.2],lips:[50,61,3.2]},rec=null,pos=50;
+    var zw=bx.querySelector('.bx-zoom'),bf=bx.querySelector('.bx-before'),ln=bx.querySelector('.bx-line'),kn=bx.querySelector('.bx-knob'),rg=bx.querySelector('.bx-range');
+    var draw=function(){var z=rec?Z[rec]:[50,50,1];zw.style.transformOrigin=z[0]+'% '+z[1]+'%';zw.style.transform='scale('+z[2]+')';
+      var wx=Math.max(0,Math.min(100,z[0]+(pos-z[0])/z[2]));bf.style.clipPath='inset(0 '+(100-wx)+'% 0 0)';ln.style.left=kn.style.left=pos+'%';};
+    rg.addEventListener('input',function(){pos=Number(rg.value);draw();});
+    document.querySelectorAll('[data-rec]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.rec;rec=rec===k?null:k;
+      document.querySelectorAll('[data-rec]').forEach(function(o){var a=o.dataset.rec===rec;o.classList.toggle('on',a);o.setAttribute('aria-pressed',a?'true':'false');});draw();});});}
+  var di=document.getElementById('wedding-date');
+  if(di){var iso=function(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
+    var today=new Date();today.setHours(0,0,0,0);var def=new Date(today);def.setDate(def.getDate()+182);
+    di.min=iso(today);di.value=iso(def);
+    var upd=function(){var p=di.value.split('-').map(Number);var days=Math.round((new Date(p[0],p[1]-1,p[2])-today)/86400000),n,u,m;
+      if(!di.value||days<=0){n=0;u='days to go';m='Pick a date in the future to see your countdown.';}
+      else if(days<14){n=days;u=days===1?'day to go':'days to go';m='Your plan will focus on what makes the biggest difference in the time you have.';}
+      else{n=Math.floor(days/7);u='weeks to go';m=n>=12?"That's plenty of time to follow your plan from start to finish.":'Enough time for the key steps. Start soon to make the most of it.';}
+      document.getElementById('cd-num').textContent=n;document.getElementById('cd-unit').textContent=u;var cm=document.getElementById('cd-msg');if(cm)cm.textContent=m;};
+    di.addEventListener('change',upd);di.addEventListener('input',upd);upd();}
+  var cta=document.getElementById('m-cta'),hero=document.querySelector('.hero');
+  if(cta&&hero&&'IntersectionObserver' in window){new IntersectionObserver(function(es){cta.classList.toggle('show',!es[0].isIntersecting);},{threshold:0}).observe(hero);}
+  // advisors autoplay
+  var t=document.getElementById('adv-track');
+  if(t&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var paused=false,rt;
+    var pause=function(){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false;},5000);};
+    t.addEventListener('touchstart',pause,{passive:true});t.addEventListener('pointerdown',pause);
+    setInterval(function(){if(paused)return;var c=t.firstElementChild,st=(c?c.getBoundingClientRect().width:200)+16;
+      if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)t.scrollTo({left:0,behavior:'smooth'});else t.scrollBy({left:st,behavior:'smooth'});},2800);}
+})();
+</script>
+</body>
+</html>
