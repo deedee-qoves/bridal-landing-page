@@ -18,5 +18,7 @@ Live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.
 
 ## Still to fill in before launch
 
-- Review text and names (3 cards)
+- Replace the 3 "Sample review" cards with real customer reviews
 - Login and button links (currently point to sections on the page)
+- Photo count: countdown and FAQ say eight photos, How it works says 6
+- Nav "Your plan" link points to a section that is hidden on this version
