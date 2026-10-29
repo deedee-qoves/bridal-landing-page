@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>if(matchMedia('(max-width: 767px)').matches)location.replace('phone/'+location.search+location.hash);</script>
+<script>if(!matchMedia('(max-width: 767px)').matches)location.replace('../'+location.search+location.hash);</script>
 <title>Wedding Day Protocol | QOVES</title>
 <meta name="description" content="A personalized beauty plan built around your features, so you look and feel your best on your wedding day.">
-<link rel="preload" href="assets/fonts/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="assets/img/hero-couple.jpg" as="image">
+<link rel="canonical" href="../">
+<link rel="preload" href="../assets/fonts/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
 <style>
-@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
-@font-face{font-family:"PP Neue Montreal";src:url("assets/fonts/PPNeueMontreal-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
-@font-face{font-family:"Zagma";src:url("assets/fonts/Zagma-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("../assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"PP Neue Montreal";src:url("../assets/fonts/PPNeueMontreal-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:"Zagma";src:url("../assets/fonts/Zagma-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap;}
 body{margin:0}
 a{color:inherit;text-decoration:none}a:hover{color:inherit}
 .qv{--ink:#233137;--ink-900:#2D3B41;--mid-500:#798F97;--mid-400:#9AAEB5;--mid-300:#AEC2C9;--mid-200:#CDDBE1;--tint:#F2F5F5;--gray-700:#515255;--gray-600:#6B767A;--white:#FFFFFF;--white-50:#F2F2F2;--white-100:#E8E8E8;--font-body:"PP Neue Montreal",-apple-system,"Helvetica Neue",Arial,sans-serif;--font-label:"Zagma",ui-monospace,monospace;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;line-height:1.43;-webkit-font-smoothing:antialiased;}
@@ -147,11 +147,11 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 @media (max-width:860px){.oc{grid-template-columns:minmax(0,1fr);gap:16px}.oc-tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}.oc-tabs::-webkit-scrollbar{display:none}.oc-tab{flex:none;padding:10px 16px;font-size:15px;gap:10px}.oc-tabs .btn{display:none}.oc-panel{padding:20px;min-height:0}.oc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:600px){.oc-chips{flex-wrap:wrap !important;overflow:visible !important;margin-inline:0 !important;padding-inline:0 !important}.oc-chips .chip{font-size:14px;padding:7px 13px}.oc-panel h3{font-size:19px}}
 .qv section.fp-sec{padding:0;border-top:1px solid var(--white-50);border-bottom:1px solid var(--white-50)}
-.fp{display:grid;grid-template-columns:max(46%,calc((100% - 1360px) / 2 + 700px)) minmax(0,1fr);min-height:760px}
+.fp{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);min-height:760px}
 .fp-left{display:flex;flex-direction:column;border-right:1px solid var(--white-50)}
 .fp-block{padding:48px 56px 48px max(32px,calc((100vw - 1360px)/2 + 32px));border-top:1px solid var(--white-50)}
 .fp-block:first-child{border-top:none;flex:1;padding-top:48px}
-.fp-title{font-size:clamp(36px,3.1vw,50px) !important;line-height:1.08;letter-spacing:-.03em;margin-top:24px !important}
+.fp-title{font-size:clamp(36px,3.1vw,56px) !important;line-height:1.08;letter-spacing:-.03em;margin-top:24px !important}
 .fp-title .hl{display:block}
 .fp-block h3{font-size:30px;letter-spacing:-.02em}
 .fp-p{font-size:17px;line-height:1.5;color:var(--gray-700);margin-top:22px !important;max-width:560px}
@@ -197,11 +197,6 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .testi-card{background:var(--tint);padding:24px}
 .testi-card .q{font-size:14px;margin-top:14px;line-height:1.5}
 .testi-card .who{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:12px;color:var(--gray-600)}
-.grid3.rv-grid{gap:16px;background:transparent;border:none;border-radius:0;overflow:visible}
-.rv-grid .testi-card{background:#fff;border:1px solid var(--white-100);border-radius:14px;padding:24px}
-.rv-grid .testi-card .q{font-size:16px;color:var(--ink)}
-.rv-tag{font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
-@media (max-width:600px){.grid3.rv-grid{flex-direction:column;overflow:visible;margin-inline:0;padding-inline:0;gap:12px}.rv-grid .testi-card{flex:none !important}}
 .stars{display:flex;gap:2px}
 .star{width:14px;height:14px;background:#1DB45A;display:inline-flex;align-items:center;justify-content:center;border-radius:2px}
 .star svg{width:9px;height:9px;fill:#fff}
@@ -236,8 +231,8 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .check-list li{display:flex;gap:10px;padding-block:14px;border-top:1px solid var(--white-50);font-size:14px}
 .check-list li:first-child{border-top:none}
 .price-amount{font-size:40px;margin-top:16px}
-.pay-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.pay-chip{border:1px solid var(--white-100);border-radius:6px;padding:6px 12px;font-size:12px;font-weight:500}
+.pay-row{display:flex;gap:5px;margin-top:12px;flex-wrap:nowrap}
+.pay-chip{border:1px solid var(--white-100);border-radius:5px;padding:3px 7px;font-size:10px;font-weight:500;white-space:nowrap}
 .trust-row{display:flex;gap:16px;margin-top:16px;font-family:var(--font-label);font-size:10px;color:var(--gray-600);flex-wrap:wrap}
 .band-tint{background:var(--tint)}
 .pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px;align-items:stretch}
@@ -402,22 +397,22 @@ footer{padding-bottom:96px !important}
 @media (max-width:600px) and (prefers-reduced-motion:reduce){.m-cta{transition:none}}
 /* phone: headlines only */
 @media (max-width:600px){
-.qv .section-sub,.qv section .sub:not(.split .sub){display:none !important}
-.split .text-side .sub{display:block !important}
+.qv .section-sub,.qv section .sub:not(.lu-keep){display:none !important}
+.split .text-side .sub{display:block !important;opacity:1 !important;transform:none !important;visibility:visible !important}
 .hiw-card > p:not(.num),.stat-card > p:not(.big-stat),.cd-text{display:none}
 .benefit-split > .copy{display:none !important}
 .adv-body p{display:none}
 .faq-text{display:none}
 .band-ink h3{margin-top:14px !important}
 .final-grid .text-side p{display:none}
+.qv .final-line{font-size:clamp(16px,5vw,20px) !important;white-space:nowrap;line-height:1.2}
 .disclaimer .d-more{display:none}
 .hiw-card h3{margin-top:4px}
 }
-.qv .big-days{margin-top:20px}
-.qv .big-days + p{margin-top:14px !important}
+/* recommendations */
 .ba-band{background:var(--tint);padding:88px 0}
 .ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
-.ba-band .h-section{margin-top:0;max-width:460px}
+.ba-band .h-section{margin-top:16px;max-width:460px}
 .rec-list{list-style:none;margin:28px 0 0;padding:0;max-width:480px;display:flex;flex-direction:column;gap:6px}
 .rec{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 16px;border-radius:12px;cursor:pointer;border:1px solid transparent;transition:background .25s,border-color .25s}
 .rec:hover{background:rgba(255,255,255,.6)}
@@ -447,35 +442,44 @@ footer{padding-bottom:96px !important}
 .rec p{font-size:14px}
 .rec-hint{margin-top:14px !important}
 }
-
+/* couple photo, phone */
 
 /* Couple photo hero, no slider; scrim from the bottom keeps faces clear */
 .v-p .hero{min-height:960px;background:#3A2E26}
-.v-p .hero-media{background:url("assets/img/hero-couple.jpg") center 40%/cover no-repeat}
+.v-p .hero-media{background:url("../assets/img/hero-couple.jpg") center 40%/cover no-repeat}
 .v-p .hero-media img{opacity:0}
 .v-p .hero-scrim{background:linear-gradient(to top,rgba(35,49,55,.92) 0%,rgba(35,49,55,.75) 25%,rgba(35,49,55,.35) 42%,rgba(35,49,55,0) 52%)}
 .v-p .hero-ba{display:none}
 .v-p .ba-slot{display:block}
 .v-p .analysis-sec{display:none}
 .v-p #plan{display:none}
-.v-p section.band-ink{display:none}
-/* alternate section backgrounds: white then tint */
-.v-p main > section:not(.hero){background:#fff}
-.v-p .ba-band,.v-p main > section:has(.compare),.v-p main > section.fp-sec,.v-p main > section:has(.testi-card),.v-p main > section#start,.v-p main > section:has(.final-grid){background:var(--tint)}
-.v-p main > section:has(.compare) .card:not(.card-new){background:#fff !important;border:1px solid var(--white-100)}
-.v-p .quote-strip{background:#fff;border:1px solid var(--white-100)}
-.v-p .fp-left{background:#fff}
-.v-p .testi-card{background:#fff;border:1px solid var(--white-100)}
-.v-p #start .grid2 > div:last-child{background:#fff}
-@media (min-width:601px){.v-p .trust > div{text-align:center;padding:24px !important}.v-p .trust .stars{justify-content:center}}
-@media (min-width:861px){.v-p .navbar{grid-template-columns:1fr auto 1fr}.v-p .header-actions{justify-self:end}.v-p nav.main{position:relative;left:-7px}}
 @media (max-width:860px){.v-p .hero{min-height:800px;background:#233137}.v-p .hero-media{bottom:auto;height:620px;background-position:28% top;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}.v-p .hero-scrim{display:none}.v-p .hero-inner{height:auto !important;padding-bottom:40px}}
 @media (max-width:600px){.v-p .hero{min-height:640px}.v-p .hero-media{height:450px}.v-p .hero-inner{padding-bottom:28px}}
+/* phone hero: full-bleed photo, text over the bottom */
+.v-p .hero{min-height:760px !important;background:#233137}
+.v-p .hero-media{inset:0 !important;height:auto !important;-webkit-mask-image:none !important;mask-image:none !important;background-image:linear-gradient(to bottom,rgba(35,49,55,0) 50%,#233137 70%),url("../assets/img/hero-couple.jpg") !important;background-position:0 0,16% top !important;background-size:100% 100%,auto 70% !important;background-repeat:no-repeat !important}
+.v-p .hero-scrim{display:block !important;top:auto !important;bottom:0;height:62% !important;background:linear-gradient(to top,#233137 0%,#233137 32%,rgba(35,49,55,.55) 62%,rgba(35,49,55,0) 100%) !important}
+.v-p .hero-inner{height:auto !important;padding:0 20px 28px !important;gap:14px}
+.v-p .h-hero{font-size:34px;line-height:1.1;letter-spacing:-.025em}
+.v-p .hero-inner .lead{font-size:15px;line-height:1.45;max-width:320px;color:rgba(255,255,255,.82)}
+.v-p .hero-inner .row{margin-top:6px !important}
+/* phone board: nothing hidden by scroll fade-ins */
+.qv.reveal-on [data-reveal]{opacity:1 !important;transform:none !important}
+.adv-nav{display:none !important}
+/* phone reviews: separate padded cards */
+.grid3.rv-grid{display:flex !important;flex-direction:column;gap:12px;overflow:visible !important;margin:24px 0 0 !important;padding:0 !important;background:transparent !important;border:none !important;border-radius:0 !important}
+.rv-grid .testi-card{flex:none !important;width:auto;background:#fff;border:1px solid var(--white-100);border-radius:14px;padding:20px !important;box-shadow:0 4px 16px rgba(117,128,132,.06)}
+.rv-grid .testi-card .q{font-size:15px;margin-top:12px;color:var(--ink)}
+.rv-grid .testi-card .who{margin-top:14px}
+.rv-grid .testi-card .who span:first-child{font-weight:500;color:var(--ink)}
+.rv-tag{font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-600)}
+.qv .big-days{margin-top:20px}
+.qv .big-days + p{margin-top:14px !important}
 html{scroll-behavior:smooth}
 </style>
 </head>
-<body>
-<div class="v-p"><div class="qv">
+<body><div class="v-p">
+<div class="qv">
 
 <div class="announce">
 <span>Get your protocol in as fast as 48 hours.</span>
@@ -486,7 +490,7 @@ html{scroll-behavior:smooth}
 <div class="navbar">
 <a class="brand" href="#top" aria-label="QOVES home">
 <svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#fff"></path></svg>
-<span style="font-size: 14px; line-height: 1.43; font-weight: 400; letter-spacing: 0px; font-style: normal; font-family: &quot;PP Neue Montreal&quot;, &quot;Inter&quot;, system-ui, -apple-system, &quot;Segoe UI&quot;, Arial, sans-serif">QOVES</span>
+<span>QOVES</span>
 </a>
 <nav class="main">
 <a href="#plan">Your plan</a>
@@ -503,7 +507,7 @@ html{scroll-behavior:smooth}
 <main>
 
 <section class="hero">
-<div class="hero-media"><img src="assets/img/hero-gradient.webp" alt=""></div>
+<div class="hero-media"><img src="../assets/img/hero-gradient.webp" alt=""></div>
 <div class="hero-scrim" style="height: 1000px"></div>
 <div class="hero-inner" style="height: 400px">
 
@@ -514,7 +518,6 @@ html{scroll-behavior:smooth}
 <a class="btn btn-on-ink" href="#how">See how it works</a>
 </div>
 </div>
-
 </section>
 
 
@@ -529,9 +532,11 @@ html{scroll-behavior:smooth}
 <div><p class="t-title">Clear, actionable plan</p><p class="t-sub">Tailored to your features</p></div>
 </div>
 </section>
-<div class="ba-slot"><div class="ba-band">
+<div class="ba-slot">
+<div class="ba-band">
 <div class="ba-band-grid">
 <div>
+
 <h2 class="h-section">What changed <span class="hl">for her big day.</span></h2>
 <ul class="rec-list">
 <li><button type="button" class="rec" aria-pressed="false" data-rec="hair"><span class="pill pill-tint">Hair</span><p>A soft, low updo with a centre part and loose face-framing pieces.</p></button></li>
@@ -540,11 +545,12 @@ html{scroll-behavior:smooth}
 <li><button type="button" class="rec" aria-pressed="false" data-rec="eyes"><span class="pill pill-tint">Eyes</span><p>Defined lashes and a soft line along the upper lash line.</p></button></li>
 <li><button type="button" class="rec" aria-pressed="false" data-rec="lips"><span class="pill pill-tint">Lips</span><p>A rosy tint a shade deeper than her natural colour.</p></button></li>
 </ul>
+
 </div>
 <div><div class="bx">
 <div class="bx-zoom" style="transform-origin: 50% 50%; transform: scale(1);">
-<img src="assets/img/projection.jpg" alt="Projection: the same woman on her wedding day, with a soft low updo, glowing skin and a satin top" draggable="false">
-<div class="bx-before" style="clip-path: inset(0 50% 0 0);"><img src="assets/img/before.jpg" alt="Before: woman with loose hair and no makeup" draggable="false"></div>
+<img src="../assets/img/projection.jpg" alt="Projection: the same woman on her wedding day, with a soft low updo, glowing skin and a satin top" draggable="false">
+<div class="bx-before" style="clip-path: inset(0 50% 0 0);"><img src="../assets/img/before.jpg" alt="Before: woman with loose hair and no makeup" draggable="false"></div>
 </div>
 <span class="bx-label" style="left: 28px;">Before</span>
 <span class="bx-label" style="right: 28px;">Projection</span>
@@ -553,19 +559,20 @@ html{scroll-behavior:smooth}
 <input class="bx-range" type="range" min="0" max="100" step="0.5" value="50" aria-label="Drag to compare before and projection">
 </div></div>
 </div>
-</div></div>
+</div>
 
 <section>
 <div class="wrap">
 <div class="split">
 <div class="text-side">
-<h2 class="h-section" data-reveal="" style="transition-delay: 0.1s;">The countdown should be <span class="hl">the fun part.</span></h2>
-<p class="sub" data-reveal="" style="transition-delay: 0.2s;">Between dress fittings and bridal prep, QOVES gives you a beauty routine to enjoy, so every step brings you closer to looking your best.</p>
-<a class="btn btn-primary btn-sm" href="#how" data-reveal="" style="margin-top: 8px; transition-delay: 0.3s;">Show me how <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+
+<h2 class="h-section">The countdown should be <span class="hl">the fun part.</span></h2>
+<p class="sub lu-keep" style="margin-top: 12px;">Between dress fittings and bridal prep, QOVES gives you a beauty routine to enjoy, so every step brings you closer to looking your best.</p>
+<a class="btn btn-primary btn-sm" href="#how" style="margin-top: 8px;">Show me how <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
-<div class="img-side" data-reveal="" style="transition-delay: 0.15s;">
+<div class="img-side">
 <div class="photo-slot" style="border: none; overflow: hidden;">
-<img src="assets/img/makeup-trial.jpg" alt="A bride-to-be in a mirror with vanity lights as a stylist works on her hair during a makeup trial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%;">
+<img src="../assets/img/makeup-trial.jpg" alt="A bride-to-be in a mirror with vanity lights as a stylist works on her hair during a makeup trial" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 38%;">
 
 </div>
 </div>
@@ -620,50 +627,23 @@ html{scroll-behavior:smooth}
 <p class="section-sub">Get your personalized facial analysis from the comfort of your home in three simple steps.</p>
 </div>
 <div class="grid3 hiw-grid">
-<div class="hiw-card"><img src="assets/img/step1.jpg" alt="Photo upload screen with the poses required"><p class="num">1</p><h3>Upload Your Photos</h3><p>Upload 6 clear photos of your face securely and privately through our online portal.</p></div>
-<div class="hiw-card"><img src="assets/img/step2.jpg" alt="List of facial assessments being measured"><p class="num">2</p><h3>Facial Assessments</h3><p>We measure 160+ facial markers, including skin quality, symmetry, eye shape, brow density, and more.</p></div>
-<div class="hiw-card"><img src="assets/img/step3.jpg" alt="Example personalized report"><p class="num">3</p><h3>Personalized Report</h3><p>You'll receive a plan highlighting your strengths, areas for improvement, and best ways to improve your appearance.</p></div>
+<div class="hiw-card"><img src="../assets/img/step1.jpg" alt="Photo upload screen with the poses required"><p class="num">1</p><h3>Upload Your Photos</h3><p>Upload 6 clear photos of your face securely and privately through our online portal.</p></div>
+<div class="hiw-card"><img src="../assets/img/step2.jpg" alt="List of facial assessments being measured"><p class="num">2</p><h3>Facial Assessments</h3><p>We measure 160+ facial markers, including skin quality, symmetry, eye shape, brow density, and more.</p></div>
+<div class="hiw-card"><img src="../assets/img/step3.jpg" alt="Example personalized report"><p class="num">3</p><h3>Personalized Report</h3><p>You'll receive a plan highlighting your strengths, areas for improvement, and best ways to improve your appearance.</p></div>
 </div>
 </div>
 </section>
 
 
 
-<section class="band-tint analysis-sec">
-<div class="wrap">
-<span class="eyebrow-pill">Personalized analysis</span>
-<h2 class="h-section" style="margin-top: 16px; max-width: 680px;">Your complete <span class="hl">facial analysis</span></h2>
-<p class="section-sub">Every face is unique. We assess more than 200 beauty markers to give you a precise understanding of your aesthetics.</p>
-<div class="grid3">
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Eyebrows</span>
-<div class="bar-track"><div class="bar-fill" style="width: 68%;"></div></div>
-<div class="bar-labels"><span>Subtle</span><span>Bold</span></div>
-<p style="margin-top: 12px; font-size: 13px; color: #515255;">Brows fall in the top 20% for natural fullness.</p>
-</div>
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Lip smoothness</span>
-<p class="big-stat">56%</p>
-<div class="bar-track"><div class="bar-fill" style="width: 56%;"></div></div>
-<div class="bar-labels"><span>Rough, 0%</span><span>Smooth, 100%</span></div>
-</div>
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Facial thirds</span>
-<div class="thirds-row first"><span>Upper third [a]</span><b>0.31</b></div>
-<div class="thirds-row"><span>Middle third [b]</span><b>0.38</b></div>
-<div class="thirds-row"><span>Lower third [c]</span><b>0.31</b></div>
-</div>
-</div>
-<p style="margin-top: 16px; font-size: 12px; color: #6B767A;">Example results. Yours are based on your own photos.</p>
-</div>
-</section>
+
 
 <section class="fp-sec">
 <div class="fp">
 <div class="fp-left">
 <div class="fp-block">
 <span class="eyebrow-pill">Your plan</span>
-<h2 class="fp-title">Simply follow your plan.<span class="hl">Look your most beautiful.</span></h2>
+<h2 class="fp-title">Simply follow your plan.<br><span class="hl">Experience the bridal glow.</span></h2>
 <p class="fp-p">A step-by-step plan for the months before your wedding, so you know exactly what to do and when. No surgery needed.</p>
 </div>
 <div class="fp-block">
@@ -672,7 +652,7 @@ html{scroll-behavior:smooth}
 </div>
 <div class="fp-block">
 <ul class="fp-list">
-<li>What to focus on for each feature</li>
+<li>What to focus on for each feature, from brows to skin</li>
 <li>Visuals of how each change could look on you</li>
 <li>Options for every step, to fit your budget and schedule</li>
 <li>Message our care team any time before the wedding</li>
@@ -682,15 +662,15 @@ html{scroll-behavior:smooth}
 <div class="fp-right">
 <div class="fp-card">
 <div class="fp-ba">
-<div><img src="assets/img/before.jpg" alt="Before"><span>Before</span></div>
-<div><img src="assets/img/projection.jpg" alt="Projection for her wedding day"><span>Projection</span></div>
+<div><img src="../assets/img/before.jpg" alt="Before"><span>Before</span></div>
+<div><img src="../assets/img/projection.jpg" alt="Projection for her wedding day"><span>Projection</span></div>
 </div>
 <div class="fp-steps">
 <div class="fp-step"><span class="fp-n">1</span><div class="fp-row"><p class="fp-h dim">Hair health</p><span class="fp-tag">4-6 months out</span></div></div>
 <div class="fp-step"><span class="fp-n">2</span><div class="fp-row open">
-<div class="fp-top"><div><p class="fp-h">Skin prep</p><p class="fp-d">Brow shape and lash care that frame your eyes in every photo.</p></div><div class="fp-when"><b>2-3</b><span>Months out</span></div></div>
+<div class="fp-top"><div><p class="fp-h">Skin prep</p><p class="fp-d">Brow shape and lash care that frame your eyes in every photo.</p></div><div class="fp-when"><b><span style="display: inline !important; font-size: 18px; text-transform: none; background-color: rgb(255, 255, 255)"><font color="#233137" face="PP Neue Montreal, -apple-system, Helvetica Neue, Arial, sans-serif">2-3<br></font></span><span style="background-color: rgb(242, 242, 242); color: rgb(107, 118, 122); font-family: Zagma, ui-monospace, monospace; display: inline !important">Months out</span></b></div></div>
 <div class="fp-acts"><p class="fp-lab">Action steps</p>
-<div class="fp-act"><span>RF microneedling</span><span class="fp-tag">Non-surgical</span></div>
+<div class="fp-act"><span>RF microneedling,<br></span><span class="fp-tag">Non-surgical</span></div>
 <div class="fp-act"><span>Moisturizer, with ceramides</span><span class="fp-tag">Non-surgical</span></div>
 </div></div></div>
 </div>
@@ -699,48 +679,20 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
-<section class="band-tint" id="plan">
-<div class="wrap">
-<span class="eyebrow-pill">Your plan</span>
-<h2 class="h-section" style="font-size: 30px; margin-top: 16px; max-width: 680px;">Make the most of <span class="hl">your unique features.</span></h2>
-<div class="oc">
-<div class="oc-tabs">
-<button type="button" class="oc-tab on" data-oc="F">Your features<span>01</span></button>
-<button type="button" class="oc-tab" data-oc="S">Your style<span>02</span></button>
-<button type="button" class="oc-tab" data-oc="L">Your lifestyle<span>03</span></button>
-<button type="button" class="oc-tab" data-oc="A">About you<span>04</span></button>
-<a class="btn btn-primary" href="#start" style="margin-top: 20px;">Get my personalized plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-</div>
-<div class="oc-panel">
-<div data-ocp="F" style="display: block;"><h3>12 facial areas</h3><p class="oc-hint">Every area is measured, not guessed.</p><div class="oc-grid"><div><img src="assets/img/areas/general.jpg" alt="">General Analysis</div><div><img src="assets/img/areas/eyebrows.jpg" alt="">Eyebrows</div><div><img src="assets/img/areas/eyes.jpg" alt="">Eyes</div><div><img src="assets/img/areas/nose.jpg" alt="">Nose</div><div><img src="assets/img/areas/lips.jpg" alt="">Lips</div><div><img src="assets/img/areas/cheeks.jpg" alt="">Cheeks</div><div><img src="assets/img/areas/jaw.jpg" alt="">Jaw</div><div><img src="assets/img/areas/chin.jpg" alt="">Chin</div><div><img src="assets/img/areas/smile.jpg" alt="">Smile</div><div><img src="assets/img/areas/neck.jpg" alt="">Neck</div><div><img src="assets/img/areas/ear.jpg" alt="">Ear</div><div><img src="assets/img/areas/skin.jpg" alt="">Skin</div></div></div>
-<div data-ocp="S" style="display: none;"><h3>What look do you love?</h3><p class="oc-hint">Pick any.</p><div class="chips oc-chips"><button type="button" class="chip" aria-pressed="false" data-pf="pref">Natural look</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Soft glam</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Glass skin</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Bold lip</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Defined brows</button></div></div>
-<div data-ocp="L" style="display: none;"><h3>How do you live?</h3><p class="oc-hint">Pick any.</p><div class="chips oc-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="life">6-7h sleep</button><button type="button" class="chip" aria-pressed="false" data-pf="life">8h+ sleep</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">High stress</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">Humid climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Dry climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Lots of travel</button></div></div>
-<div data-ocp="A" style="display: none;"><h3>About you</h3><p class="oc-hint">Skin and features change with age, background and climate.</p>
-<div class="oc-sub"><p class="oc-lab">Age</p><p class="oc-age"><span id="pf-age">31</span></p><div class="age-track"><div class="age-fill" style="width: 27.7%;"></div><div class="age-dot" style="left: 27.7%;"></div><input class="age-range" type="range" min="18" max="65" step="1" value="31" id="pf-range" aria-label="Age"></div></div>
-<div class="oc-sub"><p class="oc-lab">Background</p><div class="chips oc-chips"><button type="button" class="chip" aria-pressed="false" data-pf="eth">East Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">South Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Black</button><button type="button" class="chip on" aria-pressed="true" data-pf="eth">Mixed European</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Latina</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Middle Eastern</button></div></div>
-<div class="oc-sub"><p class="oc-lab">Region</p><div class="chips oc-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="reg">United States</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">United Kingdom</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Europe</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Asia</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Australia</button></div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
+
 
 <section class="band-tint">
 <div class="wrap">
 <div class="grid2" style="margin-top: 0;">
-<div>
-<span class="eyebrow-pill">The countdown</span>
+<div style="height: 160px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
+<span class="eyebrow-pill">THE COUNTDOWN</span>
 <h2 class="h-section" style="margin-top: 16px;">Plan backward <span class="hl">from your big day.</span></h2>
-<div>
-<div class="cd-item first"><span class="cd-num">1</span><div><p class="cd-title">Start today</p><p class="cd-text">Tell us about yourself and upload eight photos from home.</p></div></div>
-<div class="cd-item"><span class="cd-num">2</span><div><p class="cd-title">Your plan arrives</p><p class="cd-text">In as fast as 48 hours, reviewed by our team before it reaches you.</p></div></div>
-<div class="cd-item"><span class="cd-num">3</span><div><p class="cd-title">Follow it to the day</p><p class="cd-text">Skin prep, makeup direction and hair guidance, in the right order.</p></div></div>
+
 </div>
-</div>
-<div>
+<div style="padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px">
 <label class="eyebrow-pill" for="wedding-date">When's your big day?</label>
 <input class="date-input" type="date" id="wedding-date">
-<p class="big-days"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
+<p class="big-days" style="margin-top: 0px; height: 110px; margin-bottom: 20px"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
 <p style="color: #515255; margin-top: 8px; font-size: 13px;" id="cd-msg"></p>
 <a class="btn btn-primary" href="#start" style="margin-top: 20px; width: 100%;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
@@ -753,45 +705,33 @@ html{scroll-behavior:smooth}
 <h2 class="h-section">Voices that <span class="hl">matter</span></h2>
 <p class="section-sub">What other brides said about using QOVES to prepare for their day.</p>
 <div class="grid3 rv-grid">
-<div class="testi-card">
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
-<p class="q">"I finally knew what to ask my makeup artist. My trial was the easiest part of the whole planning."</p>
-<div class="who"><span>Sophie M.</span><span class="rv-tag"><br></span></div>
-</div>
+
 <div class="testi-card">
 <div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
 <p class="q">"Started six months out and my skin has never looked this good. I was glowing on the day."</p>
-<div class="who"><span>Hannah L.</span><span class="rv-tag"><br></span></div>
+<div class="who"><span><span style="color: rgb(35, 49, 55)">Hannah L.<br></span></span><span class="rv-tag"><br></span></div>
 </div>
-<div class="testi-card">
-<div class="stars" role="img" aria-label="5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7-5.4-4.7 7.1-.6z"></path></svg></span></div>
-<p class="q">"The undereye advice alone was worth it. I loved every single photo from the day."</p>
-<div class="who"><span>Priya K.</span><span class="rv-tag"><br></span></div>
-</div>
+
 </div>
 </div>
 </section>
 
-<section class="band-tint" style="padding-top: 80px">
+<section class="band-tint" style="padding-top: 60px; height: 450px">
 <div class="wrap">
-<h2 class="h-section" style="margin-top: 16px; max-width: none;">Advised by the world's leading authorities on <span class="hl">facial aesthetics</span></h2>
-<div class="adv-head" style="height: 60px">
-<div class="adv-nav">
-<button class="adv-btn" type="button" aria-label="Previous advisors" data-adv="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-<button class="adv-btn" type="button" aria-label="Next advisors" data-adv="1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-</div>
-</div>
+
+<h2 class="h-section" style="margin-top: 2px; max-width: none">Advised by the world's leading authorities on <span class="hl">facial aesthetics</span></h2>
+
 <div class="adv-track" id="adv-track">
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/devgan.jpg" alt="Dr. Lara Devgan"></div><div class="adv-body"><h4>Dr. Lara Devgan</h4><p>Top board-certified female plastic surgeon in New York, founder of Dr. Devgan Scientific Beauty, Vogue &amp; Elle Beauty Board, former RealSelf CMO, Yale Sterling Fellow, NIH Scholar</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/shamoun.jpg" alt="Dr. John Shamoun"></div><div class="adv-body"><h4>Dr. John Shamoun</h4><p>The only U.S. plastic surgeon with six active board certifications</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/khan.jpg" alt="Dr. Neelam Khan"></div><div class="adv-body"><h4>Dr. Neelam Khan</h4><p>Founder of Neely Dermatology &amp; Aesthetics, Clinical Assistant Professor at Georgetown University</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/gould.jpg" alt="Dr. Daniel Gould"></div><div class="adv-body"><h4>Dr. Daniel Gould</h4><p>Editorial Board member of the Aesthetic Surgery Journal, Sherrell Aston Award recipient</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/harb.jpg" alt="Dr. Ayad Harb"></div><div class="adv-body"><h4>Dr. Ayad Harb</h4><p>Founder of SRGN and Aesthetic Intelligence, educator to 4,000+ aesthetic professionals</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/linkov.jpg" alt="Dr. Gary Linkov, M.D."></div><div class="adv-body"><h4>Dr. Gary Linkov, M.D.</h4><p>ISHRS Communications &amp; Public Education Committee Member, founder of Feel Confident, former Adjunct Assistant Professor at NYU</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/keyes.jpg" alt="Dr. Michael Keyes"></div><div class="adv-body"><h4>Dr. Michael Keyes</h4><p>Founder of Celebrity Plastics, Vice-Chair of the ASPS Social Media Subcommittee</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/ching.jpg" alt="Dr. Shim Ching"></div><div class="adv-body"><h4>Dr. Shim Ching</h4><p>Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/zelken.jpg" alt="Dr. Jonathan Zelken"></div><div class="adv-body"><h4>Dr. Jonathan Zelken</h4><p>Johns Hopkins-trained plastic surgeon, CEO and Medical Director of Zelken MD</p></div></div>
-<div class="advisor"><div class="adv-photo"><img loading="lazy" src="assets/img/advisors/zolman.jpg" alt="Dr. Oliver Zolman"></div><div class="adv-body"><h4>Dr. Oliver Zolman</h4><p>Founder of Longevity Level 1, 2, 3 Protocol, King's College London Medical Doctor</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/devgan.jpg" alt="Dr. Lara Devgan"></div><div class="adv-body"><h4>Dr. Lara Devgan</h4><p>Top board-certified female plastic surgeon in New York, founder of Dr. Devgan Scientific Beauty, Vogue &amp; Elle Beauty Board, former RealSelf CMO, Yale Sterling Fellow, NIH Scholar</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/shamoun.jpg" alt="Dr. John Shamoun"></div><div class="adv-body"><h4>Dr. John Shamoun</h4><p>The only U.S. plastic surgeon with six active board certifications</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/khan.jpg" alt="Dr. Neelam Khan"></div><div class="adv-body"><h4>Dr. Neelam Khan</h4><p>Founder of Neely Dermatology &amp; Aesthetics, Clinical Assistant Professor at Georgetown University</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/gould.jpg" alt="Dr. Daniel Gould"></div><div class="adv-body"><h4>Dr. Daniel Gould</h4><p>Editorial Board member of the Aesthetic Surgery Journal, Sherrell Aston Award recipient</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/harb.jpg" alt="Dr. Ayad Harb"></div><div class="adv-body"><h4>Dr. Ayad Harb</h4><p>Founder of SRGN and Aesthetic Intelligence, educator to 4,000+ aesthetic professionals</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/linkov.jpg" alt="Dr. Gary Linkov, M.D."></div><div class="adv-body"><h4>Dr. Gary Linkov, M.D.</h4><p>ISHRS Communications &amp; Public Education Committee Member, founder of Feel Confident, former Adjunct Assistant Professor at NYU</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/keyes.jpg" alt="Dr. Michael Keyes"></div><div class="adv-body"><h4>Dr. Michael Keyes</h4><p>Founder of Celebrity Plastics, Vice-Chair of the ASPS Social Media Subcommittee</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/ching.jpg" alt="Dr. Shim Ching"></div><div class="adv-body"><h4>Dr. Shim Ching</h4><p>Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/zelken.jpg" alt="Dr. Jonathan Zelken"></div><div class="adv-body"><h4>Dr. Jonathan Zelken</h4><p>Johns Hopkins-trained plastic surgeon, CEO and Medical Director of Zelken MD</p></div></div>
+<div class="advisor"><div class="adv-photo"><img loading="lazy" src="../assets/img/advisors/zolman.jpg" alt="Dr. Oliver Zolman"></div><div class="adv-body"><h4>Dr. Oliver Zolman</h4><p>Founder of Longevity Level 1, 2, 3 Protocol, King's College London Medical Doctor</p></div></div>
 </div>
 </div>
 </section>
@@ -810,43 +750,29 @@ html{scroll-behavior:smooth}
 <li><span aria-hidden="true">✓</span><span>A personalized facial analysis and protocol</span></li>
 <li><span aria-hidden="true">✓</span><span>450+ science-backed recommendations</span></li>
 <li><span aria-hidden="true">✓</span><span>Visualizations of potential improvements</span></li>
+
 <li><span aria-hidden="true">✓</span><span>Direct messaging to the QOVES care team</span></li>
 </ul>
 </div>
 <div>
 <svg viewBox="0 0 1080 1147" fill="none" style="height: 20px; width: auto;" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#233137"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#233137"></path></svg>
-<p class="price-amount">$150<span> / year</span></p>
+<p class="price-amount" style="height: 60px; margin-top: 5px">$150<span> / year</span></p>
 <p style="color: #515255; font-size: 13px; margin-top: 6px;">No hidden fees. Cancel anytime.</p>
 <a class="btn btn-primary" href="#start" style="width: 100%; margin-top: 20px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 <p style="color: #515255; font-size: 12px; margin-top: 14px;">Pay your way, or split it with Klarna.</p>
 <div class="pay-row"><span class="pay-chip">VISA</span><span class="pay-chip">Mastercard</span><span class="pay-chip">PayPal</span><span class="pay-chip">Apple Pay</span><span class="pay-chip">Klarna</span></div>
-<div class="trust-row"><span>Secure payment processing</span><span>Your data is private and safe</span></div>
+<div class="trust-row" style="font-size: 8px"><span>Secure payment processing&nbsp; &nbsp; &nbsp; &nbsp; Your data is private and safe</span></div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="band-ink">
-<div class="wrap two-col" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px;">
-<div class="on-dark">
-<span class="eyebrow-pill">Your questions</span>
-<h2 class="h-section" style="margin-top: 16px;">Will analyzing my face make me <span class="hl">insecure?</span></h2>
-</div>
-<div>
-<h3 style="font-size: 16px; font-weight: 500;">You learn what's truly unique about your face.</h3>
-<p class="faq-text">Many features you might worry about are actually positive traits. Our analysis often helps people appreciate aspects of their face they used to dislike.</p>
-<h3 style="margin-top: 24px; font-size: 16px; font-weight: 500;">You get clarity about what can actually be improved.</h3>
-<p class="faq-text">Slight facial asymmetry is perfectly normal. Everyone has it and it should not be corrected. But if uneven skin tone is making you self conscious, that is something we can help improve.</p>
-<h3 style="margin-top: 24px; font-size: 16px; font-weight: 500;">You feel better about how you look.</h3>
-<p class="faq-text">Many members tell us they come away more confident. Once you understand your face and know what suits it, you spend less time doubting it and more time enjoying it.</p>
-</div>
-</div>
-</section>
+
 
 <section id="faq">
 <div class="wrap two-col" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px;">
 <div>
-<span class="eyebrow-pill">QOVES care team</span>
+<span class="eyebrow-pill">QOVES CARE TEAM</span>
 <h2 class="h-section" style="margin-top: 16px;">Your support <span class="hl">system</span></h2>
 <p class="sub" style="margin-top: 10px;">We provide ongoing support through every step of your plan. Our care team is here to help.</p>
 <div class="chat-card">
@@ -856,11 +782,11 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <div>
-<h2 class="h-section">Frequently asked <span class="hl">questions</span></h2>
+<h2 class="h-section" style="padding-top: 15px">Frequently asked <span class="hl">questions</span></h2>
 <p class="sub" style="margin-top: 10px;">If you have any further questions, contact us at hello@qoves.com.</p>
 <div style="margin-top: 16px;">
 <details class="faq-item first" open="">
-<summary><span>Can I really get results without surgery?</span><span class="sign" aria-hidden="true">+</span></summary>
+<summary style="display: flex; height: 25px"><span>Can I really get results without surgery?</span><span class="sign" aria-hidden="true">+</span></summary>
 <p class="faq-a">Yes, that is exactly what the protocol is built for. Every recommendation in it is non surgical. The individual changes are small by design, and the plan sequences them so they compound. What you get out of it depends on what you put in, and results vary.</p>
 </details>
 <details class="faq-item">
@@ -891,19 +817,17 @@ html{scroll-behavior:smooth}
 <section>
 <div class="wrap">
 <div class="final-grid">
-<div class="text-side">
-<h2 class="h-section">Time to look and feel your best.</h2>
+<div class="text-side" style="width: 353px; height: 185px; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; gap: 16px">
+<h2 class="h-section final-line">Time to look and feel your best.</h2>
 <p>The morning of the wedding should feel exciting, not stressful. With your plan behind you, you can relax into the build up, laugh with the people around you and stop thinking about your face altogether. The photos will take care of themselves.</p>
 <a class="btn btn-on-ink" href="#start" style="margin-top: 8px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
-<div class="img-side">
-<svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#fff"></path></svg>
-</div>
+
 </div>
 </div>
 </section>
 
-</main>
+</div></main>
 
 <footer>
 <div class="wrap footer-row">
@@ -913,18 +837,10 @@ html{scroll-behavior:smooth}
 </footer>
 <div class="m-cta" id="m-cta"><a class="btn btn-primary" href="#start">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
 
-</div></div>
+</div>
+</div>
 <script>
 (function(){
-  var root=document.querySelector('.qv');
-  if(root&&'IntersectionObserver' in window){var single='main > section:not(.hero) .eyebrow-pill:not(.stat-card .eyebrow-pill), main > section:not(.hero) .h-section, main > section:not(.hero) .section-sub, .quote-strip, .as-card, .copy, .chat-card, .final-grid';
-    var still=function(el){var sec=el.closest('section');return !!(sec&&sec.querySelector('.testi-card'));};
-    root.querySelectorAll(single).forEach(function(el){if(!still(el)&&!el.closest('[data-reveal]'))el.setAttribute('data-reveal','');});
-    ['.trust','.compare','.grid3','.grid2','.check-list'].forEach(function(sel){root.querySelectorAll(sel).forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){if(still(c)||c.closest('[data-reveal]'))return;c.setAttribute('data-reveal','');c.style.transitionDelay=(Math.min(i,5)*0.12)+'s';});});});
-    root.classList.add('reveal-on');
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-    root.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});}
-  // before/after with zoom
   var bx=document.querySelector('.bx');
   if(bx){var Z={hair:[50,8,2.0],brows:[50,39,3.0],skin:[30,56,2.6],eyes:[50,44,3.2],lips:[50,61,3.2]},rec=null,pos=50;
     var zw=bx.querySelector('.bx-zoom'),bf=bx.querySelector('.bx-before'),ln=bx.querySelector('.bx-line'),kn=bx.querySelector('.bx-knob'),rg=bx.querySelector('.bx-range');
@@ -933,15 +849,6 @@ html{scroll-behavior:smooth}
     rg.addEventListener('input',function(){pos=Number(rg.value);draw();});
     document.querySelectorAll('[data-rec]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.rec;rec=rec===k?null:k;
       document.querySelectorAll('[data-rec]').forEach(function(o){var a=o.dataset.rec===rec;o.classList.toggle('on',a);o.setAttribute('aria-pressed',a?'true':'false');});draw();});});}
-  // profile card
-  var multi={pref:1,life:1};
-  var count=function(){var n=document.querySelectorAll('[data-pf="pref"].on,[data-pf="life"].on').length;var c=document.getElementById('pf-count');if(c)c.textContent=n+' selected';};
-  document.querySelectorAll('[data-pf]').forEach(function(b){b.addEventListener('click',function(){var g=b.dataset.pf;
-    if(multi[g]){b.classList.toggle('on');}else{document.querySelectorAll('[data-pf="'+g+'"]').forEach(function(o){o.classList.toggle('on',o===b);o.setAttribute('aria-pressed',o===b?'true':'false');});}
-    b.setAttribute('aria-pressed',b.classList.contains('on')?'true':'false');count();});});
-  var pr=document.getElementById('pf-range');
-  if(pr){var tr=pr.parentNode;pr.addEventListener('input',function(){var v=Number(pr.value),p=((v-18)/47*100).toFixed(1)+'%';document.getElementById('pf-age').textContent=v;tr.querySelector('.age-fill').style.width=p;tr.querySelector('.age-dot').style.left=p;});}
-  // countdown
   var di=document.getElementById('wedding-date');
   if(di){var iso=function(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
     var today=new Date();today.setHours(0,0,0,0);var def=new Date(today);def.setDate(def.getDate()+182);
@@ -952,16 +859,15 @@ html{scroll-behavior:smooth}
       else{n=Math.floor(days/7);u='weeks to go';m=n>=12?"That's plenty of time to follow your plan from start to finish.":'Enough time for the key steps. Start soon to make the most of it.';}
       document.getElementById('cd-num').textContent=n;document.getElementById('cd-unit').textContent=u;var cm=document.getElementById('cd-msg');if(cm)cm.textContent=m;};
     di.addEventListener('change',upd);di.addEventListener('input',upd);upd();}
-  // option C tabs
-  document.querySelectorAll('[data-oc]').forEach(function(t){t.addEventListener('click',function(){var k=t.dataset.oc;
-    document.querySelectorAll('[data-oc]').forEach(function(o){o.classList.toggle('on',o===t);});
-    document.querySelectorAll('[data-ocp]').forEach(function(pn){pn.style.display=pn.dataset.ocp===k?'block':'none';});});});
-  // sticky phone CTA
   var cta=document.getElementById('m-cta'),hero=document.querySelector('.hero');
   if(cta&&hero&&'IntersectionObserver' in window){new IntersectionObserver(function(es){cta.classList.toggle('show',!es[0].isIntersecting);},{threshold:0}).observe(hero);}
-  // advisors
+  // advisors autoplay
   var t=document.getElementById('adv-track');
-  if(t)document.querySelectorAll('[data-adv]').forEach(function(btn){btn.addEventListener('click',function(){t.scrollBy({left:Number(btn.dataset.adv)*512,behavior:'smooth'});});});
+  if(t&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var paused=false,rt;
+    var pause=function(){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false;},5000);};
+    t.addEventListener('touchstart',pause,{passive:true});t.addEventListener('pointerdown',pause);
+    setInterval(function(){if(paused)return;var c=t.firstElementChild,st=(c?c.getBoundingClientRect().width:200)+16;
+      if(t.scrollLeft+t.clientWidth>=t.scrollWidth-4)t.scrollTo({left:0,behavior:'smooth'});else t.scrollBy({left:st,behavior:'smooth'});},2800);}
 })();
 </script>
 </body>
