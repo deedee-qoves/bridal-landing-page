@@ -740,7 +740,7 @@ html{scroll-behavior:smooth}
 <div>
 <label class="eyebrow-pill" for="wedding-date">When's your big day?</label>
 <input class="date-input" type="date" id="wedding-date">
-<p class="big-days"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
+<p class="big-days" style="font-size: 45px"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
 <p style="color: #515255; margin-top: 8px; font-size: 13px;" id="cd-msg"></p>
 <a class="btn btn-primary" href="#start" style="margin-top: 20px; width: 100%;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
@@ -948,8 +948,8 @@ html{scroll-behavior:smooth}
     di.min=iso(today);di.value=iso(def);
     var upd=function(){var p=di.value.split('-').map(Number);var days=Math.round((new Date(p[0],p[1]-1,p[2])-today)/86400000),n,u,m;
       if(!di.value||days<=0){n=0;u='days to go';m='Pick a date in the future to see your countdown.';}
-      else if(days<14){n=days;u=days===1?'day to go':'days to go';m='Your plan will focus on what makes the biggest difference in the time you have.';}
-      else{n=Math.floor(days/7);u='weeks to go';m=n>=12?"That's plenty of time to follow your plan from start to finish.":'Enough time for the key steps. Start soon to make the most of it.';}
+      else if(days<14){n=days;u=days===1?'day to go':'days to go';m='Start today. Your plan focuses on what makes the biggest difference in the time left.';}
+      else{n=Math.floor(days/7);u='weeks to go';m=n>=12?"Start now and walk in fully prepared, stress free.":'Time is tight. Start today so every step is done before the big day.';}
       document.getElementById('cd-num').textContent=n;document.getElementById('cd-unit').textContent=u;var cm=document.getElementById('cd-msg');if(cm)cm.textContent=m;};
     di.addEventListener('change',upd);di.addEventListener('input',upd);upd();}
   // option C tabs
