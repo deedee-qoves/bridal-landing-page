@@ -92,6 +92,13 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .quote-strip .q{font-size:18px;max-width:640px;margin:0 auto;line-height:1.4}
 .quote-strip .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
 .quote-strip .who b{color:var(--ink);font-weight:500}
+.quote-strip.qs-v2{border:none !important;background:none !important;border-radius:0;padding:8px 0;display:flex;align-items:center;justify-content:center;gap:20px;text-align:left;margin-top:80px}
+.qs-photo{width:84px;height:84px;border-radius:12px;object-fit:cover;object-position:center 15%;flex:none;display:block}
+.qs-body{max-width:420px}
+.qs-mark{display:block;font-size:34px;line-height:.6;height:16px;color:var(--mid-300);font-family:Georgia,serif}
+.quote-strip.qs-v2 .q{font-size:17px;font-weight:500;line-height:1.35;margin:6px 0 0;max-width:none;color:var(--ink)}
+.quote-strip.qs-v2 .who{margin-top:8px;font-size:14px;color:var(--gray-600)}
+@media (max-width:600px){.quote-strip.qs-v2{gap:14px;justify-content:flex-start;margin-top:40px}.qs-photo{width:64px;height:64px;border-radius:10px}.quote-strip.qs-v2 .q{font-size:15px}.quote-strip.qs-v2 .who{font-size:13px;margin-top:6px}.qs-mark{font-size:28px;height:13px}}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:32px;background:var(--white-50);border:1px solid var(--white-50);border-radius:12px;overflow:hidden}
 .feature-card{background:#fff;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--white-100)}
 .grid3.features{gap:16px;background:transparent;border:none;border-radius:0;overflow:visible}
@@ -612,9 +619,13 @@ html{scroll-behavior:smooth}
 </ul>
 </div>
 </div>
-<div class="quote-strip">
-<p class="q">"I'm thrilled by QOVES' innovative approach to cosmetic care."</p>
-<p class="who"><b>Dr. Gary Linkov</b> · Founder of Feel Confident</p>
+<div class="quote-strip qs-v2">
+<img class="qs-photo" src="../assets/img/linkov-quote.jpg" alt="Dr. Gary Linkov">
+<div class="qs-body">
+<span class="qs-mark" aria-hidden="true">&ldquo;</span>
+<p class="q">I'm thrilled by QOVES' innovative approach to cosmetic care.</p>
+<p class="who">Dr. Gary Linkov</p>
+</div>
 </div>
 </div>
 </section>

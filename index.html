@@ -92,6 +92,13 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .quote-strip .q{font-size:18px;max-width:640px;margin:0 auto;line-height:1.4}
 .quote-strip .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
 .quote-strip .who b{color:var(--ink);font-weight:500}
+.quote-strip.qs-v2{border:none !important;background:none !important;border-radius:0;padding:8px 0;display:flex;align-items:center;justify-content:center;gap:20px;text-align:left;margin-top:80px}
+.qs-photo{width:84px;height:84px;border-radius:12px;object-fit:cover;object-position:center 15%;flex:none;display:block}
+.qs-body{max-width:420px}
+.qs-mark{display:block;font-size:34px;line-height:.6;height:16px;color:var(--mid-300);font-family:Georgia,serif}
+.quote-strip.qs-v2 .q{font-size:17px;font-weight:500;line-height:1.35;margin:6px 0 0;max-width:none;color:var(--ink)}
+.quote-strip.qs-v2 .who{margin-top:8px;font-size:14px;color:var(--gray-600)}
+@media (max-width:600px){.quote-strip.qs-v2{gap:14px;justify-content:flex-start;margin-top:40px}.qs-photo{width:64px;height:64px;border-radius:10px}.quote-strip.qs-v2 .q{font-size:15px}.quote-strip.qs-v2 .who{font-size:13px;margin-top:6px}.qs-mark{font-size:28px;height:13px}}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:32px;background:var(--white-50);border:1px solid var(--white-50);border-radius:12px;overflow:hidden}
 .feature-card{background:#fff;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--white-100)}
 .grid3.features{gap:16px;background:transparent;border:none;border-radius:0;overflow:visible}
@@ -299,10 +306,14 @@ nav.main{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.75);justif
 .final-grid .text-side p{color:var(--mid-300);font-size:14px}
 .final-grid .img-side{min-height:320px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 60% 40%,#5A7A85 0%,#233137 70%)}
 .final-grid .img-side svg{width:22%;height:auto}
+.final-grid .img-side.fin-photo{position:relative;background:url("assets/img/final-couple.jpg") 40% 12%/115% auto no-repeat #3A2E26;min-height:420px}
+.final-grid .img-side.fin-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,var(--ink) 0%,rgba(35,49,55,.7) 18%,rgba(35,49,55,0) 50%)}
 .qv footer{border-top:1px solid var(--white-50);padding-block:32px}
 .footer-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--gray-600)}
 .disclaimer{max-width:640px;line-height:1.5}
 @media (max-width:860px){
+.final-grid .img-side.fin-photo{min-height:380px;background-size:cover;background-position:center 18%}
+.final-grid .img-side.fin-photo::before{background:linear-gradient(to bottom,var(--ink) 0%,rgba(35,49,55,.6) 15%,rgba(35,49,55,0) 45%)}
 .qv section{padding-block:56px 24px}
 .split,.compare,.grid3,.benefit-split,.grid2,.final-grid,.two-col{grid-template-columns:minmax(0,1fr) !important}
 .trust,.advisor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -390,6 +401,7 @@ nav.main{display:none}
 .faq-item{padding-block:14px}
 .qv .faq-a{margin-top:25px}
 .final-grid .img-side{min-height:160px}
+.final-grid .img-side.fin-photo{min-height:300px}
 footer{padding-bottom:96px !important}
 }
 /* sticky CTA, phone only */
@@ -605,9 +617,13 @@ html{scroll-behavior:smooth}
 </ul>
 </div>
 </div>
-<div class="quote-strip">
-<p class="q">"I'm thrilled by QOVES' innovative approach to cosmetic care."</p>
-<p class="who"><b>Dr. Gary Linkov</b> · Founder of Feel Confident</p>
+<div class="quote-strip qs-v2">
+<img class="qs-photo" src="assets/img/linkov-quote.jpg" alt="Dr. Gary Linkov">
+<div class="qs-body">
+<span class="qs-mark" aria-hidden="true">&ldquo;</span>
+<p class="q">I'm thrilled by QOVES' innovative approach to cosmetic care.</p>
+<p class="who">Dr. Gary Linkov</p>
+</div>
 </div>
 </div>
 </section>
@@ -740,7 +756,7 @@ html{scroll-behavior:smooth}
 <div>
 <label class="eyebrow-pill" for="wedding-date">When's your big day?</label>
 <input class="date-input" type="date" id="wedding-date">
-<p class="big-days" style="font-size: 45px"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
+<p class="big-days" style="font-size: 42px; font-weight: 400"><b id="cd-num" style="font-weight:inherit"></b> <span id="cd-unit"></span></p>
 <p style="color: #515255; margin-top: 8px; font-size: 13px;" id="cd-msg"></p>
 <a class="btn btn-primary" href="#start" style="margin-top: 20px; width: 100%;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
@@ -896,9 +912,7 @@ html{scroll-behavior:smooth}
 <p>The morning of the wedding should feel exciting, not stressful. With your plan behind you, you can relax into the build up, laugh with the people around you and stop thinking about your face altogether. The photos will take care of themselves.</p>
 <a class="btn btn-on-ink" href="#start" style="margin-top: 8px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
-<div class="img-side">
-<svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#fff"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#fff"></path></svg>
-</div>
+<div class="img-side fin-photo" role="img" aria-label="A bride in a white dress laughing as her partner lifts her into a hug"></div>
 </div>
 </div>
 </section>
