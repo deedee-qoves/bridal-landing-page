@@ -693,10 +693,10 @@ main .fp-card{border-radius:16px 16px 0 0}
 @media (max-width:860px){.sup-top{grid-template-columns:minmax(0,1fr);gap:28px}.sup-faq{margin-top:56px}}
 
 /* priority metrics preview in plan section */
-.fp-pm{width:min(1000px,calc(100% - 2 * max(32px,9vw)));margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.fp-pm{width:min(1000px,calc(100% - 2 * max(32px,9vw)));margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
 .fp-pm-h{font-size:clamp(24px,1.9vw,30px);font-weight:400;line-height:1.12;letter-spacing:-.02em;margin:0;color:var(--ink)}.fp-pm-h span{color:var(--mid-500)}
-.fp-pm-p{font-size:17px;line-height:1.5;color:var(--gray-700);margin:14px 0 0 !important;max-width:460px}
-.pv{background:#FAFAFA;border:1px solid var(--white-100);border-radius:14px;padding:14px;max-width:480px;justify-self:end;width:100%;box-sizing:border-box}
+.fp-pm-p{font-size:17px;line-height:1.5;color:var(--gray-700);margin:14px 0 0 !important;max-width:none}
+.pv{background:#FAFAFA;border:1px solid var(--white-100);border-radius:14px;padding:14px;max-width:none;justify-self:end;width:100%;box-sizing:border-box}
 .pv-t{font-size:14px;margin:0 0 10px;color:var(--ink)}
 .pv-box{position:relative;background:#fff;border:1px solid #F0F0F0;border-radius:10px;padding:30px 22px 32px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .pv-box::before{content:"";position:absolute;left:50%;top:24px;bottom:24px;border-left:1px solid #E6E6E6}.pv-box::after{content:"";position:absolute;top:50%;left:16px;right:16px;border-top:1px solid #E6E6E6}
@@ -715,8 +715,35 @@ main .fp-card{border-radius:16px 16px 0 0}
 .pp .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
 .pp-tag{white-space:nowrap}
 
-main .pm-sec{padding:96px 0;border-bottom:1px solid var(--white-50)}
+main .pm-sec + section{padding-top:40px !important}
+main .pm-sec{padding:56px 0 32px;border-bottom:1px solid var(--white-50)}
 @media (max-width:860px){main .pm-sec{padding:56px 0}}
+
+/* countdown: center right column */
+@media (min-width:861px){.grid2 > div:has(> .date-input){display:flex;flex-direction:column;justify-content:center}.grid2 > div:has(> .date-input) > .btn{margin-top:28px !important}}
+
+/* QOVES chat window */
+.chat-card.qc{padding:0;overflow:hidden;border-radius:16px;background:linear-gradient(165deg,#7E8D94 0%,#A3B1B6 55%,#C6CFD2 100%);border:1px solid rgba(255,255,255,.4);box-shadow:0 20px 44px rgba(35,49,55,.18)}
+.qc-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.28)}
+.qv .qc-head p{color:#fff;font-size:15px;font-weight:500;margin:0}
+.qc .cc-247{background:rgba(255,255,255,.22);color:#fff;font-family:var(--font-label);font-size:9px;vertical-align:2px}
+.qc-dots{color:#fff;font-size:20px;letter-spacing:1px;line-height:1}
+.qc-body{padding:4px 16px 18px}
+.qc .bubble{border:none;border-radius:16px;font-size:13px;line-height:1.4;padding:10px 14px;margin-top:14px}
+.qc .bubble.user{background:#7A8F98;color:#fff;border-bottom-right-radius:4px;max-width:78%;width:max-content;margin-left:auto}
+.qc-row{display:flex;align-items:flex-end;gap:8px;margin-top:14px}
+.qc .qc-row .bubble.team{background:#fff;color:var(--ink);border-bottom-left-radius:4px;margin-top:0;max-width:78%;width:auto}
+.qc-av{flex:none;width:28px;height:28px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(35,49,55,.12)}
+.qc-av svg{width:13px;height:14px}
+.qc-input{display:flex;align-items:center;justify-content:space-between;margin:0 16px 16px;background:#fff;border-radius:999px;padding:6px 6px 6px 16px;font-size:13px;color:#9AA2A5}
+.qc-send{width:30px;height:30px;border-radius:50%;background:#A6B2B7;display:flex;align-items:center;justify-content:center}
+.qc-send svg{width:14px;height:14px}
+
+/* chat option A: white window, dark bubbles, kept distinct from white section */
+.chat-card.qc{background:#fff;border:1px solid #D9E1E4;box-shadow:0 2px 4px rgba(35,49,55,.04),0 22px 48px rgba(35,49,55,.14)}
+.qc-head{border-bottom:1px solid #E6ECEE;background:#FAFBFB}.qv .qc-head p{color:#233137}.qc-dots{color:#9AA2A5}.qc .cc-247{background:#233137;color:#fff}
+.qc .bubble.user{background:#233137}.qc .qc-row .bubble.team{background:#F2F5F5}.qc-av{background:#F2F5F5;box-shadow:none}
+.qc-input{background:#F2F5F5}.qc-send{background:#233137}
 .ba-band{background:var(--tint);padding:88px 0}
 .ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
 .ba-band .h-section{margin-top:0;max-width:460px}
@@ -1153,12 +1180,15 @@ html{scroll-behavior:smooth}
 <h2 class="h-section" style="margin-top: 16px;">Your support <span class="hl">system</span></h2>
 <p class="sub" style="margin-top: 10px;">Not sure about a look? Our concierge team is here 24 hours a day to update your preview and plan until it feels right.</p>
 <div class="cc-steps"><div><b>01</b><p>Ask</p><span>Tell us what you'd like to change.</span></div><div><b>02</b><p>We update</p><span>Your preview and plan are revised.</span></div><div><b>03</b><p>You decide</p><span>Only commit when it feels like you.</span></div></div></div>
-<div class="chat-card">
-<p class="chat-label">QOVES chat <em class="cc-247">24/7</em></p>
+<div class="chat-card qc">
+<div class="qc-head"><p>QOVES chat <em class="cc-247">24/7</em></p><span class="qc-dots" aria-hidden="true">&middot;&middot;&middot;</span></div>
+<div class="qc-body">
 <div class="bubble user">I want to see myself with red lips and darker hair.</div>
-<div class="bubble team">Here's your updated preview.<img class="cc-img" src="assets/img/preview-redlip.jpg" alt="Preview with red lips and darker hair"></div>
+<div class="qc-row"><span class="qc-av"><svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#233137"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#233137"></path></svg></span><div class="bubble team">Here's your updated preview.<img class="cc-img" src="assets/img/preview-redlip.jpg" alt="Preview with red lips and darker hair"></div></div>
 <div class="bubble user">Love that, but let's keep it soft for the wedding.</div>
-<div class="bubble team">Done. Here's your soft version, and your plan is updated to match.<img class="cc-img" src="assets/img/slider-projection.jpg" alt="Soft bridal preview"></div>
+<div class="qc-row"><span class="qc-av"><svg viewBox="0 0 1080 1147" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M324.544 758.596C158.329 469.344 147.005 163.289 299.196 75.0248C451.387 -13.2929 709.52 149.624 875.734 438.877C943.839 557.449 985.962 678.839 1001.47 786.883C1051.21 708.509 1079.89 616.416 1079.89 517.943C1079.89 231.88 838.163 0 539.919 0C241.728 0 0 231.88 0 517.943C0 803.951 241.728 1035.83 539.919 1035.83C544.523 1035.83 549.127 1035.78 553.73 1035.67C471.073 968.464 390.585 873.5 324.544 758.596Z" fill="#233137"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1001.47 786.883C908.913 932.626 743.493 1031.1 553.73 1035.67C679.092 1137.65 809.323 1175.67 901.082 1122.45C990.883 1070.39 1023.74 942.463 1001.47 786.883Z" fill="#233137"></path></svg></span><div class="bubble team">Done. Here's your soft version, and your plan is updated to match.<img class="cc-img" src="assets/img/slider-projection.jpg" alt="Soft bridal preview"></div></div>
+</div>
+<div class="qc-input"><span>Ask our team</span><span class="qc-send" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l16-8-6 16-2-7-8-1z" stroke="#fff" stroke-width="2" stroke-linejoin="round"></path></svg></span></div>
 </div></div>
 <div class="sup-faq"><h2 class="h-section">Frequently asked <span class="hl">questions</span></h2>
 <p class="sub" style="margin-top: 10px;">If you have any further questions, contact us at hello@qoves.com.</p>
