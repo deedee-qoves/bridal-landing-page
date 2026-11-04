@@ -744,6 +744,12 @@ main .pm-sec{padding:56px 0 32px;border-bottom:1px solid var(--white-50)}
 .qc-head{border-bottom:1px solid #E6ECEE;background:#FAFBFB}.qv .qc-head p{color:#233137}.qc-dots{color:#9AA2A5}.qc .cc-247{background:#233137;color:#fff}
 .qc .bubble.user{background:#233137}.qc .qc-row .bubble.team{background:#F2F5F5}.qc-av{background:#F2F5F5;box-shadow:none}
 .qc-input{background:#F2F5F5}.qc-send{background:#233137}
+
+/* viz + research spacing (replaces fixed canvas heights) */
+.hx-sec.hx-vsec{padding-bottom:72px}
+.hx-sec.hx-rsec{padding-block:72px 80px}
+.hx-rsec .section-sub{margin-top:12px !important}
+@media (max-width:600px){.hx-sec.hx-vsec{padding-bottom:48px}.hx-sec.hx-rsec{padding-block:48px}}
 .ba-band{background:var(--tint);padding:88px 0}
 .ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
 .ba-band .h-section{margin-top:0;max-width:460px}
@@ -977,7 +983,7 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 
-<div class="hx-sec" style="height: 730px; padding-bottom: 0px">
+<div class="hx-sec hx-vsec">
 <div class="wrap">
 <div class="hx-head"><span class="eyebrow-pill">Visualization</span>
 <h2 class="h-section" style="margin-top: 16px;">See yourself <span class="hl">on the big day.</span></h2>
@@ -998,8 +1004,8 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 
-<div class="hx-sec" style="padding-top: 10px; height: 390px">
-<div class="wrap" style="height: 350px">
+<div class="hx-sec hx-rsec">
+<div class="wrap">
 <div class="hx-head"><span class="eyebrow-pill">The research</span>
 <h2 class="h-section" style="margin-top: 16px;">How you look shapes <span class="hl">how the day feels.</span></h2>
 <p class="section-sub">The best results take months to build. Start early and they peak in time for the day, and every photo from it.</p></div>
