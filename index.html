@@ -1,9 +1,8 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><script>if(matchMedia('(max-width: 767px)').matches)location.replace('phone/'+location.search+location.hash);</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>if(matchMedia('(max-width: 767px)').matches)location.replace('phone/'+location.search+location.hash);</script>
 <title>Wedding Day Protocol | QOVES</title>
 <meta name="description" content="A personalized beauty plan built around your features, so you look and feel your best on your wedding day.">
 <link rel="preload" href="assets/fonts/PPNeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
@@ -427,6 +426,297 @@ footer{padding-bottom:96px !important}
 }
 .qv .big-days{margin-top:20px}
 .qv .big-days + p{margin-top:14px !important}
+
+/* homepage-style sections (hx) */
+.hx-head{max-width:760px}
+.hx-head .section-sub{max-width:560px}
+.hx-card{background:#fff;border:1px solid var(--white-100);border-radius:12px;padding:24px}
+.band-tint .hx-card{border-color:rgba(174,194,201,.25)}
+.hx-lab{font-family:var(--font-label);font-size:11px;letter-spacing:.02em;text-transform:uppercase;color:var(--mid-500)}
+.hx-cite{font-size:11px;line-height:1.45;color:var(--gray-600);margin-top:auto;padding-top:16px;border-top:1px solid var(--white-50)}
+.hx-g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
+.hx-g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:40px}
+.hx-g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:40px}
+.hx-study{display:flex;flex-direction:column;gap:8px;min-height:190px}
+.hx-study h3{font-size:20px;letter-spacing:-.02em;color:var(--mid-500)}
+.hx-study h3 b{font-weight:500;color:var(--ink)}
+.hx-study p{font-size:14px;color:var(--gray-700)}
+.hx-fac{display:flex;flex-direction:column;gap:10px}
+.hx-fac h3{font-size:17px;font-weight:500}
+.hx-fac p{font-size:13px;color:var(--gray-700)}
+.hx-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.hx-rows{border-top:1px solid var(--white-100)}
+.hx-row{display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--white-100)}
+.hx-row h3{font-size:18px;font-weight:500}
+.hx-row p{font-size:14px;color:var(--gray-700);margin-top:4px}
+.hx-steps{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-direction:column;gap:10px}
+.hx-steps li{display:flex;gap:14px;align-items:center;font-size:16px}
+.hx-steps .hx-lab{color:var(--mid-400);width:28px}
+.hx-shot{border-radius:12px;overflow:hidden;background:var(--mid-200);aspect-ratio:4/3}
+.hx-shot img{width:100%;height:100%;object-fit:cover;display:block}
+.hx-ba{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hx-ba div{position:relative;aspect-ratio:4/5;background:var(--mid-200);border-radius:12px;overflow:hidden}
+.hx-ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hx-ba span{position:absolute;left:12px;bottom:12px;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:#fff;background:rgba(35,49,55,.45);border-radius:6px;padding:5px 8px 3px}
+.hx-note{font-size:12px;color:var(--gray-600);margin-top:16px}
+.hx-viz{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:40px;align-items:stretch}
+.hx-viz .hx-ba{height:auto;align-self:start}
+.hx-viz .hx-ba div{aspect-ratio:4/5;min-height:0}
+.hx-vlist{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hx-vlist .hx-card h3{font-size:17px;font-weight:500;margin-top:10px}
+.hx-vlist .hx-card p{font-size:13px;color:var(--gray-700);margin-top:6px}
+.hx-vlist{grid-auto-rows:1fr;row-gap:16px}
+.hx-vlist .hx-card{display:flex;flex-direction:column;justify-content:center;padding:24px}
+.hx-vlist .hx-card .hx-lab{display:block;line-height:16px;height:16px}
+.qv .hx-vlist .hx-card h3{margin-top:12px;line-height:22px;min-height:22px}
+.qv .hx-vlist .hx-card p{margin-top:8px;line-height:20px;min-height:40px}
+@media (max-width:1280px){.qv .hx-vlist .hx-card p{min-height:60px}}
+.hx-disc{display:flex;flex-direction:column;gap:14px}
+.hx-disc .hx-pic{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--mid-200) center/cover no-repeat}
+.hx-chip{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.92);border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px}
+.hx-chip b{font-weight:500}
+.hx-disc h3{font-size:18px;font-weight:500;display:flex;gap:10px;align-items:baseline}
+.hx-disc p{font-size:14px;color:var(--gray-700)}
+.hx-tech{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.hx-tech .hx-card{display:flex;flex-direction:column;gap:8px;padding:20px}
+.hx-tech h3{font-size:17px;font-weight:500}
+.hx-tech p{font-size:13px;color:var(--gray-700)}
+.hx-tvis{margin-top:auto;height:220px;background:var(--tint);border-radius:8px;padding:16px;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:6px}
+.hx-tvis.hx-fwrap{padding:0;overflow:hidden}
+.hx-face{position:relative;aspect-ratio:1520/1920;height:100%;overflow:hidden}
+.hx-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hx-face svg{position:absolute;inset:0;width:100%;height:100%}
+.hx-tags{display:flex;flex-wrap:wrap;gap:6px}
+.hx-tags span{font-family:var(--font-label);font-size:11px;text-transform:uppercase;background:#fff;border-radius:6px;padding:5px 8px 3px;color:var(--gray-700)}
+.hx-tvis.hx-kv{flex-direction:column;flex-wrap:nowrap;justify-content:center;align-content:stretch;gap:0}
+.hx-kv div{display:flex;justify-content:space-between;padding:10px 4px;border-bottom:1px solid rgba(174,194,201,.35);font-size:13px}
+.hx-kv div:last-child{border-bottom:none}
+.hx-kv div span:first-child{color:var(--gray-600)}
+.hx-pers{display:flex;flex-wrap:wrap;gap:6px}
+.hx-pers span{font-size:12px;background:#fff;border-radius:999px;padding:5px 10px}
+.hx-vain{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.hx-vain h3{font-size:16px;font-weight:500;margin-bottom:12px}
+.hx-vain ul{list-style:none;padding:0;margin:0 0 32px;border-top:1px solid var(--white-100)}
+.hx-vain li{padding:12px 0;border-bottom:1px solid var(--white-100);font-size:15px}
+.hx-q{margin-top:56px}
+@media (max-width:1100px){.hx-tech{grid-template-columns:repeat(2,minmax(0,1fr))}.hx-g5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){
+.hx-g3,.hx-g2,.hx-viz,.hx-split,.hx-vain{grid-template-columns:minmax(0,1fr);gap:16px}
+.hx-split,.hx-vain{gap:32px}
+.hx-g5{grid-template-columns:1fr 1fr}
+.hx-viz .hx-ba div{min-height:0;aspect-ratio:4/5}
+.hx-study{min-height:0}
+}
+@media (max-width:600px){
+.hx-g3,.hx-g2,.hx-g5,.hx-tech,.hx-viz{margin-top:28px}
+.hx-g5,.hx-vlist,.hx-tech{grid-template-columns:minmax(0,1fr)}
+.hx-card{padding:20px}
+.hx-q{margin-top:32px}
+}
+
+.hx-sec{padding-block:80px 40px}
+@media (max-width:600px){.hx-sec{padding-block:56px 24px}}
+.tc-head{text-align:center;max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.tc-head .h-section{font-size:clamp(34px,3.8vw,56px);line-height:1.06;letter-spacing:-.03em;margin-top:18px}
+.tc-head .h-section .hl{display:block}
+.qv .tc-head .section-sub{margin-top:20px;font-size:16px;max-width:620px}
+.tc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:56px}
+.tc-card{position:relative;aspect-ratio:453/679;border-radius:16px;overflow:hidden;background:#9EADB4;color:#fff;text-align:center}
+.tc-txt{position:absolute;left:0;right:0;padding:26px 22px;z-index:2}
+.tc-top{top:0}.tc-bot{bottom:0}
+.qv .tc-card h3{font-size:clamp(17px,1.55vw,22px);font-weight:400;color:#fff;letter-spacing:-.01em;line-height:1.2}
+.qv .tc-card p{font-size:14px;color:rgba(255,255,255,.85);margin-top:10px;line-height:1.5}
+.tc-vis{position:absolute;left:0;width:100%;display:block}
+.tc-b{bottom:0}.tc-ring{top:11%}
+.tc-woman{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.tc-fade{position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(to top,rgba(104,121,129,.95) 0%,rgba(130,146,153,.7) 45%,rgba(158,173,180,0) 100%);z-index:1}
+@media (max-width:1100px){.tc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.tc-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px;scrollbar-width:none;gap:12px;margin-top:32px}.tc-grid::-webkit-scrollbar{display:none}.tc-card{flex:0 0 78%;scroll-snap-align:start}.tc-head .h-section{font-size:34px}}
+.hx-sec.an-sec{background:linear-gradient(180deg,#A7B6BC 0%,#92A2A9 100%);padding-block:96px !important}
+.an-sec .h-section{color:#fff}.an-sec .h-section .hl{color:#E3ECEF}
+.an-sec .section-sub{color:rgba(255,255,255,.85)}
+.an-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
+.an-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px;color:#fff;min-height:300px}
+.an-lab{font-family:var(--font-label);font-size:11px;letter-spacing:.02em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.an-viz{flex:1;display:flex;flex-direction:column;justify-content:center}
+.an-svg{width:100%;height:auto;max-height:190px;display:block;overflow:visible}
+.an-ax{font-family:var(--font-label);font-size:8.5px;fill:rgba(255,255,255,.85);letter-spacing:.03em}
+.an-dark{fill:var(--ink)}
+.an-s-brow .an-ax{font-size:11.5px}.an-s-mel .an-ax{font-size:7.5px}
+.qv .an-cap{background:rgba(255,255,255,.2);border-radius:8px;padding:9px 12px;font-size:13px;color:#fff;line-height:1.35}
+.an-big{font-size:56px;letter-spacing:-.03em;line-height:1}
+.an-track{position:relative;height:8px;border-radius:4px;background:rgba(255,255,255,.25);margin-top:34px}
+.an-fill{position:absolute;inset:0 auto 0 0;border-radius:4px;background:#fff}
+.an-pin,.an-pill{position:absolute;transform:translateX(-50%);font-family:var(--font-label);font-size:10px;letter-spacing:.03em;background:#fff;color:var(--ink);border-radius:4px;padding:4px 7px 2px;white-space:nowrap}
+.an-pin{bottom:16px}
+.an-ends{display:flex;justify-content:space-between;margin-top:12px;font-family:var(--font-label);font-size:10px;letter-spacing:.03em;color:rgba(255,255,255,.85)}
+.an-thirds{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;align-items:end}
+.an-thirds div{display:flex;flex-direction:column;gap:6px;align-items:center}
+.an-thirds b{font-size:30px;font-weight:400;letter-spacing:-.02em}
+.an-thirds span{font-family:var(--font-label);font-size:10px;letter-spacing:.03em;color:rgba(255,255,255,.85)}
+.an-thirds i{display:block;width:100%;height:4px;border-radius:2px;background:#fff;margin-top:6px}
+.an-sym{display:flex;flex-direction:column;gap:26px;padding-top:8px}
+.an-row{position:relative;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 6px,transparent 6px 11px)}
+.an-pill{top:50%;transform:translate(-50%,-50%)}
+.an-you{background:var(--ink);color:#fff}
+.an-sym .an-ends{margin-top:0}
+@media (max-width:1100px){.an-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.hx-sec.an-sec{padding-block:56px !important}.an-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding-inline:16px;scrollbar-width:none;margin-top:28px;scroll-padding-inline:16px}.an-grid::-webkit-scrollbar{display:none}.an-card{flex:0 0 78%;scroll-snap-align:start;min-height:280px}}
+.hx-sec.an-sec{background:#233137;padding-block:72px !important}
+.an-b{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:center}
+.an-sec .h-section .hl{color:var(--mid-300)}
+.qv .an-sub{font-size:15px;color:rgba(255,255,255,.72);margin-top:14px;line-height:1.5;max-width:380px}
+.an-win{background:#2D3B41;border:1px solid rgba(255,255,255,.12);border-radius:14px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.3);max-width:680px;justify-self:end;width:100%}
+.an-wbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+.an-wbar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
+.an-wbar span{margin-left:10px;font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.an-wbody{display:grid;grid-template-columns:128px minmax(0,1fr)}
+.an-wside{list-style:none;margin:0;padding:12px 8px;border-right:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:2px}
+.an-wside li{font-size:12px;color:rgba(255,255,255,.55);padding:7px 9px;border-radius:7px}
+.an-wside li.on{background:rgba(255,255,255,.1);color:#fff}
+.an-wgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:linear-gradient(180deg,#8E9EA5,#7D8E96)}
+.an-wgrid .an-card{min-height:0;padding:12px;gap:8px;border-radius:10px}
+.an-wgrid .an-lab{font-size:9px}
+.an-wgrid .an-svg{max-height:100px}
+.an-wgrid .an-big{font-size:34px}
+.an-wgrid .an-track{margin-top:24px;height:6px}
+.an-wgrid .an-thirds b{font-size:20px}
+.an-wgrid .an-ends,.an-wgrid .an-thirds span,.an-wgrid .an-pin{font-size:8px}
+.an-wgrid .an-pin{padding:3px 5px 1px}
+.rp .an-r{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.rp{background:#fff;border-color:rgba(255,255,255,.2)}
+.rp .an-wbar{background:#F4F6F6;border-bottom:1px solid #E8ECED}
+.rp .an-wbar i{background:#D3DADD}.rp .an-wbar span{color:var(--gray-600)}
+.rp .an-wbar em{margin-left:auto;font-style:normal;font-family:var(--font-label);font-size:9px;text-transform:uppercase;color:var(--gray-600);background:#fff;border:1px solid #E1E6E8;border-radius:999px;padding:3px 7px 1px}
+.rp-body{display:grid;grid-template-columns:186px minmax(0,1fr);min-height:380px}
+.rp-side{padding:16px 10px;display:flex;flex-direction:column;gap:6px;background:#fff}
+.rp-logo{width:18px;height:auto;margin:0 0 10px 8px}
+.rp-chev{width:10px;height:10px;flex:none;color:#9AA5A9}
+.rp-grp,.rp-gh{display:flex;align-items:center;gap:10px;font-size:13px;color:#8A9599;padding:6px 8px}
+.rp-open{background:#F7F8F8;border:1px solid #EDF0F1;border-radius:10px;padding:4px 0 8px}
+.rp-gh{color:var(--ink)}
+.rp-items{display:flex;flex-direction:column;margin-left:18px;border-left:1px solid #E3E8EA}
+.rp-it{font-size:12px;color:#8A9599;padding:5px 0 5px 14px;cursor:pointer;position:relative;transition:color .2s}
+.rp-it:hover{color:var(--ink)}
+.rp-main{background:linear-gradient(180deg,#9AAAB1,#86979F);padding:16px;display:flex}
+.rp-p{display:none;flex:1;flex-direction:column;gap:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:18px;color:#fff}
+.qv .rp-lab{font-family:var(--font-label);font-size:10px;text-transform:uppercase;letter-spacing:.02em;color:rgba(255,255,255,.85)}
+.rp-viz{flex:1;display:flex;flex-direction:column;justify-content:center}
+.rp-svg{width:100%;height:auto;max-height:190px;display:block;overflow:visible}
+.rp-ax{font-family:var(--font-label);font-size:9px;fill:#fff;letter-spacing:.03em}
+.rp-dk{fill:var(--ink)}
+.rp-num{font-size:34px;fill:#fff;letter-spacing:-.02em}
+.qv .rp-cap{background:rgba(255,255,255,.2);border-radius:8px;padding:8px 11px;font-size:12px;line-height:1.4;color:#fff}
+.rp-thirds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.rp-thirds div{display:flex;flex-direction:column;align-items:center;gap:6px}
+.rp-thirds b{font-size:30px;font-weight:400;letter-spacing:-.02em}
+.rp-thirds span,.rp-ends,.rp-m span,.rp-c span{font-family:var(--font-label);font-size:9px;letter-spacing:.03em;color:rgba(255,255,255,.85)}
+.rp-thirds i{display:block;width:100%;height:4px;border-radius:2px;background:#fff;margin-top:6px}
+.rp-sym{display:flex;flex-direction:column;gap:26px}
+.rp-row{position:relative;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 6px,transparent 6px 11px)}
+.rp-pill{position:absolute;top:50%;transform:translate(-50%,-50%);font-family:var(--font-label);font-size:9px;background:#fff;color:var(--ink);border-radius:4px;padding:4px 7px 2px}
+.rp-you{background:var(--ink);color:#fff}
+.rp-ends{display:flex;justify-content:space-between}
+.rp-meters{display:flex;flex-direction:column;gap:16px}
+.rp-m{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:12px}
+.rp-m div{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.rp-m i{height:10px;border-radius:3px;background:rgba(255,255,255,.22)}.rp-m i.on{background:#fff}
+.rp-mk .rp-ends{display:flex;justify-content:space-between}
+.rp-con{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rp-c{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.rp-sw{display:flex;border-radius:10px;overflow:hidden;width:72px;height:44px;box-shadow:0 0 0 1px rgba(255,255,255,.3)}
+.rp-sw i{flex:1}
+.rp-c b{font-size:24px;font-weight:400}
+#rp0:checked ~ .rp-body .rp-p0{display:flex}#rp0:checked ~ .rp-body label[for="rp0"]{color:var(--ink)}#rp0:checked ~ .rp-body label[for="rp0"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp0:focus-visible ~ .rp-body label[for="rp0"]{outline:2px solid var(--ink);outline-offset:1px}#rp1:checked ~ .rp-body .rp-p1{display:flex}#rp1:checked ~ .rp-body label[for="rp1"]{color:var(--ink)}#rp1:checked ~ .rp-body label[for="rp1"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp1:focus-visible ~ .rp-body label[for="rp1"]{outline:2px solid var(--ink);outline-offset:1px}#rp2:checked ~ .rp-body .rp-p2{display:flex}#rp2:checked ~ .rp-body label[for="rp2"]{color:var(--ink)}#rp2:checked ~ .rp-body label[for="rp2"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp2:focus-visible ~ .rp-body label[for="rp2"]{outline:2px solid var(--ink);outline-offset:1px}#rp3:checked ~ .rp-body .rp-p3{display:flex}#rp3:checked ~ .rp-body label[for="rp3"]{color:var(--ink)}#rp3:checked ~ .rp-body label[for="rp3"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp3:focus-visible ~ .rp-body label[for="rp3"]{outline:2px solid var(--ink);outline-offset:1px}#rp4:checked ~ .rp-body .rp-p4{display:flex}#rp4:checked ~ .rp-body label[for="rp4"]{color:var(--ink)}#rp4:checked ~ .rp-body label[for="rp4"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp4:focus-visible ~ .rp-body label[for="rp4"]{outline:2px solid var(--ink);outline-offset:1px}#rp5:checked ~ .rp-body .rp-p5{display:flex}#rp5:checked ~ .rp-body label[for="rp5"]{color:var(--ink)}#rp5:checked ~ .rp-body label[for="rp5"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp5:focus-visible ~ .rp-body label[for="rp5"]{outline:2px solid var(--ink);outline-offset:1px}#rp6:checked ~ .rp-body .rp-p6{display:flex}#rp6:checked ~ .rp-body label[for="rp6"]{color:var(--ink)}#rp6:checked ~ .rp-body label[for="rp6"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp6:focus-visible ~ .rp-body label[for="rp6"]{outline:2px solid var(--ink);outline-offset:1px}#rp7:checked ~ .rp-body .rp-p7{display:flex}#rp7:checked ~ .rp-body label[for="rp7"]{color:var(--ink)}#rp7:checked ~ .rp-body label[for="rp7"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp7:focus-visible ~ .rp-body label[for="rp7"]{outline:2px solid var(--ink);outline-offset:1px}#rp8:checked ~ .rp-body .rp-p8{display:flex}#rp8:checked ~ .rp-body label[for="rp8"]{color:var(--ink)}#rp8:checked ~ .rp-body label[for="rp8"]::before{content:"";position:absolute;left:-1px;top:4px;bottom:4px;width:1.5px;background:var(--ink)}#rp8:focus-visible ~ .rp-body label[for="rp8"]{outline:2px solid var(--ink);outline-offset:1px}
+@media (max-width:600px){.rp-body{grid-template-columns:minmax(0,1fr);min-height:0}.rp-side{padding:10px 0 8px;gap:0}.rp-logo,.rp-grp,.rp-gh{display:none}.rp-open{background:none;border:none;padding:0}.rp-items{flex-direction:row;overflow-x:auto;margin:0;border:none;padding:0 10px;gap:6px;scrollbar-width:none}.rp-items::-webkit-scrollbar{display:none}.rp-it{flex:none;border:1px solid #E3E8EA;border-radius:999px;padding:6px 11px;font-size:12px}#rp0:checked ~ .rp-body label[for="rp0"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp0:checked ~ .rp-body label[for="rp0"]::before{display:none}#rp1:checked ~ .rp-body label[for="rp1"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp1:checked ~ .rp-body label[for="rp1"]::before{display:none}#rp2:checked ~ .rp-body label[for="rp2"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp2:checked ~ .rp-body label[for="rp2"]::before{display:none}#rp3:checked ~ .rp-body label[for="rp3"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp3:checked ~ .rp-body label[for="rp3"]::before{display:none}#rp4:checked ~ .rp-body label[for="rp4"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp4:checked ~ .rp-body label[for="rp4"]::before{display:none}#rp5:checked ~ .rp-body label[for="rp5"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp5:checked ~ .rp-body label[for="rp5"]::before{display:none}#rp6:checked ~ .rp-body label[for="rp6"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp6:checked ~ .rp-body label[for="rp6"]::before{display:none}#rp7:checked ~ .rp-body label[for="rp7"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp7:checked ~ .rp-body label[for="rp7"]::before{display:none}#rp8:checked ~ .rp-body label[for="rp8"]{background:var(--ink);color:#fff;border-color:var(--ink)}#rp8:checked ~ .rp-body label[for="rp8"]::before{display:none}.rp-main{padding:10px}.rp-p{padding:14px;min-height:280px}}
+@media (max-width:600px){.an-wgrid .an-thirds b{font-size:16px}.an-wgrid .an-thirds span{font-size:7px;white-space:nowrap}}
+.qv .an-wgrid .an-cap{font-size:11px;padding:6px 9px}
+@media (max-width:860px){.an-b{grid-template-columns:minmax(0,1fr);gap:28px}.an-win{justify-self:stretch;max-width:none}}
+@media (max-width:600px){.hx-sec.an-sec{padding-block:48px !important}.an-wbody{grid-template-columns:minmax(0,1fr)}.an-wside{display:none}.an-wgrid{gap:8px;padding:10px}.an-wgrid .an-card{padding:10px}.an-wgrid .an-svg{max-height:80px}.an-wgrid .an-big{font-size:26px}.qv .an-wgrid .an-cap{display:none}}
+.hx-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-family:var(--font-label);font-size:11px;text-transform:uppercase;color:var(--mid-500);background:var(--tint);border:1px dashed var(--mid-300)}
+.hx-pic.p1{background-image:url("assets/img/before.jpg");background-position:56% 46%;background-size:260% auto}
+.hx-pic.p2{background-image:url("assets/img/before.jpg");background-position:50% 52%;background-size:150% auto}
+.hx-pic.p3{background-image:url("assets/img/before.jpg");background-position:62% 58%;background-size:220% auto}
+/* narrower content column, matches qoves.com */
+main .wrap{max-width:1064px}
+main .trust{max-width:1064px;margin-inline:auto}
+@media (min-width:861px){main .ba-band-grid{max-width:1064px;padding-inline:32px}}
+@media (min-width:861px) and (max-width:1320px){main .wrap,main .trust,main .ba-band-grid{padding-inline:max(32px,9vw)}}
+@media (min-width:861px){.fp{grid-template-columns:max(46%,calc((100% - 1000px) / 2 + 520px)) minmax(0,1fr)}.fp-block{padding-left:max(32px,9vw,calc((100vw - 1000px) / 2))}.fp-right{padding-right:max(56px,9vw,calc((100vw - 1000px) / 2));min-width:0}.fp-card{min-width:0}.fp-left{min-width:0}}
+@media (min-width:861px) and (max-width:1320px){.fp{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.fp-right{padding-left:32px}}
+@media (min-width:861px){main > :not(.hero) .wrap > *,main .ba-band-grid > *{zoom:.88}.qv .fp-title{font-size:clamp(32px,2.7vw,44px) !important}.qv .fp-p{font-size:15px}.fp-list{font-size:14px}.fp-card{padding:32px 36px 28px}.fp-block{padding-top:40px;padding-bottom:40px}}
+.pp{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.28);max-width:500px;width:100%;justify-self:end;color:var(--ink)}
+.pp-head{display:flex;align-items:center;gap:16px;padding:22px 24px;background:#F5F8F8;border-bottom:1px solid var(--white-50)}
+.qv .pp-head h3{font-size:19px;font-weight:400}
+.qv .pp-head p{font-size:13px;color:var(--gray-600);margin-top:2px}
+.pp-tag{margin-left:auto;font-family:var(--font-label);font-size:10px;text-transform:uppercase;color:var(--gray-700);border:1px solid #D5DADC;border-radius:999px;padding:6px 11px 5px}
+.pp-row{padding:16px 24px;border-top:1px solid var(--white-50)}
+.pp-row:first-of-type{border-top:none}
+.qv .pp-label{display:flex;align-items:baseline;gap:10px;font-size:15px}
+.pp-label i{font-style:normal;font-family:var(--font-label);font-size:10px;color:var(--gray-600)}
+.pp-sp{justify-content:space-between}.pp-sp span{display:flex;align-items:baseline;gap:10px}
+.pp-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pp-chip{background:#E6EDEE;border-radius:999px;padding:6px 13px;font-size:13px}
+.pp-chip.add{background:transparent;border:1px dashed #C3CDD0;color:var(--gray-600)}
+.pp-track{position:relative;height:4px;background:#E3EAEE;border-radius:2px;margin-top:14px}
+.pp-fill{position:absolute;left:0;top:0;bottom:0;width:28%;background:var(--ink);border-radius:2px}
+.pp-dot{position:absolute;left:28%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#fff;border:2px solid var(--ink)}
+.pp-foot{display:flex;align-items:center;gap:12px;padding:15px 24px;background:var(--ink);color:#fff;font-size:14px}
+.pp-foot span{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:11px}
+@media (max-width:860px){.pp{justify-self:stretch;max-width:none}}
+@media (max-width:600px){.pp-head,.pp-row,.pp-foot{padding-inline:16px}.pp-row{padding-block:13px}}
+@media (min-width:861px){
+main .fp-sec{padding:80px 0 !important;border:none}
+main .fp{width:min(1000px,calc(100% - 2 * max(32px,9vw)));margin:0 auto;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;min-height:0;align-items:center}
+main .fp-left{border-right:none;justify-content:center;background:transparent !important}
+main .fp-block{padding:0;border-top:none}
+main .fp-block + .fp-block{margin-top:28px}
+main .fp-right{padding:28px 28px 0;border-radius:20px;min-width:0}
+main .fp-card{border-radius:16px 16px 0 0}
+}
+.sp-band{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--white-100);border-radius:14px;background:#fff;margin-top:20px}
+.sp-band > div{padding:18px 20px;display:flex;flex-direction:column;gap:4px}.sp-band > div + div{border-left:1px solid var(--white-100)}
+.sp-band b{font-weight:500;font-size:15px}.sp-band span{font-size:13px;color:var(--gray-600)}
+.cc-247{font-style:normal;margin-left:6px;background:var(--ink);color:#fff;border-radius:999px;padding:2px 7px}
+.cc-img{display:block;width:120px;aspect-ratio:760/960;object-fit:cover;border-radius:8px;margin-top:10px}
+.cc-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.cc-steps > div{background:var(--tint);border-radius:12px;padding:14px}
+.cc-steps b{font-family:var(--font-label);font-size:10px;color:var(--gray-600);font-weight:400}
+.qv .cc-steps p{font-size:15px;margin-top:6px}.cc-steps span{font-size:12px;color:var(--gray-600)}
+@media (max-width:600px){.sp-band{grid-template-columns:minmax(0,1fr)}.sp-band > div + div{border-left:none;border-top:1px solid var(--white-100)}.cc-steps{grid-template-columns:minmax(0,1fr)}.cc-img{width:100px}}
+.sup-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.sup-top .chat-card{margin-top:0}
+.sup-top .cc-steps{margin-top:28px}
+.sup-top .bubble.team{width:max-content;max-width:85%}
+.sup-faq{max-width:760px;margin:80px auto 0}
+.sup-faq > .h-section,.sup-faq > .sub{text-align:center}
+@media (max-width:860px){.sup-top{grid-template-columns:minmax(0,1fr);gap:28px}.sup-faq{margin-top:56px}}
+
+/* priority metrics preview in plan section */
+.fp-pm{width:min(1000px,calc(100% - 2 * max(32px,9vw)));margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.fp-pm-h{font-size:clamp(24px,1.9vw,30px);font-weight:400;line-height:1.12;letter-spacing:-.02em;margin:0;color:var(--ink)}.fp-pm-h span{color:var(--mid-500)}
+.fp-pm-p{font-size:17px;line-height:1.5;color:var(--gray-700);margin:14px 0 0 !important;max-width:460px}
+.pv{background:#FAFAFA;border:1px solid var(--white-100);border-radius:14px;padding:14px;max-width:480px;justify-self:end;width:100%;box-sizing:border-box}
+.pv-t{font-size:14px;margin:0 0 10px;color:var(--ink)}
+.pv-box{position:relative;background:#fff;border:1px solid #F0F0F0;border-radius:10px;padding:30px 22px 32px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.pv-box::before{content:"";position:absolute;left:50%;top:24px;bottom:24px;border-left:1px solid #E6E6E6}.pv-box::after{content:"";position:absolute;top:50%;left:16px;right:16px;border-top:1px solid #E6E6E6}
+.pv-ax{position:absolute;font-family:"Zagma",monospace;font-size:8px;color:#9AA2A5;letter-spacing:.04em}.pv-top{top:7px;left:50%;transform:translateX(-50%)}.pv-r{right:22px;bottom:6px}
+.pv-q{position:relative;z-index:1;padding:10px;border-radius:8px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}.pv-q.win{background:var(--ink)}
+.pv-c{align-self:stretch;background:#F1F2F2;border-radius:6px;padding:8px 10px;font-size:11px;line-height:1.35;color:var(--ink)}
+.pv-q.win .pv-c{background:rgba(255,255,255,.12);color:#fff}
+.pv-more{display:block;margin-top:5px;font-family:"Zagma",monospace;font-size:9px;color:var(--gray-600)}.pv-q.win .pv-more{color:var(--mid-300)}
+@media (max-width:860px){.fp-pm{grid-template-columns:minmax(0,1fr);gap:28px;margin-top:0;width:auto;padding:0 16px}.pv{justify-self:stretch;max-width:none}.fp-pm-p{font-size:15px}}
+
+/* interactive profile card */
+.pp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pp .chip{font-size:13px;padding:5px 12px}
+.pp .chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.pp-age{margin-top:14px}
+.pp .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.pp-tag{white-space:nowrap}
+
+main .pm-sec{padding:96px 0;border-bottom:1px solid var(--white-50)}
+@media (max-width:860px){main .pm-sec{padding:56px 0}}
 .ba-band{background:var(--tint);padding:88px 0}
 .ba-band-grid{max-width:1360px;margin:0 auto;padding:0 120px;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:64px;align-items:center}
 .ba-band .h-section{margin-top:0;max-width:460px}
@@ -473,7 +763,8 @@ footer{padding-bottom:96px !important}
 .v-p section.band-ink{display:none}
 /* alternate section backgrounds: white then tint */
 .v-p main > section:not(.hero){background:#fff}
-.v-p .ba-band,.v-p main > section:has(.compare),.v-p main > section.fp-sec,.v-p main > section:has(.testi-card),.v-p main > section#start,.v-p main > section:has(.final-grid){background:var(--tint)}
+.v-p main > section.fp-sec{background:#fff}
+.v-p .ba-band,.v-p main > section:has(.compare),.v-p main > div.hx-sec:has(.hx-study),.v-p main > section:has(.date-input),.v-p main > div.hx-sec:has(.tc-grid),.v-p main > section#start,.v-p main > section:has(.final-grid){background:var(--tint)}
 .v-p main > section:has(.compare) .card:not(.card-new){background:#fff !important;border:1px solid var(--white-100)}
 .v-p .quote-strip{background:#fff;border:1px solid var(--white-100)}
 .v-p .fp-left{background:#fff}
@@ -501,7 +792,7 @@ html{scroll-behavior:smooth}
 <span style="font-size: 14px; line-height: 1.43; font-weight: 400; letter-spacing: 0px; font-style: normal; font-family: &quot;PP Neue Montreal&quot;, &quot;Inter&quot;, system-ui, -apple-system, &quot;Segoe UI&quot;, Arial, sans-serif">QOVES</span>
 </a>
 <nav class="main">
-<a href="#plan">Your plan</a>
+<a href="#your-plan">Your plan</a>
 <a href="#how">How it works</a>
 <a href="#faq">FAQ</a>
 </nav>
@@ -513,7 +804,6 @@ html{scroll-behavior:smooth}
 </div>
 
 <main>
-
 <section class="hero">
 <div class="hero-media"><img src="assets/img/hero-gradient.webp" alt=""></div>
 <div class="hero-scrim" style="height: 1000px"></div>
@@ -529,7 +819,6 @@ html{scroll-behavior:smooth}
 
 </section>
 
-
 <section style="padding-block: 40px;">
 <div class="trust">
 <div><p class="t-title">Recommended by experts</p><p class="t-sub">Supported by world renowned experts</p></div>
@@ -541,16 +830,17 @@ html{scroll-behavior:smooth}
 <div><p class="t-title">Clear, actionable plan</p><p class="t-sub">Tailored to your features</p></div>
 </div>
 </section>
+
 <div class="ba-slot"><div class="ba-band">
 <div class="ba-band-grid">
 <div>
 <h2 class="h-section">What changed <span class="hl">for her big day.</span></h2>
 <ul class="rec-list">
-<li><button type="button" class="rec" aria-pressed="false" data-rec="hair"><span class="pill pill-tint">Hair</span><p>A soft, low updo with a centre part and loose face-framing pieces.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="hair"><span class="pill pill-tint">Hair</span><p>A soft, low updo with a center part and loose face-framing pieces.</p></button></li>
 <li><button type="button" class="rec" aria-pressed="false" data-rec="brows"><span class="pill pill-tint">Brows</span><p>Shaped and filled through the tail to frame the eyes.</p></button></li>
 <li><button type="button" class="rec" aria-pressed="false" data-rec="skin"><span class="pill pill-tint">Skin</span><p>An even, dewy finish that calms redness around the nose and cheeks.</p></button></li>
 <li><button type="button" class="rec" aria-pressed="false" data-rec="eyes"><span class="pill pill-tint">Eyes</span><p>Defined lashes and a soft line along the upper lash line.</p></button></li>
-<li><button type="button" class="rec" aria-pressed="false" data-rec="lips"><span class="pill pill-tint">Lips</span><p>A rosy tint a shade deeper than her natural colour.</p></button></li>
+<li><button type="button" class="rec" aria-pressed="false" data-rec="lips"><span class="pill pill-tint">Lips</span><p>A rosy tint a shade deeper than her natural color.</p></button></li>
 </ul>
 </div>
 <div><div class="bx">
@@ -596,11 +886,11 @@ html{scroll-behavior:smooth}
 <div class="card" style="background: #F5F6F6; border-radius: 12px;">
 <h3 style="font-size: 17px; font-weight: 500;">One size fits all</h3>
 <ul class="steps">
-<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text off">Follow the latest trend</p></div></li>
-<li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text off">Try what worked for a friend</p></div></li>
-<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text off">Same routine as everyone</p></div></li>
-<li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text off">Trial and error</p></div></li>
-<li><span class="step-num">5</span><div><p class="step-label">Step 5</p><p class="step-text off">A look that isn't quite you</p></div></li>
+<li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text off">Search “bridal treatments” online</p></div></li>
+<li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text off">Book whatever’s trending</p></div></li>
+<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text off">No idea how it’ll look on you</p></div></li>
+<li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text off">Spend more than you planned</p></div></li>
+<li><span class="step-num">5</span><div><p class="step-label">Step 5</p><p class="step-text off">Run out of time to fix it</p></div></li>
 </ul>
 </div>
 <div class="card card-new" style="border-radius: 12px;">
@@ -611,7 +901,7 @@ html{scroll-behavior:smooth}
 <ul class="steps">
 <li><span class="step-num">1</span><div><p class="step-label">Step 1</p><p class="step-text">Share your photos and goals</p></div></li>
 <li><span class="step-num">2</span><div><p class="step-label">Step 2</p><p class="step-text">QOVES analysis</p></div></li>
-<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text">Visualise your best self</p></div></li>
+<li><span class="step-num">3</span><div><p class="step-label">Step 3</p><p class="step-text">Visualize your best self</p></div></li>
 <li><span class="step-num">4</span><div><p class="step-label">Step 4</p><p class="step-text">Personalized protocol</p></div></li>
 <li><span class="step-num">5</span><div><p class="step-label">Step 5</p><p class="step-text">Look your best on the big day</p></div></li>
 </ul>
@@ -620,7 +910,7 @@ html{scroll-behavior:smooth}
 <div class="quote-strip qs-v2">
 <img class="qs-photo" src="assets/img/linkov-quote.jpg" alt="Dr. Gary Linkov">
 <div class="qs-body">
-<span class="qs-mark" aria-hidden="true">&ldquo;</span>
+<span class="qs-mark" aria-hidden="true">“</span>
 <p class="q">I'm thrilled by QOVES' innovative approach to cosmetic care.</p>
 <p class="who">Dr. Gary Linkov</p>
 </div>
@@ -643,49 +933,66 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
+<div class="hx-sec an-sec">
+<div class="wrap an-b">
+<div class="an-intro"><span class="eyebrow-pill">Personalized analysis</span>
+<h2 class="h-section" style="margin-top: 16px;">Taking into account <span class="hl">your whole picture.</span></h2>
+<p class="an-sub">Your background, style, lifestyle, age and region shape every recommendation in your plan.</p></div>
+<div class="pp">
+<div class="pp-head"><div><h3>Your profile</h3><p>Tap to change. Every answer shapes your plan.</p></div><span class="pp-tag">Try it</span></div>
+<div class="pp-row"><p class="pp-label"><i>01</i>Ethnic background</p><div class="pp-chips"><button type="button" class="chip" aria-pressed="false" data-pf="eth">East Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">South Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Black</button><button type="button" class="chip on" aria-pressed="true" data-pf="eth">Mixed European</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Latina</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Middle Eastern</button></div></div>
+<div class="pp-row"><p class="pp-label"><i>02</i>Personal preferences</p><div class="pp-chips"><button type="button" class="chip" aria-pressed="false" data-pf="pref">Natural look</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Soft glam</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Glass skin</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Bold lip</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Defined brows</button></div></div>
+<div class="pp-row"><p class="pp-label"><i>03</i>Lifestyle</p><div class="pp-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="life">6-7h sleep</button><button type="button" class="chip" aria-pressed="false" data-pf="life">8h+ sleep</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">High stress</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">Humid climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Dry climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Lots of travel</button></div></div>
+<div class="pp-row"><p class="pp-label pp-sp"><span><i>04</i>Age</span><span id="pf-age">31</span></p><div class="age-track pp-age"><div class="age-fill" style="width: 27.7%;"></div><div class="age-dot" style="left: 27.7%;"></div><input class="age-range" type="range" min="18" max="65" step="1" value="31" id="pf-range" aria-label="Age"></div></div>
+<div class="pp-row"><p class="pp-label"><i>05</i>Region</p><div class="pp-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="reg">United States</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">United Kingdom</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Europe</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Asia</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Australia</button></div></div>
+<div class="pp-foot"><span aria-hidden="true">✓</span>Applied across 200+ assessments</div>
+</div>
+</div>
+</div>
 
-
-<section class="band-tint analysis-sec">
+<div class="hx-sec" style="height: 730px; padding-bottom: 0px">
 <div class="wrap">
-<span class="eyebrow-pill">Personalized analysis</span>
-<h2 class="h-section" style="margin-top: 16px; max-width: 680px;">Your complete <span class="hl">facial analysis</span></h2>
-<p class="section-sub">Every face is unique. We assess more than 200 beauty markers to give you a precise understanding of your aesthetics.</p>
-<div class="grid3">
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Eyebrows</span>
-<div class="bar-track"><div class="bar-fill" style="width: 68%;"></div></div>
-<div class="bar-labels"><span>Subtle</span><span>Bold</span></div>
-<p style="margin-top: 12px; font-size: 13px; color: #515255;">Brows fall in the top 20% for natural fullness.</p>
-</div>
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Lip smoothness</span>
-<p class="big-stat">56%</p>
-<div class="bar-track"><div class="bar-fill" style="width: 56%;"></div></div>
-<div class="bar-labels"><span>Rough, 0%</span><span>Smooth, 100%</span></div>
-</div>
-<div class="stat-card">
-<span class="eyebrow-pill" style="margin-bottom: 14px;">Facial thirds</span>
-<div class="thirds-row first"><span>Upper third [a]</span><b>0.31</b></div>
-<div class="thirds-row"><span>Middle third [b]</span><b>0.38</b></div>
-<div class="thirds-row"><span>Lower third [c]</span><b>0.31</b></div>
+<div class="hx-head"><span class="eyebrow-pill">Visualization</span>
+<h2 class="h-section" style="margin-top: 16px;">See yourself <span class="hl">on the big day.</span></h2>
+<p class="section-sub">Ever wondered how you will look walking down the aisle, at your very best?</p></div>
+<div class="hx-viz">
+<div class="hx-ba"><div><img src="assets/img/viz-before.jpg" alt="Before: woman with dark hair and a fringe, no makeup, black top"><span>Before</span></div><div><img src="assets/img/slider-projection.jpg" alt="Projection: the same woman with soft highlighted waves, glowing skin and a white bridal top"><span>Projection</span></div></div>
+<div class="hx-vlist">
+<div class="hx-card"><span class="hx-lab">Realistic</span><h3>Realistic visualization</h3><p>Previews of how small, natural changes look on your face.</p></div>
+<div class="hx-card"><span class="hx-lab">Surgery-free</span><h3>Achievable without surgery</h3><p>Every change we show can be approached without surgery.</p></div>
+<div class="hx-card"><span class="hx-lab">Ethnicity-aware</span><h3>Made for your features</h3><p>We account for the diversity of human faces. No one-size-fits-all advice.</p></div>
+<div class="hx-card"><span class="hx-lab">Before you book</span><h3>Decide before your trial</h3><p>Preview a change before your brow appointment or makeup trial.</p></div>
 </div>
 </div>
-<p style="margin-top: 16px; font-size: 12px; color: #6B767A;">Example results. Yours are based on your own photos.</p>
+<div class="quote-strip qs-v2 hx-q" style="padding-top: 15px; padding-bottom: 0px">
+<img class="qs-photo" src="assets/img/advisors/zelken.jpg" alt="Dr. Jonathan Zelken" loading="lazy">
+<div class="qs-body"><span class="qs-mark" aria-hidden="true">“</span>
+<p class="q">QOVES is disruptive and eliminates so much of the bluster in the aesthetics space.</p><p class="who">Dr. Jonathan Zelken, MD</p></div></div>
 </div>
-</section>
+</div>
 
-<section class="fp-sec">
+<div class="hx-sec" style="padding-top: 10px; height: 390px">
+<div class="wrap" style="height: 350px">
+<div class="hx-head"><span class="eyebrow-pill">The research</span>
+<h2 class="h-section" style="margin-top: 16px;">How you look shapes <span class="hl">how the day feels.</span></h2>
+<p class="section-sub">The best results take months to build. Start early and they peak in time for the day, and every photo from it.</p></div>
+<div class="hx-g3">
+<div class="hx-card hx-study"><h3><b>Results</b> take time</h3><p>Skin tightening treatment showed its results at 6 months, with wrinkles improved by about a quarter.</p><p class="hx-cite">Alexiades-Armenakas, M., et al. (2013). Dermatologic Surgery.</p></div>
+<div class="hx-card hx-study"><h3><b>Skin</b> keeps building</h3><p>Women using a retinoid cream kept improving, or held their results, all the way to 48 weeks.</p><p class="hx-cite">Olsen, E. A., et al. (1997). Journal of the American Academy of Dermatology.</p></div>
+<div class="hx-card hx-study"><h3><b>Better</b> on camera</h3><p>Attractive people come across as funnier on video than in audio. Good news for the speeches.</p><p class="hx-cite">Cowan, M. L., &amp; Little, A. C. (2013). Personality and Individual Differences.</p></div>
+</div>
+</div>
+</div>
+
+<section class="fp-sec" id="your-plan">
 <div class="fp">
 <div class="fp-left">
 <div class="fp-block">
 <span class="eyebrow-pill">Your plan</span>
 <h2 class="fp-title">Simply follow your plan.<span class="hl">Look your most beautiful.</span></h2>
-<p class="fp-p">A step-by-step plan for the months before your wedding, so you know exactly what to do and when. No surgery needed.</p>
+<p class="fp-p">A step-by-step plan for the months before your wedding, so you know exactly what to do and when. No surgery needed.<br><br></p>
 </div>
-<div class="fp-block">
-<h3>Look your best on the big day</h3>
-<p class="fp-p">Your protocol draws on <b>450+</b> evidence-based methods, chosen for your face, your style and your timeline.</p>
-</div>
+
 <div class="fp-block">
 <ul class="fp-list">
 <li>What to focus on for each feature</li>
@@ -715,32 +1022,6 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
-<section class="band-tint" id="plan">
-<div class="wrap">
-<span class="eyebrow-pill">Your plan</span>
-<h2 class="h-section" style="font-size: 30px; margin-top: 16px; max-width: 680px;">Make the most of <span class="hl">your unique features.</span></h2>
-<div class="oc">
-<div class="oc-tabs">
-<button type="button" class="oc-tab on" data-oc="F">Your features<span>01</span></button>
-<button type="button" class="oc-tab" data-oc="S">Your style<span>02</span></button>
-<button type="button" class="oc-tab" data-oc="L">Your lifestyle<span>03</span></button>
-<button type="button" class="oc-tab" data-oc="A">About you<span>04</span></button>
-<a class="btn btn-primary" href="#start" style="margin-top: 20px;">Get my personalized plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-</div>
-<div class="oc-panel">
-<div data-ocp="F" style="display: block;"><h3>12 facial areas</h3><p class="oc-hint">Every area is measured, not guessed.</p><div class="oc-grid"><div><img src="assets/img/areas/general.jpg" alt="">General Analysis</div><div><img src="assets/img/areas/eyebrows.jpg" alt="">Eyebrows</div><div><img src="assets/img/areas/eyes.jpg" alt="">Eyes</div><div><img src="assets/img/areas/nose.jpg" alt="">Nose</div><div><img src="assets/img/areas/lips.jpg" alt="">Lips</div><div><img src="assets/img/areas/cheeks.jpg" alt="">Cheeks</div><div><img src="assets/img/areas/jaw.jpg" alt="">Jaw</div><div><img src="assets/img/areas/chin.jpg" alt="">Chin</div><div><img src="assets/img/areas/smile.jpg" alt="">Smile</div><div><img src="assets/img/areas/neck.jpg" alt="">Neck</div><div><img src="assets/img/areas/ear.jpg" alt="">Ear</div><div><img src="assets/img/areas/skin.jpg" alt="">Skin</div></div></div>
-<div data-ocp="S" style="display: none;"><h3>What look do you love?</h3><p class="oc-hint">Pick any.</p><div class="chips oc-chips"><button type="button" class="chip" aria-pressed="false" data-pf="pref">Natural look</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Soft glam</button><button type="button" class="chip on" aria-pressed="true" data-pf="pref">Glass skin</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Bold lip</button><button type="button" class="chip" aria-pressed="false" data-pf="pref">Defined brows</button></div></div>
-<div data-ocp="L" style="display: none;"><h3>How do you live?</h3><p class="oc-hint">Pick any.</p><div class="chips oc-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="life">6-7h sleep</button><button type="button" class="chip" aria-pressed="false" data-pf="life">8h+ sleep</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">High stress</button><button type="button" class="chip on" aria-pressed="true" data-pf="life">Humid climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Dry climate</button><button type="button" class="chip" aria-pressed="false" data-pf="life">Lots of travel</button></div></div>
-<div data-ocp="A" style="display: none;"><h3>About you</h3><p class="oc-hint">Skin and features change with age, background and climate.</p>
-<div class="oc-sub"><p class="oc-lab">Age</p><p class="oc-age"><span id="pf-age">31</span></p><div class="age-track"><div class="age-fill" style="width: 27.7%;"></div><div class="age-dot" style="left: 27.7%;"></div><input class="age-range" type="range" min="18" max="65" step="1" value="31" id="pf-range" aria-label="Age"></div></div>
-<div class="oc-sub"><p class="oc-lab">Background</p><div class="chips oc-chips"><button type="button" class="chip" aria-pressed="false" data-pf="eth">East Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">South Asian</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Black</button><button type="button" class="chip on" aria-pressed="true" data-pf="eth">Mixed European</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Latina</button><button type="button" class="chip" aria-pressed="false" data-pf="eth">Middle Eastern</button></div></div>
-<div class="oc-sub"><p class="oc-lab">Region</p><div class="chips oc-chips"><button type="button" class="chip on" aria-pressed="true" data-pf="reg">United States</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">United Kingdom</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Europe</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Asia</button><button type="button" class="chip" aria-pressed="false" data-pf="reg">Australia</button></div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
 <section class="band-tint">
 <div class="wrap">
 <div class="grid2" style="margin-top: 0;">
@@ -762,6 +1043,12 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div>
+</section>
+
+<section class="pm-sec">
+<div class="fp-pm"><div><h3 class="fp-pm-h">Biggest impact, <span>least effort.</span></h3><p class="fp-pm-p">Your plan sorts every recommendation by value and effort, so you know where to start.</p></div>
+<div class="pv"><p class="pv-t">Priority metrics</p><div class="pv-box"><span class="pv-ax pv-top">LOW EFFORT</span><span class="pv-ax pv-r">HIGH VALUE</span>
+<div class="pv-q"><div class="pv-c">SPF 30+ to even out skin tone</div><span class="pv-more">+4 more</span></div><div class="pv-q win"><div class="pv-c">Tinted brow gel to deepen brow color</div><span class="pv-more">+5 more</span></div><div class="pv-q"><div class="pv-c">Hair gloss for shine in photos</div><span class="pv-more">+2 more</span></div><div class="pv-q"><div class="pv-c">RF microneedling for smoother texture</div><span class="pv-more">+3 more</span></div></div></div></div>
 </section>
 
 <section>
@@ -787,6 +1074,24 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </section>
+
+<div class="hx-sec">
+<div class="wrap">
+<div class="tc-head"><span class="eyebrow-pill">Technology</span>
+<h2 class="h-section">The technology behind <span class="hl">your bridal plan.</span></h2>
+<p class="section-sub">Our technology and expertise build a science-backed plan around you. Clear, personal advice to help you look and feel your best on the day.</p></div>
+<div class="tc-grid">
+<div class="tc-card tc-c1"><img class="tc-woman" src="assets/img/tech-card1.jpg" alt="Side profile of a woman with her hair in a low bun" loading="lazy"><div class="tc-fade"></div><div class="tc-txt tc-bot"><h3>Precision facial analysis</h3><p>We map 521 points across your face to build a detailed analysis.</p></div></div>
+<div class="tc-card"><div class="tc-txt tc-top"><h3>Made for you</h3><p>We consider your background, age, location, lifestyle and budget. Every bridal plan is unique.</p></div><img class="tc-vis tc-b" src="assets/img/tech-globe.jpg" alt="" loading="lazy"></div>
+<div class="tc-card"><img class="tc-vis tc-ring" src="assets/img/tech-ring.jpg" alt="" loading="lazy"><div class="tc-txt tc-bot"><h3>The science of facial attractiveness</h3><p>Your face is assessed across 160+ beauty tests.</p></div></div>
+<div class="tc-card"><div class="tc-txt tc-top"><h3>Reviewed by humans</h3><p>Every analysis is checked by our team for quality, consistency and clarity.</p></div><img class="tc-vis tc-b" src="assets/img/tech-review.jpg" alt="" loading="lazy"></div>
+</div>
+<div class="quote-strip qs-v2 hx-q">
+<img class="qs-photo" src="assets/img/advisors/ching.jpg" alt="Dr. Shim Ching" loading="lazy">
+<div class="qs-body"><span class="qs-mark" aria-hidden="true">“</span>
+<p class="q">I am excited to be partnering with QOVES, an innovative state of the art facial analysis system that I believe is the future of aesthetic medicine.</p><p class="who">Dr. Shim Ching, Associate Clinical Professor at the University of Hawaii JABSOM School of Medicine</p></div></div>
+</div>
+</div>
 
 <section class="band-tint" style="padding-top: 80px">
 <div class="wrap">
@@ -839,8 +1144,95 @@ html{scroll-behavior:smooth}
 <div class="trust-row"><span>Secure payment processing</span><span>Your data is private and safe</span></div>
 </div>
 </div>
+<div class="sp-band"><div><b>Unbiased advice</b><span>Every recommendation is based on what suits your face, not what costs the most.</span></div><div><b>Know what to skip</b><span>Your plan flags what you don't need.</span></div><div><b>Spend less overall</b><span>No money wasted on treatments that won't help you.</span></div></div>
 </div>
 </section>
+
+<section id="faq">
+<div class="wrap"><div class="sup-top"><div><span class="eyebrow-pill">QOVES care team</span>
+<h2 class="h-section" style="margin-top: 16px;">Your support <span class="hl">system</span></h2>
+<p class="sub" style="margin-top: 10px;">Not sure about a look? Our concierge team is here 24 hours a day to update your preview and plan until it feels right.</p>
+<div class="cc-steps"><div><b>01</b><p>Ask</p><span>Tell us what you'd like to change.</span></div><div><b>02</b><p>We update</p><span>Your preview and plan are revised.</span></div><div><b>03</b><p>You decide</p><span>Only commit when it feels like you.</span></div></div></div>
+<div class="chat-card">
+<p class="chat-label">QOVES chat <em class="cc-247">24/7</em></p>
+<div class="bubble user">I want to see myself with red lips and darker hair.</div>
+<div class="bubble team">Here's your updated preview.<img class="cc-img" src="assets/img/preview-redlip.jpg" alt="Preview with red lips and darker hair"></div>
+<div class="bubble user">Love that, but let's keep it soft for the wedding.</div>
+<div class="bubble team">Done. Here's your soft version, and your plan is updated to match.<img class="cc-img" src="assets/img/slider-projection.jpg" alt="Soft bridal preview"></div>
+</div></div>
+<div class="sup-faq"><h2 class="h-section">Frequently asked <span class="hl">questions</span></h2>
+<p class="sub" style="margin-top: 10px;">If you have any further questions, contact us at hello@qoves.com.</p>
+<div style="margin-top: 16px;">
+<details class="faq-item first" open="">
+<summary><span>Will I really see results?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes, when you follow your plan. Every step is chosen for your face and timed so the changes build on each other, so by the day they add up to something you can see. How much you see depends on where you start and how closely you follow it.</p>
+</details>
+<details class="faq-item">
+<summary><span>Are the visualizations realistic?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. We only show changes your plan can achieve without surgery, using your own photos. Think of them as a preview of you at your best, not a filter. Results vary from person to person.</p>
+</details>
+<details class="faq-item">
+<summary><span>Do I need surgery?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">No. Every recommendation in your plan is non-surgical, from skincare and treatments to hair and makeup direction. Anything involving clinical services, procedures or medication should be discussed with a licensed provider.</p>
+</details>
+<details class="faq-item">
+<summary><span>Does it work for all ages and ethnicities?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Your analysis takes into account your heritage, your age and how your features change over time, so your plan suits your face, not a one-size-fits-all standard.</p>
+</details>
+<details class="faq-item">
+<summary><span>I have product preferences. Can my plan work around them?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Tell us what matters to you, like vegan or cruelty-free, and your plan will take it into account. You can message our care team any time if something does not suit you.</p>
+</details>
+<details class="faq-item">
+<summary><span>My wedding is soon. Is that okay?</span><span class="sign" aria-hidden="true">+</span></summary>
+<p class="faq-a">Yes. Your plan is built around your date. With less time, it focuses on the steps that make the biggest difference before the day. The earlier you start, the more you can do, so it is worth starting now.</p>
+</details>
+</div></div></div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="final-grid">
+<div class="text-side">
+<h2 class="h-section">Time to look and feel your best.</h2>
+<p>The morning of the wedding should feel exciting, not stressful. With your plan behind you, you can relax into the build up, laugh with the people around you and stop thinking about your face altogether. The photos will take care of themselves.</p>
+<a class="btn btn-on-ink" href="#start" style="margin-top: 8px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+</div>
+<div class="img-side fin-photo" role="img" aria-label="A bride in a white dress laughing as her partner lifts her into a hug"></div>
+</div>
+</div>
+</section>
+
+<section class="band-tint analysis-sec">
+<div class="wrap">
+<span class="eyebrow-pill">Personalized analysis</span>
+<h2 class="h-section" style="margin-top: 16px; max-width: 680px;">Your complete <span class="hl">facial analysis</span></h2>
+<p class="section-sub">Every face is unique. We assess more than 200 beauty markers to give you a precise understanding of your aesthetics.</p>
+<div class="grid3">
+<div class="stat-card">
+<span class="eyebrow-pill" style="margin-bottom: 14px;">Eyebrows</span>
+<div class="bar-track"><div class="bar-fill" style="width: 68%;"></div></div>
+<div class="bar-labels"><span>Subtle</span><span>Bold</span></div>
+<p style="margin-top: 12px; font-size: 13px; color: #515255;">Brows fall in the top 20% for natural fullness.</p>
+</div>
+<div class="stat-card">
+<span class="eyebrow-pill" style="margin-bottom: 14px;">Lip smoothness</span>
+<p class="big-stat">56%</p>
+<div class="bar-track"><div class="bar-fill" style="width: 56%;"></div></div>
+<div class="bar-labels"><span>Rough, 0%</span><span>Smooth, 100%</span></div>
+</div>
+<div class="stat-card">
+<span class="eyebrow-pill" style="margin-bottom: 14px;">Facial thirds</span>
+<div class="thirds-row first"><span>Upper third [a]</span><b>0.31</b></div>
+<div class="thirds-row"><span>Middle third [b]</span><b>0.38</b></div>
+<div class="thirds-row"><span>Lower third [c]</span><b>0.31</b></div>
+</div>
+</div>
+<p style="margin-top: 16px; font-size: 12px; color: #6B767A;">Example results. Yours are based on your own photos.</p>
+</div>
+</section>
+
+
 
 <section class="band-ink">
 <div class="wrap two-col" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px;">
@@ -855,64 +1247,6 @@ html{scroll-behavior:smooth}
 <p class="faq-text">Slight facial asymmetry is perfectly normal. Everyone has it and it should not be corrected. But if uneven skin tone is making you self conscious, that is something we can help improve.</p>
 <h3 style="margin-top: 24px; font-size: 16px; font-weight: 500;">You feel better about how you look.</h3>
 <p class="faq-text">Many members tell us they come away more confident. Once you understand your face and know what suits it, you spend less time doubting it and more time enjoying it.</p>
-</div>
-</div>
-</section>
-
-<section id="faq">
-<div class="wrap two-col" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px;">
-<div>
-<span class="eyebrow-pill">QOVES care team</span>
-<h2 class="h-section" style="margin-top: 16px;">Your support <span class="hl">system</span></h2>
-<p class="sub" style="margin-top: 10px;">We provide ongoing support through every step of your plan. Our care team is here to help.</p>
-<div class="chat-card">
-<p class="chat-label">QOVES chat</p>
-<div class="bubble user">I see "mild asymmetry" in my results. Is that normal?</div>
-<div class="bubble team">Yes, facial asymmetry is very common. Most people have slight differences between their left and right sides. Your results help us suggest improvements if needed.</div>
-</div>
-</div>
-<div>
-<h2 class="h-section">Frequently asked <span class="hl">questions</span></h2>
-<p class="sub" style="margin-top: 10px;">If you have any further questions, contact us at hello@qoves.com.</p>
-<div style="margin-top: 16px;">
-<details class="faq-item first" open="">
-<summary><span>Can I really get results without surgery?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">Yes, that is exactly what the protocol is built for. Every recommendation in it is non surgical. The individual changes are small by design, and the plan sequences them so they compound. What you get out of it depends on what you put in, and results vary.</p>
-</details>
-<details class="faq-item">
-<summary><span>Will I still look like me?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">Yes. Your protocol is built around your natural features, so the focus is on bringing out what is already there. Every recommendation is non-surgical and the changes are small by design, so on the day you will look like yourself at your best. Anything involving clinical services, procedures or medication should be discussed with a licensed provider.</p>
-</details>
-<details class="faq-item">
-<summary><span>How long will it take for me to receive my results?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">It can take up to 28 days from the moment you upload your photos for our team to prepare your analysis and protocol, so leave enough time before the wedding.</p>
-</details>
-<details class="faq-item">
-<summary><span>How does it work?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">Tell us about yourself: demographics, lifestyle, and goals. Upload your photos: eight specific angles of your face and head. Within 28 days, you’ll receive your full protocol and visuals of your best-looking self.</p>
-</details>
-<details class="faq-item">
-<summary><span>Is this realistic?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">Yes. Any changes we show are realistic and achievable without surgery. Results vary.</p>
-</details>
-<details class="faq-item">
-<summary><span>Is this a one time report or a continuous service?</span><span class="sign" aria-hidden="true">+</span></summary>
-<p class="faq-a">This is an ongoing service that you can cancel at any time. After your initial plan, you’ll receive updated protocols, analyses, and visualizations every year. You’ll also have unlimited access to message our care team whenever you need.</p>
-</details>
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="wrap">
-<div class="final-grid">
-<div class="text-side">
-<h2 class="h-section">Time to look and feel your best.</h2>
-<p>The morning of the wedding should feel exciting, not stressful. With your plan behind you, you can relax into the build up, laugh with the people around you and stop thinking about your face altogether. The photos will take care of themselves.</p>
-<a class="btn btn-on-ink" href="#start" style="margin-top: 8px;">Start my plan <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-</div>
-<div class="img-side fin-photo" role="img" aria-label="A bride in a white dress laughing as her partner lifts her into a hug"></div>
 </div>
 </div>
 </section>
